@@ -45,7 +45,7 @@ A principal conquista adquirida nesse projeto é relacionada ao estímulo à mel
 
 - [FrontMasters](https://frontendmasters.com/books/front-end-handbook/2019/#4.28)
 
-## :woman: Qual perfil do aprendiz se espera?
+## :woman: Qual perfil da aprendiz se espera?
 
 O perfil da aprendiz se baseia em ser proativa, ser aberta a novas aprendizados e que queira contribuir com a expansão da nossa causa. Além de que, o foco principal é para pessoas que são iniciantes no estudo de tecnologias para desenvolvimento web.
 
@@ -95,7 +95,7 @@ O perfil da aprendiz se baseia em ser proativa, ser aberta a novas aprendizados 
     
 ## :woman_teacher: Mentora
 
-Leandra Oliveira, é estudante de Ciência da Computação, entusiasta do Elas, apaixonada por desenvolvimento web, fascinada por Teoria dos Grafos e também interessada pela área de análise de dados. Diante da proposta do AndromeDev, viu uma chance de compartilhar os seus conhecimentos na área e de aprender ainda mais com a troca de experiências com as futuras aprendizes.
+Leandra Oliveira, é estudante de Ciência da Computação, membra, atual coordenadora e fascinada pelo propósito do Elas, apaixonada por desenvolvimento web, entusiasta  Teoria dos Grafos e também interessada pela área de análise de dados. Diante da proposta do AndromeDev, viu uma chance de compartilhar os seus conhecimentos na área e de aprender ainda mais com a troca de experiências com as futuras aprendizes.
 
 ### :loudspeaker: Contatos:
 
