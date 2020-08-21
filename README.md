@@ -111,7 +111,7 @@ O perfil da aprendiz se baseia em ser proativa, ser aberta a novas aprendizados 
 -   Hospedagem do site
     
 
-### :pushpin: Adicional
+#### :pushpin: Adicional
 
 -   Abertas para decisões futuras e será decidido na primeira semana do evento.
     
