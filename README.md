@@ -9,6 +9,7 @@
 - [Quais tecnologias e ferramentas devem ser usadas?](#computer-Quais-tecnologias-e-ferramentas-devem-ser-usadas)
 - [Links úteis](#link-Links-úteis)
 - [Qual perfil do aprendiz se espera?](#woman-Qual-perfil-do-aprendiz-se-espera)
+- [Cronograma sugerido](calendar-Cronograma-sugerido)
 - [Mentora](#woman_teacher-Mentora)
 - [Contatos](#loudspeaker-Contatos)
 - [Sobre a organização](#clipboard-Sobre-a-organização)
@@ -56,7 +57,7 @@ O perfil da aprendiz se baseia em ser proativa, ser aberta a novas aprendizados 
 
   
 
-### :calendar: Cronograma sugerido
+## :calendar: Cronograma sugerido
 
 #### 1ª fase de desenvolvimento
 
