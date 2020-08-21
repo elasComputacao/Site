@@ -5,7 +5,7 @@
 
 ## Índice
 - [Descrição do projeto](#pencil-Descrição-do-projeto)
-- [O que eu ganho participando do projeto?(#thought_balloon-O-que-eu-ganho-participando-do-projeto)
+- [O que eu ganho participando do projeto?](#thought_balloon-O-que-eu-ganho-participando-do-projeto)
 - [Quais tecnologias e ferramentas devem ser usadas?](#computer-Quais-tecnologias-e-ferramentas-devem-ser-usadas)
 - [Links úteis](#paperclip-Links-úteis)
 - [Qual perfil do aprendiz se espera?](#woman-Qual-perfil-do-aprendiz-se-espera)
@@ -36,7 +36,7 @@ A principal conquista adquirida nesse projeto é relacionada ao estímulo à mel
 
 - [VSCode](https://code.visualstudio.com/)
 
-## :paperclip: Links úteis
+## :link: Links úteis
 
 - [Site: Mulheres na computação](https://mulheresnacomputacao.com/)
 
