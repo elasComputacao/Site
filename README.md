@@ -19,6 +19,8 @@
 
 A ideia principal do projeto é desenvolver um site para centralizar as informações e produções internas da organização. Sendo assim, servirá como ambiente para divulgação das ações, materiais e integrantes, tornando a comunidade mais ativa.
 
+### [Esboço do Layout do Site]()
+
 ## :thought_balloon: O que eu ganho participando do projeto?
 
 A principal conquista adquirida nesse projeto é relacionada ao estímulo à melhoria no desenvolvido em habilidades interpessoais como: trabalho em equipe, organização, comunicação, experiência em open source e criatividade. Além de que, terá conhecimento direto sobre a motivação inerente a organização e desenvolverá habilidades técnicas em desenvolvimento web, especificamente na área de front-end.
