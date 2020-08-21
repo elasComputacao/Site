@@ -5,14 +5,14 @@
 
 ## Índice
 - [Descrição do projeto](#pencil-Descrição-do-projeto)
-- [O que eu ganho participando do projeto](#thought_balloon-O-que-eu-ganho-participando-do-projeto?)
-- [Quais tecnologias e ferramentas devem ser usadas?](#computer-Quais-tecnologias-e-ferramentas-devem-ser-usadas?)
+- [O que eu ganho participando do projeto?(#thought_balloon-O-que-eu-ganho-participando-do-projeto)
+- [Quais tecnologias e ferramentas devem ser usadas?](#computer-Quais-tecnologias-e-ferramentas-devem-ser-usadas)
 - [Links úteis](#paperclip-Links-úteis)
-- [Qual perfil do aprendiz se espera?](#woman-Qual-perfil-do-aprendiz-se-espera?)
+- [Qual perfil do aprendiz se espera?](#woman-Qual-perfil-do-aprendiz-se-espera)
 - [Mentora](#woman_teacher-Mentora)
-- [Contatos](#loudspeaker-Contatos:)
-- [Sobre a organização](#clipboard-Sobre-a-organização:)
-- [Contatos Elas](#telephone-Contatos-Elas:)
+- [Contatos](#loudspeaker-Contatos)
+- [Sobre a organização](#clipboard-Sobre-a-organização)
+- [Contatos Elas](#telephone-Contatos-Elas)
 
 ## :pencil: Descrição do projeto 
 
