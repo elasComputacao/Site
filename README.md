@@ -1,18 +1,18 @@
 # Site dElas  
 <p align="center">
-<img src="./assets/logo-elas.png" heigth="70"/>
+<img src="./assets/logo_elas.png" heigth="80" width="180"/>
 <p/>
 
 ## Índice
 - [Descrição do projeto](#pencil-Descrição-do-projeto)
-- [O que eu ganho participando do projeto](#thought_balloon-O-que-eu-ganho-participando-do-projeto)
-- [Quais tecnologias e ferramentas devem ser usadas?](#:computer:-Quais-tecnologias-e-ferramentas-devem-ser-usadas)
-- [Links úteis]()
-- [Qual perfil do aprendiz se espera?]()
-- [Mentora]()
-- [Contatos]()
-- [Sobre a organização]()
-- [Contatos Elas]()
+- [O que eu ganho participando do projeto](#thought_balloon-O-que-eu-ganho-participando-do-projeto?)
+- [Quais tecnologias e ferramentas devem ser usadas?](#computer-Quais-tecnologias-e-ferramentas-devem-ser-usadas?)
+- [Links úteis](#paperclip-Links-úteis)
+- [Qual perfil do aprendiz se espera?](#woman-Qual-perfil-do-aprendiz-se-espera?)
+- [Mentora](#woman_teacher-Mentora)
+- [Contatos](#loudspeaker-Contatos:)
+- [Sobre a organização](#clipboard-Sobre-a-organização:)
+- [Contatos Elas](#telephone-Contatos-Elas:)
 
 ## :pencil: Descrição do projeto 
 
