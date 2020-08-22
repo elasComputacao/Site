@@ -96,7 +96,7 @@ O perfil da aprendiz se baseia em ser proativa, ser aberta a novas aprendizados 
     
 ## :woman_teacher: Mentora
 
-Leandra Oliveira, é estudante de Ciência da Computação, membra, atual coordenadora e fascinada pelo propósito do Elas, apaixonada por desenvolvimento web, entusiasta  Teoria dos Grafos e também interessada pela área de análise de dados. Diante da proposta do AndromeDev, viu uma chance de compartilhar os seus conhecimentos na área e de aprender ainda mais com a troca de experiências com as futuras aprendizes.
+Leandra Oliveira, é estudante de Ciência da Computação, membra, atual coordenadora e fascinada pelo propósito do Elas, apaixonada por desenvolvimento web, monitora e entusiasta de Teoria dos Grafos e também interessada pela área de análise de dados. Diante da proposta do AndromeDev, viu uma chance de compartilhar os seus conhecimentos na área e de aprender ainda mais com a troca de experiências com as futuras aprendizes.
 
 ### :loudspeaker: Contatos:
 
