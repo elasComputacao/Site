@@ -5,7 +5,6 @@
 
 ## Índice
 - [Descrição do projeto](#pencil-Descrição-do-projeto)
-- [Esboço do Layout do site](#pencil-Esboço-do-Layout-do-site)
 - [O que eu ganho participando do projeto?](#thought_balloon-O-que-eu-ganho-participando-do-projeto)
 - [Quais tecnologias e ferramentas devem ser usadas?](#computer-Quais-tecnologias-e-ferramentas-devem-ser-usadas)
 - [Links úteis](#link-Links-úteis)
