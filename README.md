@@ -19,7 +19,7 @@
 ## :pencil: Descrição do projeto 
 
 A ideia principal do projeto é desenvolver um site para centralizar as informações e produções internas da organização. Sendo assim, servirá como ambiente para divulgação das ações, materiais e integrantes, tornando a comunidade mais ativa.
-- :pencil2: [Esboço do Layout do Site](https://github.com/elasComputacao/Site/blob/master/assets/layout.png?raw=true)
+- [Esboço do Layout do Site](https://github.com/elasComputacao/Site/blob/master/assets/layout.png?raw=true)
 
 ## :thought_balloon: O que eu ganho participando do projeto?
 
