@@ -1,0 +1,19 @@
+:root {
+    --color-1: #f19181;
+    --color-2: #d27c90;
+    --color-3: #a66f96;
+    --color-4: #75648d;
+    --color-5: #4a5876;
+    --color-6: #2f4858;
+    --color-7: #ffffff;
+    --title-font: 'Poppins', sans-serif;
+    --text-font: 'Raleway', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#home-page {
+
+}
