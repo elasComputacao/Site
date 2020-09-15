@@ -5,7 +5,9 @@
     --color-4: #75648d;
     --color-5: #4a5876;
     --color-6: #2f4858;
-    --color-7: #ffffff;
+    --color-7: #fff6f3;
+    --color-8: #A66F96;
+    --color-9: #ffffff;
     --title-font: 'Poppins', sans-serif;
     --text-font: 'Raleway', sans-serif;
 }
@@ -15,5 +17,96 @@ html {
 }
 
 #home-page {
+    overflow: hidden;
+}
 
+#home-page header {
+    font-family: var(--title-font);
+    color: var(--color-7);
+}
+
+#home-page header img {
+    width: 50px;
+}
+
+#home-page header ul {
+    display: flex;
+    flex-direction: row;
+}
+
+#home-page header ul li {
+    list-style: none;
+}
+
+#home-page header ul li a {
+    text-decoration: none;
+    color: var(--color-2);
+    font-weight: 500;
+    font-size: 16px;
+}
+
+#home-page img.wellcome-image {
+    width: 100vw;
+}
+
+#home-page main h1 {
+    font-family: var(--title-font);
+    font-size: 32px;
+    font-weight: 300;
+    color: var(--color-2);
+}
+
+#home-page main p.screen-paragraph {
+    font-family: var(--text-font);
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 40px;
+    color: var(--color-6);
+}
+
+#home-page main p.tiptool-paragraph {
+    font-family: var(--title-font);
+    font-weight: 300;
+    line-height: 40px;
+    color: var(--color-6);
+}
+
+#home-page footer {
+    background-color: var(--color-7);
+    background-image: url("../assets/images/background-opacity.png");
+    background-repeat: repeat-y;
+    background-size: 100vw;
+}
+
+#home-page footer div.footer-content h1 {
+    font-family: var(--title-font);
+    color: var(--color-2);
+    font-weight: 300;
+}
+
+#home-page footer div.footer-content div.contact span {
+    font-family: var(--text-font);
+    color: var(--color-6);
+}
+
+#home-page footer div.footer-content div.contact div.icon {
+    background-color: var(--color-8);
+    color: var(--color-9);
+}
+
+#home-page footer div.social-networks img {
+    max-width: 72px;
+}
+
+#home-page footer div.footer-content div.copyright span {
+    font-family: var(--text-font);
+    color: var(--color-6);
+}
+
+#home-page footer div.footer-content div.copyright img {
+    width: 72px;
+}
+
+#home-page footer div.background {
+       
 }

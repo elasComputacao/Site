@@ -49,7 +49,7 @@ module.exports = {
         background_color: `#f7f0eb`,
         theme_color: `#d27c90`,
         display: `standalone`,
-        icon: `src/assets/logos/logo_png.png`
+        icon: `src/assets/logos/elas_vertical.png`
       },
     },
   ],

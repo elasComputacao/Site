@@ -1,12 +1,12 @@
 var plugins = [{
-      plugin: require('/home/mariaeas/Área de Trabalho/Elas@Computação/project/node_modules/gatsby-plugin-react-helmet/gatsby-ssr'),
+      plugin: require('/home/mariaeas/Área de Trabalho/Elas@Computação/Site/project/node_modules/gatsby-plugin-react-helmet/gatsby-ssr'),
       options: {"plugins":[]},
     },{
-      plugin: require('/home/mariaeas/Área de Trabalho/Elas@Computação/project/node_modules/gatsby-plugin-prefetch-google-fonts/gatsby-ssr'),
+      plugin: require('/home/mariaeas/Área de Trabalho/Elas@Computação/Site/project/node_modules/gatsby-plugin-prefetch-google-fonts/gatsby-ssr'),
       options: {"plugins":[],"fonts":[{"family":"Poppins","subsets":["latin"],"variants":["400","500","600"]},{"family":"Raleway","subsets":["latin"],"variants":["300","400","500"]}]},
     },{
-      plugin: require('/home/mariaeas/Área de Trabalho/Elas@Computação/project/node_modules/gatsby-plugin-manifest/gatsby-ssr'),
-      options: {"plugins":[],"name":"Elas@Computação UFCG","short_name":"Elas@Computação UFCG","start_url":"/","background_color":"#f7f0eb","theme_color":"#d27c90","display":"standalone","icon":"src/assets/logos/logo_png.png","cache_busting_mode":"query","include_favicon":true,"legacy":true,"theme_color_in_head":true,"cacheDigest":null},
+      plugin: require('/home/mariaeas/Área de Trabalho/Elas@Computação/Site/project/node_modules/gatsby-plugin-manifest/gatsby-ssr'),
+      options: {"plugins":[],"name":"Elas@Computação UFCG","short_name":"Elas@Computação UFCG","start_url":"/","background_color":"#f7f0eb","theme_color":"#d27c90","display":"standalone","icon":"src/assets/logos/elas_vertical.png","cache_busting_mode":"query","include_favicon":true,"legacy":true,"theme_color_in_head":true,"cacheDigest":"9f5231c01f5a0a905ad0e331e58ee548"},
     }]
 // During bootstrap, we write requires at top of this file which looks like:
 // var plugins = [
