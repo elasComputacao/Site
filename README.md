@@ -26,13 +26,17 @@ A ideia principal do projeto é desenvolver um site com um layout simples, intui
 
 A principal conquista adquirida nesse projeto é relacionada ao estímulo à melhoria no desenvolvido em habilidades interpessoais como: trabalho em equipe, organização, comunicação, experiência em open source e criatividade. Além de que, terá conhecimento direto sobre a motivação inerente a organização e desenvolverá habilidades técnicas em desenvolvimento web, especificamente na área de front-end.
 
-## :computer: Quais tecnologias e ferramentas devem ser usadas?
+## :computer: Quais tecnologias e ferramentas estão sendo usadas?
 
-- [HTML5](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
+- [React](https://pt-br.reactjs.org/)
 
-- [CSS 3](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
+- [Gatsby](https://www.gatsbyjs.com/)
+
+- [CSS3](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
 
 - [JavaScript](https://www.javascript.com/)
+
+- [TypeScript](https://www.typescriptlang.org/)
 
 - [VSCode](https://code.visualstudio.com/)
 
@@ -56,13 +60,13 @@ O perfil da aprendiz se baseia em ser proativa, ser aberta a novas aprendizados 
 
 #### 1ª fase de desenvolvimento
 
-- [ ] Apresentação das tecnologias que serão utilizadas e a discussão do projeto para o aprendiz.
+- [x] Apresentação das tecnologias que serão utilizadas e a discussão do projeto para o aprendiz.
     
-- [ ] Formação do layout do site.
+- [x] Formação do layout do site.
     
-- [ ] Implementação do esqueleto das páginas.
+- [ ] Implementação do esqueleto das páginas. (em andamento)
 
-- [ ] Estrutural / Princípio da estilização
+- [ ] Estrutural / Princípio da estilização (em andamento)
     
 #### 2ª fase de desenvolvimento
 
