@@ -1,38 +1,50 @@
 import React from 'react';
 import {MapPin, Mail} from 'react-feather';
-import { Container, Dropdown } from 'react-bootstrap';
 
 /**
- * Futuros componentes:
- * 
- * - Dropdown dos idiomas
- * - Logo do Elas com o ícone
- * - Cards do carrossel
- * - Ícones das redes sociais
- * - Ícones dos GitHubs
+ * O que falta?
+ * - Componente do Dropdown (envolve lógica)
+ * - Componente do Tooltip (envolve lógica)
+ * - Componente do Carrossel (envolve lógica)
+ * - Toda a parte do Painel (envolve lógica)
+ * - Detalhes do estilo (sombras, alinhamentos, detaques...)
+ * - Hover dos ícones e de outros componentes
+ * - Conexão com API do GitHub (necessário para iniciar o Painel)
+ * - Lógica do Toggle 
+ * - Lógica do Header (fixo quando a página faz scroll)
+ * - Movimentação da página por meio do header
+ * - Adaptação do layout para desktop (mobile first)
+ * - Adaptação da lógica para desktop (algumas listagens são diferentes)
  */
 
 import logoHorizontal from '../assets/logos/elas_horizontal.png';
 import logoVertical from '../assets/logos/elas_vertical.png';
-import instagram from '../assets/redes-sociais/instagram.svg';
-import github from '../assets/redes-sociais/github.svg';
-import twitter from '../assets/redes-sociais/twitter.svg';
+import instagram from '../assets/redes-sociais/instagram.png';
+import github from '../assets/redes-sociais/github.png';
+import twitter from '../assets/redes-sociais/twitter.png';
 import cabecalho from '../assets/images/cabecalho.png';
+import cafeComElas from '../assets/images/cafe-com-elas.png'
 
 import icons from '../enums/icons'
 import socialNetwork from '../enums/social-network'
+
+import Section from '../components/Section';
+import ProjectCard from '../components/ProjectCard';
+import ContactCard from '../components/ContactCard';
+import IconStatus from '../components/IconStatus'
+
 import '../styles/home.css'
-import DropdownItem from 'react-bootstrap/esm/DropdownItem';
 
 export default function Home() {
   return (
-    <Container fluid id="home-page">
+    <div id="home-page">
       <header>
         <img src={logoHorizontal} alt="Logo Elas@Computação Horizontal"/>
         <ul>
-          <li><li>
+          <li>
             <a>Sobre</a>
           </li>
+          <li>
             <a>Painel</a>
           </li>
           <li>
@@ -42,89 +54,66 @@ export default function Home() {
             <a>Contato</a>
           </li>
           <li>
-            <Dropdown>
-              <Dropdown.Toggle variant="success" id="dropdown-basic">
-                Idioma
-              </Dropdown.Toggle>
-              <Dropdown.Menu>
-                <Dropdown.Item>Português</Dropdown.Item>
-                <br/>
-                <Dropdown.Item>English</Dropdown.Item>
-              </Dropdown.Menu>
-            </Dropdown>
+            <a>
+              Idioma
+            </a>
           </li>
         </ul>
       </header>
       <main>
         <img className="wellcome-image" src={cabecalho} alt="Elas@Computação UFCG"/>
-        <section>
-          <h1>Sobre</h1>
-          <div>
-            <p className="screen-paragraph">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-              Consectetur quae, quis excepturi quasi vel quia commodi ab
-              accusantium? Nisi molestiae autem laudantium unde asperiores
-              ea excepturi nesciunt saepe neque minima?
-            </p>
-            <div>
-              <img src={logoVertical} alt="Logo Elas@Computação Vertical"/>
-              <img src={icons.yellowRibbon} alt="Ícone"/>            
-            </div>
-          </div>
-        </section>
-        <section>
-          <h1>Painel</h1>
-          <div>
-
-          </div>
-        </section>
-        <section>
-          <h1>Projetos</h1>
-          <div>
-            <img src={"https://picsum.photos/300/150"}/>
-            <h3>Titulo</h3>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur 
-              adipisicing elit. Ratione, rerum labore, 
-              expedita quod, praesentium odio fugit amet 
-              ullam eum architecto incidunt autem omnis 
-              asperiores. Dolor quibusdam beatae consequuntur
-              dolores ipsum?
-            </p>
-            <a>Conferir detalhes do projeto</a>
-          </div>
-        </section>
+        <Section title="Sobre" className="section-about">
+          <p className="screen-paragraph">
+          O Elas@computação surge com o objetivo de reunir mulheres 
+          do curso de Ciência da Computação da Universidade Federal 
+          de Campina Grande e também outras mais. Nosso foco é levantar, 
+          discutir e impulsionar os assuntos que dizem respeito ao feminino, 
+          feminismo, nossos espaços, falas, movimentos e necessidades. A nossa
+          missão é inspirar mulheres mostrando que todas são capazes de trabalhar
+          e serem as melhores profissionais na área que Elas quiserem. Somos uma
+          comunidade que se apoia e que está disposta sempre a acolher novas 
+          membras e continuamente ajudá-las a se desenvolverem como mulheres 
+          e profissionais.
+          </p>
+          <IconStatus 
+            icon={logoVertical} 
+            status={icons.yellowRibbon} 
+            statusText="Lorem ipsum dolor sit, 
+            amet consectetur adipisicing elit. 
+            Recusandae odio sint eos reiciendis 
+            modi cum debitis, quod"
+          />
+        </Section>
+        <Section title="Painel" className="section-painel">
+        </Section>
+        <Section title="Projetos" className="section-projects">
+          <ProjectCard 
+          imageURL={cafeComElas} 
+          title="Café com Elas" 
+          description="Conversas e palestras das mulheres de computação. 
+          Com o objetivo de trazer conversas sobre temas interessantes 
+          e importantes acerca de nossa área e papel, com o intuito de 
+          abraçar e estimular mulheres a participarem na comunidade."
+          href="https://github.com/elasComputacao/CafeComElas"
+          />
+        </Section>
       </main>
       <footer>
+        <h1>Contato</h1>
         <div className="footer-content">
-          <h1>Contato</h1>
           <div className="contact">
-            <div>
-              <div className="icon">
-                <MapPin />
-              </div>
-              <span>
-                Universidade Federal de Campina Grande - UFCG,
-                Campus Central, R. Aprígio Veloso, 882 - Universitário, Campina Grande - PB, 58428-830
-              </span>
-              </div>
-              <div>
-                <div className="icon">
-                  <Mail />
-                </div>
-                <span>
-                  elas@computacao.ufcg.edu.br
-                </span>
-              </div>
+            <ContactCard content="Universidade Federal de Campina Grande - UFCG,
+            Campus Central, R. Aprígio Veloso, 882 - Universitário, Campina Grande - PB, 58428-830"/>            
+            <ContactCard content="elas@computacao.ufcg.edu.br"/>
           </div>
           <div className="social-networks">
-            <a href={socialNetwork.instagramElas} target="_blank">
+            <a target="_blank" href={socialNetwork.instagramElas}>
               <img src={instagram} alt="Instagram"/>
             </a>
-            <a href={socialNetwork.githubElas} target="_blank">
+            <a target="_blank" href={socialNetwork.githubElas}>
               <img src={github} alt="GitHub"/>
             </a>
-            <a href="" target="_blank">
+            <a target="_blank" href="">
               <img src={twitter} alt="Twitter"/>
             </a>
           </div>
@@ -136,6 +125,6 @@ export default function Home() {
         <div className="background">
         </div>
       </footer>
-    </Container>
+    </div>
   );
 }

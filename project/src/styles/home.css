@@ -17,21 +17,30 @@ html {
 }
 
 #home-page {
+    justify-self: center;
     overflow: hidden;
 }
 
 #home-page header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     font-family: var(--title-font);
-    color: var(--color-7);
+    background-color: var(--color-7);
+    padding-left: 9px;
+    padding-right: 9px;
+    max-height: 44px;
+    box-shadow: 5px;
 }
 
 #home-page header img {
-    width: 50px;
+    max-width: 50px;
 }
 
 #home-page header ul {
     display: flex;
-    flex-direction: row;
+    gap: 7px;
+    justify-content: space-between;
 }
 
 #home-page header ul li {
@@ -42,18 +51,11 @@ html {
     text-decoration: none;
     color: var(--color-2);
     font-weight: 500;
-    font-size: 16px;
+    font-size: 12px;
 }
 
 #home-page img.wellcome-image {
     width: 100vw;
-}
-
-#home-page main h1 {
-    font-family: var(--title-font);
-    font-size: 32px;
-    font-weight: 300;
-    color: var(--color-2);
 }
 
 #home-page main p.screen-paragraph {
@@ -62,6 +64,10 @@ html {
     font-weight: 300;
     line-height: 40px;
     color: var(--color-6);
+}
+
+#home-page main .section-about p.screen-paragraph {
+    margin-top: -10px;
 }
 
 #home-page main p.tiptool-paragraph {
@@ -76,26 +82,49 @@ html {
     background-image: url("../assets/images/background-opacity.png");
     background-repeat: repeat-y;
     background-size: 100vw;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 5px;
 }
 
-#home-page footer div.footer-content h1 {
+#home-page footer h1 {
     font-family: var(--title-font);
     color: var(--color-2);
     font-weight: 300;
 }
 
-#home-page footer div.footer-content div.contact span {
-    font-family: var(--text-font);
-    color: var(--color-6);
+#home-page footer div.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
 
-#home-page footer div.footer-content div.contact div.icon {
-    background-color: var(--color-8);
-    color: var(--color-9);
+#home-page footer div.footer-content div.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 32px;
 }
 
-#home-page footer div.social-networks img {
-    max-width: 72px;
+#home-page footer div.footer-content div.social-networks {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 48px;
+    align-items: center;
+    padding: 32px;
+}
+
+#home-page footer div.footer-content div.social-networks img {
+    max-height: 70px;
+}
+
+#home-page footer div.footer-content div.copyright {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
 }
 
 #home-page footer div.footer-content div.copyright span {
@@ -105,8 +134,5 @@ html {
 
 #home-page footer div.footer-content div.copyright img {
     width: 72px;
-}
-
-#home-page footer div.background {
-       
+    margin-top: -6px;
 }

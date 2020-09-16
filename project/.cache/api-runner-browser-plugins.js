@@ -1,4 +1,7 @@
 module.exports = [{
+      plugin: require('../node_modules/gatsby-plugin-catch-links/gatsby-browser.js'),
+      options: {"plugins":[]},
+    },{
       plugin: require('../node_modules/gatsby-plugin-nprogress/gatsby-browser.js'),
       options: {"plugins":[],"color":"#d27c90","showSpinner":false},
     },{

@@ -2,6 +2,9 @@ var plugins = [{
       plugin: require('/home/mariaeas/Área de Trabalho/Elas@Computação/Site/project/node_modules/gatsby-plugin-react-helmet/gatsby-ssr'),
       options: {"plugins":[]},
     },{
+      plugin: require('/home/mariaeas/Área de Trabalho/Elas@Computação/Site/project/node_modules/gatsby-plugin-sitemap/gatsby-ssr'),
+      options: {"plugins":[]},
+    },{
       plugin: require('/home/mariaeas/Área de Trabalho/Elas@Computação/Site/project/node_modules/gatsby-plugin-prefetch-google-fonts/gatsby-ssr'),
       options: {"plugins":[],"fonts":[{"family":"Poppins","subsets":["latin"],"variants":["400","500","600"]},{"family":"Raleway","subsets":["latin"],"variants":["300","400","500"]}]},
     },{
