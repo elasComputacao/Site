@@ -27,15 +27,19 @@ import cafeComElas from '../assets/images/cafe-com-elas.png'
 
 import icons from '../enums/icons'
 import socialNetwork from '../enums/social-network'
+import langs from '../enums/langs'
 
 import Section from '../components/Section';
 import ProjectCard from '../components/ProjectCard';
 import ContactCard from '../components/ContactCard';
-import IconStatus from '../components/IconStatus'
+import IconStatus from '../components/IconStatus';
+import Dropdown from '../components/DropDown';
 
 import '../styles/home.css'
+import PictureLink from '../components/PictureLink';
 
 export default function Home() {
+
   return (
     <div id="home-page">
       <header>
@@ -54,9 +58,10 @@ export default function Home() {
             <a>Contato</a>
           </li>
           <li>
-            <a>
-              Idioma
-            </a>
+            <Dropdown 
+            title="Idiomas"
+            items={langs}
+            />
           </li>
         </ul>
       </header>
@@ -78,13 +83,17 @@ export default function Home() {
           <IconStatus 
             icon={logoVertical} 
             status={icons.yellowRibbon} 
-            statusText="Lorem ipsum dolor sit, 
-            amet consectetur adipisicing elit. 
-            Recusandae odio sint eos reiciendis 
-            modi cum debitis, quod"
+            statusText="
+            O Elas@Computação apoia a campanha do Setembro Amarelo em prevenção
+            ao suicídio.
+            Se você estiver passando por problemas relacionados à sua saúde mental 
+            ou conhece alguém que está passando por alguma dificuldade, procure ajuda
+            profissional.
+            "
           />
         </Section>
         <Section title="Painel" className="section-painel">
+          <PictureLink text="MariaEduardaDeAzevedo" pic={`${socialNetwork.github}/MariaEduardaDeAzevedo.png`} href={`${socialNetwork.github}/MariaEduardaDeAzevedo`} />
         </Section>
         <Section title="Projetos" className="section-projects">
           <ProjectCard 
@@ -103,8 +112,12 @@ export default function Home() {
         <div className="footer-content">
           <div className="contact">
             <ContactCard content="Universidade Federal de Campina Grande - UFCG,
-            Campus Central, R. Aprígio Veloso, 882 - Universitário, Campina Grande - PB, 58428-830"/>            
-            <ContactCard content="elas@computacao.ufcg.edu.br"/>
+            Campus Central, R. Aprígio Veloso, 882 - Universitário, Campina Grande - PB, 58428-830">
+            <MapPin />
+            </ContactCard>            
+            <ContactCard content="elas@computacao.ufcg.edu.br">
+              <Mail/>
+            </ContactCard>
           </div>
           <div className="social-networks">
             <a target="_blank" href={socialNetwork.instagramElas}>
@@ -117,12 +130,12 @@ export default function Home() {
               <img src={twitter} alt="Twitter"/>
             </a>
           </div>
-          <div className="copyright">
-            <img src={logoHorizontal} alt="Logo Elas@Computação Horizontal"/>
-            <span>© 2020 Elas@Computação</span>
-          </div>
         </div>
         <div className="background">
+        </div>
+        <div className="copyright">
+          <img src={logoHorizontal} alt="Logo Elas@Computação Horizontal"/>
+          <span>© 2020 Elas@Computação</span>
         </div>
       </footer>
     </div>

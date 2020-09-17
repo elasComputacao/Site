@@ -1,5 +1,6 @@
 import React from 'react';
-import {OverlayTrigger, Tooltip} from 'react-bootstrap';
+
+import Tooltip from '../Tooltip';
 
 import './styles.css'
 
@@ -13,7 +14,9 @@ const IconStatus:React.FC<Properties> = ({icon, status, statusText}) => {
   return (
     <div id="iconstatus-component">
       <img className="icon" src={icon} alt="Icon"/>     
-      <img src={status} className="status" alt="Status"/>
+      <Tooltip text={statusText}>
+        <img src={status}  alt="Status" className="status"/>
+      </Tooltip>
     </div>
   );
 }

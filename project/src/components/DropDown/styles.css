@@ -1,0 +1,34 @@
+#dropdown-component {
+}
+
+#dropdown-component .button,
+#dropdown-component .menu-item  {
+    background: none;
+    border: none;
+    font-family: var(--title-font);
+    color: var(--color-2);
+    text-decoration: none;
+    color: var(--color-2);
+    font-weight: 500;
+    font-size: 12px;
+    padding: 0px;
+}
+
+#dropdown-component .menu-item  {
+    border: 1px var(--color-2) solid;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    cursor: pointer;
+}
+
+@media (min-width: 1080px) {
+    #dropdown-component .button {
+        font-size: 20px;
+    }
+
+    #dropdown-component .menu-item {
+        font-size: 20px;
+    }
+}

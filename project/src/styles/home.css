@@ -19,6 +19,7 @@ html {
 #home-page {
     justify-self: center;
     overflow: hidden;
+    margin: -8px;
 }
 
 #home-page header {
@@ -45,6 +46,7 @@ html {
 
 #home-page header ul li {
     list-style: none;
+    cursor: pointer;
 }
 
 #home-page header ul li a {
@@ -70,14 +72,13 @@ html {
     margin-top: -10px;
 }
 
-#home-page main p.tiptool-paragraph {
-    font-family: var(--title-font);
-    font-weight: 300;
-    line-height: 40px;
-    color: var(--color-6);
+#home-page main .section-projects .carousel {
+    color: #4a5876;
 }
 
 #home-page footer {
+    display: flex;
+    flex-direction: column;
     background-color: var(--color-7);
     background-image: url("../assets/images/background-opacity.png");
     background-repeat: repeat-y;
@@ -120,19 +121,43 @@ html {
     max-height: 70px;
 }
 
-#home-page footer div.footer-content div.copyright {
+#home-page footer div.copyright {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 5px;
 }
 
-#home-page footer div.footer-content div.copyright span {
+#home-page footer div.copyright span {
     font-family: var(--text-font);
     color: var(--color-6);
 }
 
-#home-page footer div.footer-content div.copyright img {
+#home-page footer div.copyright img {
     width: 72px;
     margin-top: -6px;
+}
+
+@media (min-width: 1080px) {
+    #home-page header {
+        max-height: 86px;
+    }
+    
+    #home-page header img {
+        max-width: 80px;
+    }
+
+    #home-page header ul li a {
+        font-size: 20px;
+    }
+
+    #home-page footer div.footer-content {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #home-page footer div.copyright {
+        max-width: 300px;
+        align-self: center;
+    }
 }

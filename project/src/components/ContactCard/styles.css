@@ -10,6 +10,7 @@
 }
 
 #contactcard-component p {
+    display: flex;
     padding: 8px;
     font-family: var(--text-font);
     font-size: 12px;
@@ -18,8 +19,29 @@
 }
 
 #contactcard-component div.icon {
+    justify-content: center;
+    align-items: center;
+    display: flex;
     height: 110px;
     width: 110px;
     background-color: var(--color-8);
     color: var(--color-9);
+}
+
+@media (min-width: 1080px) {
+    #contactcard-component {
+        height: 96px;
+        width: 510px;
+    }
+
+    #contactcard-component div.icon {
+        height: 96px;
+        width: 96px;
+    }
+
+    #contactcard-component p {
+        align-self: center;
+        width: 396px;
+        font-size: 16px;
+    }
 }

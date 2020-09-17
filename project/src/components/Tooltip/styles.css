@@ -1,0 +1,12 @@
+#text {
+    background-color: #75648dc0;
+    border-radius: 8px;
+    padding: 8px;
+    max-width: 325px;
+    max-height: 218px;
+}
+
+#text p {
+    font-family: var(--text-font);
+    color: var(--color-9);
+}

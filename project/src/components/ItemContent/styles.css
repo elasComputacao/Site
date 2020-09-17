@@ -1,0 +1,12 @@
+#itemcontent-component {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    background-color: var(--color-9);
+}
+
+#itemcontent-component img {
+    width: 20px;
+    height: 20px;
+}

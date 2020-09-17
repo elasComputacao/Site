@@ -8,6 +8,7 @@
 
 #section-component .children {
     align-items: center;
+    justify-content: center;
 }
 
 #section-component h1 {
@@ -15,4 +16,12 @@
     font-size: 32px;
     font-weight: 300;
     color: var(--color-2);
+}
+
+@media (min-width: 1080px) {
+    #section-component .children {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }   
 }
