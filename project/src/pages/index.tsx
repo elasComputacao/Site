@@ -1,10 +1,8 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import {MapPin, Mail} from 'react-feather';
 
 /**
  * O que falta?
- * - Componente do Dropdown (envolve lógica)
- * - Componente do Tooltip (envolve lógica)
  * - Componente do Carrossel (envolve lógica)
  * - Toda a parte do Painel (envolve lógica)
  * - Detalhes do estilo (sombras, alinhamentos, detaques...)
@@ -43,19 +41,21 @@ export default function Home() {
   return (
     <div id="home-page">
       <header>
-        <img src={logoHorizontal} alt="Logo Elas@Computação Horizontal"/>
+        <a href="#">
+          <img src={logoHorizontal} alt="Logo Elas@Computação Horizontal"/>
+        </a>
         <ul>
           <li>
-            <a>Sobre</a>
+            <a href="#Sobre">Sobre</a>
           </li>
           <li>
-            <a>Painel</a>
+            <a href="#Painel">Painel</a>
           </li>
           <li>
-            <a>Projetos</a>
+            <a href="#Projetos">Projetos</a>
           </li>
           <li>
-            <a>Contato</a>
+            <a href="#Contato">Contato</a>
           </li>
           <li>
             <Dropdown 
@@ -86,14 +86,17 @@ export default function Home() {
             statusText="
             O Elas@Computação apoia a campanha do Setembro Amarelo em prevenção
             ao suicídio.
-            Se você estiver passando por problemas relacionados à sua saúde mental 
+            Se você estiver passando por problemas relacionados a sua saúde mental 
             ou conhece alguém que está passando por alguma dificuldade, procure ajuda
             profissional.
             "
           />
         </Section>
         <Section title="Painel" className="section-painel">
-          <PictureLink text="MariaEduardaDeAzevedo" pic={`${socialNetwork.github}/MariaEduardaDeAzevedo.png`} href={`${socialNetwork.github}/MariaEduardaDeAzevedo`} />
+          <PictureLink 
+          text="MariaEduardaDeAzevedo" 
+          pic={`${socialNetwork.github}/MariaEduardaDeAzevedo.png`} 
+          href={`${socialNetwork.github}/MariaEduardaDeAzevedo`} />
         </Section>
         <Section title="Projetos" className="section-projects">
           <ProjectCard 
@@ -105,10 +108,28 @@ export default function Home() {
           abraçar e estimular mulheres a participarem na comunidade."
           href="https://github.com/elasComputacao/CafeComElas"
           />
+          <ProjectCard 
+          imageURL={cafeComElas} 
+          title="Café com Elas" 
+          description="Conversas e palestras das mulheres de computação. 
+          Com o objetivo de trazer conversas sobre temas interessantes 
+          e importantes acerca de nossa área e papel, com o intuito de 
+          abraçar e estimular mulheres a participarem na comunidade."
+          href="https://github.com/elasComputacao/CafeComElas"
+          />
+          <ProjectCard 
+          imageURL={cafeComElas} 
+          title="Café com Elas" 
+          description="Conversas e palestras de mulheres de computação. 
+          Com o objetivo de trazer conversas sobre temas interessantes 
+          e importantes acerca de nossa área e papel e 
+          estimular mulheres a participarem na comunidade."
+          href="https://github.com/elasComputacao/CafeComElas"
+          />
         </Section>
       </main>
       <footer>
-        <h1>Contato</h1>
+        <h1 id="Contato">Contato</h1>
         <div className="footer-content">
           <div className="contact">
             <ContactCard content="Universidade Federal de Campina Grande - UFCG,
@@ -134,7 +155,9 @@ export default function Home() {
         <div className="background">
         </div>
         <div className="copyright">
-          <img src={logoHorizontal} alt="Logo Elas@Computação Horizontal"/>
+          <a href="#">
+            <img src={logoHorizontal} alt="Logo Elas@Computação Horizontal"/>
+          </a>
           <span>© 2020 Elas@Computação</span>
         </div>
       </footer>

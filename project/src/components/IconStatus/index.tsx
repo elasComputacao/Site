@@ -14,7 +14,7 @@ const IconStatus:React.FC<Properties> = ({icon, status, statusText}) => {
   return (
     <div id="iconstatus-component">
       <img className="icon" src={icon} alt="Icon"/>     
-      <Tooltip text={statusText}>
+      <Tooltip position="bottom" slim={false} text={statusText}>
         <img src={status}  alt="Status" className="status"/>
       </Tooltip>
     </div>

@@ -1,4 +1,5 @@
 import React from "react";
+
 import {
   useTooltipState,
   Tooltip as ReakitTooltip,
@@ -7,14 +8,14 @@ import {
 
 import './styles.css'
 
-const Tooltip = ({ children, text, ...props }) => {
-  const tooltip = useTooltipState({placement: "bottom"});
+const Tooltip = ({ children, text, slim, position, ...props }) => {
+  const tooltip = useTooltipState({placement: position});
   return (
     <>
       <TooltipReference {...tooltip} ref={children.ref} {...children.props}>
         {(referenceProps) => React.cloneElement(children, referenceProps)}
       </TooltipReference>
-      <ReakitTooltip {...tooltip} {...props} id="text">
+      <ReakitTooltip {...tooltip} {...props} id={slim ? "text-slim" : "text"}>
         <p>
             {text}
         </p>

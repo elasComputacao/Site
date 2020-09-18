@@ -7,6 +7,13 @@
     overflow: hidden;
     height: 110px;
     width: 310px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#contactcard-component:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--color-10) 5px 3px 7px;
 }
 
 #contactcard-component p {
@@ -31,7 +38,7 @@
 @media (min-width: 1080px) {
     #contactcard-component {
         height: 96px;
-        width: 510px;
+        width: 540px;
     }
 
     #contactcard-component div.icon {

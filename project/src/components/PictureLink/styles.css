@@ -2,3 +2,9 @@
     border-radius: 50%;
     max-height: 72px;
 }
+
+@media (min-width: 1080px) {
+    #picturelink-component img {
+        max-height: 120px;
+    }
+}

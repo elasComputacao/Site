@@ -9,7 +9,7 @@ interface Properties {
 const Section:React.FC<Properties> = ({title, children, className}) => {
   return (
     <div id="section-component" className={className}>
-        <h1>{title}</h1>
+        <h1 id={title}>{title}</h1>
         <div className="children">
             {children}
         </div>

@@ -1,4 +1,6 @@
 #dropdown-component {
+    cursor: pointer;
+    overflow: hidden;
 }
 
 #dropdown-component .button,
@@ -11,7 +13,8 @@
     color: var(--color-2);
     font-weight: 500;
     font-size: 12px;
-    padding: 0px;
+    cursor: pointer;
+    transition: 0.1s;
 }
 
 #dropdown-component .menu-item  {

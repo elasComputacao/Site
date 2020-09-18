@@ -31,7 +31,9 @@ const DropDown:React.FC<Properties> = ({title, items}) => {
   const menu = useMenuState({ animated: 250 });
   return (
       <div id="dropdown-component">
-          <MenuButton {...menu} className="button" >{title}</MenuButton>
+          <MenuButton {...menu} className="button" >
+            {title}
+          </MenuButton>
           <Menu
             {...menu}
             aria-label={title}

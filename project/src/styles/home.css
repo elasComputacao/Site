@@ -8,6 +8,7 @@
     --color-7: #fff6f3;
     --color-8: #A66F96;
     --color-9: #ffffff;
+    --color-10: #2b2b2b88;
     --title-font: 'Poppins', sans-serif;
     --text-font: 'Raleway', sans-serif;
 }
@@ -31,7 +32,7 @@ html {
     padding-left: 9px;
     padding-right: 9px;
     max-height: 44px;
-    box-shadow: 5px;
+    box-shadow: var(--color-10) 1px 2px 8px;
 }
 
 #home-page header img {
@@ -42,11 +43,13 @@ html {
     display: flex;
     gap: 7px;
     justify-content: space-between;
+    max-height: 24px;
 }
 
 #home-page header ul li {
     list-style: none;
     cursor: pointer;
+    max-height: 24px;
 }
 
 #home-page header ul li a {
@@ -54,6 +57,12 @@ html {
     color: var(--color-2);
     font-weight: 500;
     font-size: 12px;
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+#home-page header ul li:hover {
+    border-bottom: solid var(--color-2) 2px;
 }
 
 #home-page img.wellcome-image {
@@ -86,6 +95,7 @@ html {
     padding-left: 12px;
     padding-right: 12px;
     padding-top: 5px;
+    box-shadow: var(--color-10) 1px 2px 8px;
 }
 
 #home-page footer h1 {
@@ -117,7 +127,7 @@ html {
     padding: 32px;
 }
 
-#home-page footer div.footer-content div.social-networks img {
+#home-page footer div.footer-content div.social-networks a img {
     max-height: 70px;
 }
 
@@ -147,17 +157,52 @@ html {
         max-width: 80px;
     }
 
+    #home-page header ul {
+        max-height: 30px;
+        gap: 20px;
+    }
+
+    #home-page header ul li {
+        font-size: 20px;
+        max-height: 30px;
+    }
+
     #home-page header ul li a {
         font-size: 20px;
+    }
+
+    #home-page main p.screen-paragraph {
+        font-size: 22px;
+        line-height: 50px;
+    }
+
+    #home-page main .section-about .icon{
+       margin-top: -124px; 
+    }
+
+    #home-page footer h1 {
+        font-size: 56px;
     }
 
     #home-page footer div.footer-content {
         display: flex;
         flex-direction: row;
+        padding-left: 16px;
+        padding-right: 32px;
+    }
+
+    #home-page footer div.footer-content div.contact {
+        gap: 16px;
+    }
+
+    #home-page footer div.footer-content div.social-networks a img {
+        max-height: 100px;
     }
 
     #home-page footer div.copyright {
         max-width: 300px;
         align-self: center;
+        padding-bottom: 12px;
+        padding-top: 24px;
     }
 }

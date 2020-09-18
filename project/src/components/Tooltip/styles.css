@@ -6,7 +6,17 @@
     max-height: 218px;
 }
 
-#text p {
+#text-slim {
+    display: flex;
+    align-items: center;
+    background-color: #75648dc0;
+    border-radius: 8px;
+    padding: 2px;
+    height: 24px;
+}
+
+#text p,
+#text-slim p {
     font-family: var(--text-font);
     color: var(--color-9);
 }

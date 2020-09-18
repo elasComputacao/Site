@@ -13,8 +13,8 @@ const PictureLink:React.FC<Properties> = ({pic, href, text}) =>  {
 
   return (
     <div id="picturelink-component">
-        <Tooltip text={text}>
-            <a href={href}>
+        <Tooltip position="top" slim={true} text={text}>
+            <a href={href} target="_blank">
                 <img src={pic} alt={text}/>
             </a>
         </Tooltip>
