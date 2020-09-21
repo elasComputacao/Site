@@ -1,14 +1,18 @@
 #section-component {
     display: flex;
     flex-direction: column;
-    padding-left: 12px;
-    padding-right: 12px;
+    padding-left: 32px;
+    padding-right: 32px;
     margin-bottom: 40px;
+    overflow: hidden;
 }
 
 #section-component .children {
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    transition: 0.5s;
 }
 
 #section-component h1 {
@@ -18,14 +22,31 @@
     color: var(--color-2);
 }
 
-@media (min-width: 1080px) {
+#section-component button {
+    width: 100vw;
+    height: 50px;
+    background-color: var(--color-1);
+    border: none;
+    align-self: center;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+#section-component button:hover{
+    opacity: 90%;
+}
+
+@media (min-width: 1024px) {
     #section-component .children {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+        flex-direction: row;
     }
-    
+
     #section-component h1 {
         font-size: 64px;
+    }
+
+    #section-component div.button-case {
+        margin-top: 8px;
     }
 }

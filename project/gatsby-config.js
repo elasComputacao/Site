@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Elas@Computação UFCG`,
-    //siteUrl: `https://www.gatsbyjs.org`, adicionar depois!
+    siteUrl: `https://www.elascomputacao.org`, 
     description: `Site do Elas@Computação UFCG`,
     social: [
       {

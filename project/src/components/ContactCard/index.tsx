@@ -6,7 +6,6 @@ import './styles.css'
 interface Properties {
     icon?: string;
     content: string;
-    func: string;
 }
 const ContactCard:React.FC<Properties> = ({content, children}) => {
 

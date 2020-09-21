@@ -1,6 +1,21 @@
+#picturelink-component {   
+    cursor: pointer;
+}
+
+#picturelink-component a {
+    height: 72px;
+}
+
 #picturelink-component img {
     border-radius: 50%;
     max-height: 72px;
+    transition: 0.2s; 
+}
+
+#picturelink-component img:hover {
+    transform: scale(1.5);
+    box-shadow: var(--color-10) 5px 3px 7px;
+
 }
 
 @media (min-width: 1080px) {

@@ -81,8 +81,12 @@ html {
     margin-top: -10px;
 }
 
-#home-page main .section-projects .carousel {
-    color: #4a5876;
+#home-page main .section-painel .children {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    column-gap: 8px;
 }
 
 #home-page footer {
@@ -131,6 +135,11 @@ html {
     max-height: 70px;
 }
 
+#home-page footer div.footer-content div.social-networks a img:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--color-10) 5px 3px 7px;;
+}
+
 #home-page footer div.copyright {
     display: flex;
     align-items: center;
@@ -148,7 +157,17 @@ html {
     margin-top: -6px;
 }
 
-@media (min-width: 1080px) {
+@media (min-width: 750px) {
+    #home-page main .section-painel .children {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+    }
+}
+
+@media (min-width: 1024px) {
     #home-page header {
         max-height: 86px;
     }
@@ -180,6 +199,18 @@ html {
        margin-top: -124px; 
     }
 
+    #home-page main .section-painel .children {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    #home-page main .section-projects .children {
+        gap: 24px;
+    }
+
     #home-page footer h1 {
         font-size: 56px;
     }
@@ -196,7 +227,9 @@ html {
     }
 
     #home-page footer div.footer-content div.social-networks a img {
-        max-height: 100px;
+        max-height: 130px;
+        transition: 0.2s;
+        border-radius: 50%;
     }
 
     #home-page footer div.copyright {

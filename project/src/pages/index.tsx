@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import {MapPin, Mail} from 'react-feather';
+import {Octokit} from "@octokit/rest"
 
 /**
  * O que falta?
@@ -11,15 +12,13 @@ import {MapPin, Mail} from 'react-feather';
  * - Lógica do Toggle 
  * - Lógica do Header (fixo quando a página faz scroll)
  * - Movimentação da página por meio do header
- * - Adaptação do layout para desktop (mobile first)
- * - Adaptação da lógica para desktop (algumas listagens são diferentes)
  */
 
 import logoHorizontal from '../assets/logos/elas_horizontal.png';
 import logoVertical from '../assets/logos/elas_vertical.png';
-import instagram from '../assets/redes-sociais/instagram.png';
-import github from '../assets/redes-sociais/github.png';
-import twitter from '../assets/redes-sociais/twitter.png';
+import instagram from '../assets/redes-sociais/instagram.svg';
+import github from '../assets/redes-sociais/github.svg';
+import twitter from '../assets/redes-sociais/twitter.svg';
 import cabecalho from '../assets/images/cabecalho.png';
 import cafeComElas from '../assets/images/cafe-com-elas.png'
 
@@ -32,11 +31,28 @@ import ProjectCard from '../components/ProjectCard';
 import ContactCard from '../components/ContactCard';
 import IconStatus from '../components/IconStatus';
 import Dropdown from '../components/DropDown';
-
-import '../styles/home.css'
 import PictureLink from '../components/PictureLink';
 
+//import getUsers from '../connections/github';
+
+import '../styles/home.css'
+
 export default function Home() {
+
+  const [users, setUsers] = useState([]);
+
+  useEffect(() => {
+    var result:any = [];
+
+    const octokit = new Octokit();
+    
+    octokit.orgs.listMembers({
+      org: "elasComputacao",
+      type: "public",
+    }).then(({data}) => {
+        setUsers(data);
+    })
+  }, [])
 
   return (
     <div id="home-page">
@@ -46,16 +62,16 @@ export default function Home() {
         </a>
         <ul>
           <li>
-            <a href="#Sobre">Sobre</a>
+            <a href="/#Sobre">Sobre</a>
           </li>
           <li>
-            <a href="#Painel">Painel</a>
+            <a href="/#Painel">Painel</a>
           </li>
           <li>
-            <a href="#Projetos">Projetos</a>
+            <a href="/#Projetos">Projetos</a>
           </li>
           <li>
-            <a href="#Contato">Contato</a>
+            <a href="/#Contato">Contato</a>
           </li>
           <li>
             <Dropdown 
@@ -92,11 +108,19 @@ export default function Home() {
             "
           />
         </Section>
-        <Section title="Painel" className="section-painel">
-          <PictureLink 
-          text="MariaEduardaDeAzevedo" 
-          pic={`${socialNetwork.github}/MariaEduardaDeAzevedo.png`} 
-          href={`${socialNetwork.github}/MariaEduardaDeAzevedo`} />
+        <Section toggle title="Painel" className="section-painel">
+          {
+            users.map(user => {
+              return(
+                <PictureLink 
+                  href={`${socialNetwork.github}/${user.login}`}
+                  pic={user.avatar_url}
+                  text={user.login}
+                  key={user.id}
+                />
+              );
+            })
+          }
         </Section>
         <Section title="Projetos" className="section-projects">
           <ProjectCard 
