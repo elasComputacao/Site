@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Tooltip from '../Tooltip';
 
 import './styles.css'
@@ -10,6 +10,8 @@ interface Properties {
 };
 
 const PictureLink:React.FC<Properties> = ({pic, href, text}) =>  {
+
+  const [display, setDisplay] = useState(window.innerWidth);
 
   return (
     <div id="picturelink-component">

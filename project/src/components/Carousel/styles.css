@@ -1,0 +1,44 @@
+#carousel-component {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#carousel-component .carousel-content {
+    display: flex;
+    transition: 0.5s;
+}
+
+#carousel-component .pass-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 56px;
+    width: 40px;
+    background-color: transparent;
+    cursor: pointer;
+    color: var(--color-3);
+}
+
+@media (min-width: 1080px) {
+    #carousel-component {
+        gap: 12px;
+    }
+    
+    #carousel-component .carousel-content {
+        gap: 24px;
+    }
+
+    #carousel-component .pass-button {
+        height: 64px;
+        width: 56px;
+    }
+
+    #carousel-component .pass-button #left {
+        margin-right: 90vw;
+    }
+
+    #carousel-component .pass-button #right {
+        margin-right: 90vw;
+    }
+}

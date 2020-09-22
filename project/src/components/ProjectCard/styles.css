@@ -4,7 +4,7 @@
     border-radius: 4px;
     border: var(--color-3) 0.2px;
     border-style: dashed;
-    width: 290px;
+    width: 270px;
     height: 424px;
     overflow: hidden;
     margin-bottom: 12px;
@@ -41,6 +41,9 @@
     line-height: 25px;
     color: var(--color-6);
     margin-top: -28px;
+    width: 270px;
+    height: 148px;
+    overflow: hidden;
 }
 
 #projectcard-component div.content a {
@@ -67,6 +70,7 @@
 
     #projectcard-component div.content p {
         font-size: 16px;
+        width: 360px;
     }
 
     #projectcard-component div.content h3 {

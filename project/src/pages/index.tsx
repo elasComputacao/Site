@@ -1,18 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import {MapPin, Mail} from 'react-feather';
-import {Octokit} from "@octokit/rest"
-
-/**
- * O que falta?
- * - Componente do Carrossel (envolve lógica)
- * - Toda a parte do Painel (envolve lógica)
- * - Detalhes do estilo (sombras, alinhamentos, detaques...)
- * - Hover dos ícones e de outros componentes
- * - Conexão com API do GitHub (necessário para iniciar o Painel)
- * - Lógica do Toggle 
- * - Lógica do Header (fixo quando a página faz scroll)
- * - Movimentação da página por meio do header
- */
+import { Octokit } from "@octokit/rest"
 
 import logoHorizontal from '../assets/logos/elas_horizontal.png';
 import logoVertical from '../assets/logos/elas_vertical.png';
@@ -20,20 +8,18 @@ import instagram from '../assets/redes-sociais/instagram.svg';
 import github from '../assets/redes-sociais/github.svg';
 import twitter from '../assets/redes-sociais/twitter.svg';
 import cabecalho from '../assets/images/cabecalho.png';
-import cafeComElas from '../assets/images/cafe-com-elas.png'
 
 import icons from '../enums/icons'
 import socialNetwork from '../enums/social-network'
 import langs from '../enums/langs'
+import projects from '../enums/projects';
 
 import Section from '../components/Section';
-import ProjectCard from '../components/ProjectCard';
 import ContactCard from '../components/ContactCard';
 import IconStatus from '../components/IconStatus';
 import Dropdown from '../components/DropDown';
 import PictureLink from '../components/PictureLink';
-
-//import getUsers from '../connections/github';
+import Carousel from '../components/Carousel';
 
 import '../styles/home.css'
 
@@ -122,34 +108,8 @@ export default function Home() {
             })
           }
         </Section>
-        <Section title="Projetos" className="section-projects">
-          <ProjectCard 
-          imageURL={cafeComElas} 
-          title="Café com Elas" 
-          description="Conversas e palestras das mulheres de computação. 
-          Com o objetivo de trazer conversas sobre temas interessantes 
-          e importantes acerca de nossa área e papel, com o intuito de 
-          abraçar e estimular mulheres a participarem na comunidade."
-          href="https://github.com/elasComputacao/CafeComElas"
-          />
-          <ProjectCard 
-          imageURL={cafeComElas} 
-          title="Café com Elas" 
-          description="Conversas e palestras das mulheres de computação. 
-          Com o objetivo de trazer conversas sobre temas interessantes 
-          e importantes acerca de nossa área e papel, com o intuito de 
-          abraçar e estimular mulheres a participarem na comunidade."
-          href="https://github.com/elasComputacao/CafeComElas"
-          />
-          <ProjectCard 
-          imageURL={cafeComElas} 
-          title="Café com Elas" 
-          description="Conversas e palestras de mulheres de computação. 
-          Com o objetivo de trazer conversas sobre temas interessantes 
-          e importantes acerca de nossa área e papel e 
-          estimular mulheres a participarem na comunidade."
-          href="https://github.com/elasComputacao/CafeComElas"
-          />
+        <Section title="Projetos" className="section-projects">  
+          <Carousel array={projects} />
         </Section>
       </main>
       <footer>

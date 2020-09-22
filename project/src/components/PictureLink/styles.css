@@ -8,6 +8,7 @@
 
 #picturelink-component img {
     border-radius: 50%;
+    border: var(--color-2) solid;
     max-height: 72px;
     transition: 0.2s; 
 }
@@ -15,11 +16,10 @@
 #picturelink-component img:hover {
     transform: scale(1.5);
     box-shadow: var(--color-10) 5px 3px 7px;
-
 }
 
 @media (min-width: 1080px) {
     #picturelink-component img {
-        max-height: 120px;
+        max-height: 124px;
     }
 }

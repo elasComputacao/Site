@@ -1,13 +1,13 @@
-import React, { useEffect, useState } from 'react';
-import { Copy } from 'react-feather';
+import React from 'react';
 
 import './styles.css'
 
 interface Properties {
     icon?: string;
     content: string;
+    copy?: boolean;
 }
-const ContactCard:React.FC<Properties> = ({content, children}) => {
+const ContactCard:React.FC<Properties> = ({content, copy, children}) => {
 
   return (
     <div id="contactcard-component">

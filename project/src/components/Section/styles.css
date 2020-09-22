@@ -28,7 +28,8 @@
     background-color: var(--color-1);
     border: none;
     align-self: center;
-    margin-top: 10px;
+    margin-top: 23px;
+    margin-bottom: -24px;
     cursor: pointer;
     transition: opacity 0.2s;
 }
@@ -46,7 +47,7 @@
         font-size: 64px;
     }
 
-    #section-component div.button-case {
-        margin-top: 8px;
+    #section-component button {
+        margin-bottom: -48px;
     }
 }
