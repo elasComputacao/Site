@@ -25,6 +25,8 @@ html {
 
 #home-page header {
     display: flex;
+    cursor: pointer;
+    width: 100vw;
     justify-content: space-between;
     align-items: center;
     font-family: var(--title-font);
@@ -32,6 +34,7 @@ html {
     padding-left: 9px;
     padding-right: 9px;
     max-height: 44px;
+    transition: 0.5s;
     box-shadow: var(--color-10) 1px 2px 8px;
 }
 
@@ -44,6 +47,7 @@ html {
     gap: 7px;
     justify-content: space-between;
     max-height: 24px;
+    padding-right: 2vw;
 }
 
 #home-page header ul li {
@@ -85,6 +89,7 @@ html {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     align-items: center;
+    align-self: center;
     justify-content: center;
     column-gap: 8px;
 }

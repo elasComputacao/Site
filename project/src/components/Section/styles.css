@@ -13,6 +13,7 @@
     align-items: center;
     justify-content: center;
     transition: 0.5s;
+    overflow: hidden;
 }
 
 #section-component h1 {
@@ -29,7 +30,6 @@
     border: none;
     align-self: center;
     margin-top: 23px;
-    margin-bottom: -24px;
     cursor: pointer;
     transition: opacity 0.2s;
 }
@@ -45,9 +45,5 @@
 
     #section-component h1 {
         font-size: 64px;
-    }
-
-    #section-component button {
-        margin-bottom: -48px;
     }
 }

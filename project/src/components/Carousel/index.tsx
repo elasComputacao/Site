@@ -68,6 +68,7 @@ const Carousel:React.FC<Properties> = ({array}) => {
               title={array[element].title} 
               description={array[element].description}
               href={array[element].href}
+              spotlight={show.indexOf(element) == 1 ? true : false}
             />
             );
           }

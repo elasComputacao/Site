@@ -27,6 +27,25 @@ export default function Home() {
 
   const [users, setUsers] = useState([]);
 
+  function mouse() {
+    const header = window.document.getElementById("header")
+    const main = window.document.getElementById("main")
+
+    const scroll = window.scrollY;
+
+    window.addEventListener('mousemove', (event) => {
+      var pos = event.clientY;
+      if (scroll > 380 && ((pos >= 0 && pos < 44 && window.innerWidth < 1080) || (pos >= 0 && pos < 64 && window.innerWidth > 1080))) {
+        console.log(header.style.position);
+        header.style.position = "fixed";
+        main.style.marginTop = window.innerWidth < 1080 ? "44px" : "62px";
+      } else {
+        header.style.position = "relative";
+        main.style.marginTop = "0px";    
+      }
+    })
+  }
+
   useEffect(() => {
     var result:any = [];
 
@@ -41,8 +60,8 @@ export default function Home() {
   }, [])
 
   return (
-    <div id="home-page">
-      <header>
+    <div id="home-page" onMouseOver={mouse}>
+      <header id="header">
         <a href="#">
           <img src={logoHorizontal} alt="Logo Elas@Computação Horizontal"/>
         </a>
@@ -67,8 +86,8 @@ export default function Home() {
           </li>
         </ul>
       </header>
-      <main>
-        <img className="wellcome-image" src={cabecalho} alt="Elas@Computação UFCG"/>
+      <img className="wellcome-image" src={cabecalho} alt="Elas@Computação UFCG"/>
+      <main id="main">
         <Section title="Sobre" className="section-about">
           <p className="screen-paragraph">
           O Elas@computação surge com o objetivo de reunir mulheres 

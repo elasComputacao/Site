@@ -22,9 +22,9 @@ const Section:React.FC<Properties> = ({title, children, className, toggle}) => {
     const section = window.document.getElementById(className);
     if (hidden) {
       if (window.innerWidth > 1080) {
-        section.style.height = "380px";
+        section.style.height = "400px";
       } else {
-        section.style.height = "138px";
+        section.style.height = "164px";
       }
     } else {
       section.style.height = "100vh";
