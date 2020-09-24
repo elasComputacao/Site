@@ -14,7 +14,7 @@
 }
 
 #picturelink-component img:hover {
-    transform: scale(1.5);
+    transform: scale(1.1);
     box-shadow: var(--color-10) 5px 3px 7px;
 }
 

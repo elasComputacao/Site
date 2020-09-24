@@ -10,10 +10,9 @@
 #section-component .children {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
     transition: 0.5s;
     overflow: hidden;
+    padding-top: 12px;
 }
 
 #section-component h1 {
@@ -29,7 +28,6 @@
     background-color: var(--color-1);
     border: none;
     align-self: center;
-    margin-top: 23px;
     cursor: pointer;
     transition: opacity 0.2s;
 }

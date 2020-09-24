@@ -1,10 +1,16 @@
 #dropdown-component {
     cursor: pointer;
     overflow: hidden;
+    margin-top: 0.4vh;
+    margin-left: -2vw;
 }
 
 #dropdown-component .button,
 #dropdown-component .menu-item  {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
     background: none;
     border: none;
     font-family: var(--title-font);
@@ -17,6 +23,19 @@
     transition: 0.1s;
 }
 
+#dropdown-component .button .selected {
+    margin-top: 5px;
+    height: 16px;
+    width: 16px;
+}
+
+#dropdown-component .button .icon {
+    margin-top: 5px;
+    margin-left: -12px;
+    height: 16px;
+    width: 16px;
+}
+
 #dropdown-component .menu-item  {
     border: 1px var(--color-2) solid;
     padding-left: 4px;
@@ -24,11 +43,35 @@
     padding-top: 2px;
     padding-bottom: 2px;
     cursor: pointer;
+    transition: opacity 0.5s;
+}
+
+#dropdown-component .menu-item:hover {
+    opacity: 60%;
 }
 
 @media (min-width: 1080px) {
+
+    #dropdown-component {
+        margin-top: 0vh;
+        margin-left: -0.5vw;
+    }
+
     #dropdown-component .button {
         font-size: 20px;
+    }
+
+    #dropdown-component .button .selected {
+        margin-top: 5px;
+        height: 20px;
+        width: 20px;
+    }
+    
+    #dropdown-component .button .icon {
+        margin-top: 5px;
+        margin-left: -32px;
+        height: 16px;
+        width: 16px;
     }
 
     #dropdown-component .menu-item {

@@ -37,18 +37,18 @@
 
 @media (min-width: 1080px) {
     #contactcard-component {
-        height: 96px;
+        height: 112px;
         width: 540px;
     }
 
     #contactcard-component div.icon {
-        height: 96px;
-        width: 96px;
+        height: 112px;
+        width: 112px;
     }
 
     #contactcard-component p {
         align-self: center;
         width: 396px;
-        font-size: 16px;
+        font-size: 18px;
     }
 }

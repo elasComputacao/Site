@@ -1,13 +1,15 @@
 #projectcard-component {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     border-radius: 4px;
     width: 270px;
     height: 424px;
     overflow: hidden;
     border: var(--color-3) 0.2px;
     border-style: dashed;
-    margin-bottom: 12px;
+    margin-bottom: 16px;
     transition: 0.2s;
 }
 
@@ -26,22 +28,34 @@
 }
 
 .spotlight:hover {
-    transform: scale(105%) translateY(-10px);
+    transform: translateY(-5px);
     box-shadow: var(--color-10) 5px 3px 7px;
     border-style: solid;
 }
 
-#projectcard-component img {
-    max-width: 460px;
-    max-height: 180px;
+#projectcard-component .img-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    height: 360px;
+    width: 360px;
     background-color: var(--color-7);
 }
 
+#projectcard-component img {
+    max-width: 240px;
+    max-height: 240px;
+}
+
 #projectcard-component div.content {
-    padding: 8px;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
 }
 
 #projectcard-component div.content h3 {
+    text-align: center;
     font-family: var(--title-font);
     font-size: 24px;
     font-weight: 300;
@@ -50,24 +64,35 @@
 }
 
 #projectcard-component div.content p {
+    display: flex;
     font-family: var(--text-font);
+    text-align: justify;
     font-size: 12px;
-    line-height: 25px;
+    line-height: 30px;
     color: var(--color-6);
     margin-top: -28px;
-    width: 270px;
+    max-width: 350px;
     height: 148px;
     overflow: hidden;
 }
 
 #projectcard-component div.content a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
     text-decoration: none;
     font-family: var(--title-font);
     color: var(--color-9);
     background-color: var(--color-3);
-    padding: 5px;
+    padding: 10px;
     text-align: center;
-    border-radius: 8px;
+    border-radius: 4px;
+    transition: opacity 0.5s;
+}
+
+#projectcard-component div.content a:hover {
+    opacity: 80%;
 }
 
 @media (min-width: 1080px) {
@@ -77,12 +102,17 @@
         margin-bottom: 12px;
     }
 
+    #projectcard-component .img-content {
+        width: 500px;
+    }
+
     #projectcard-component img {
         max-width: 400px;
         max-height: 240px;
     }
 
     #projectcard-component div.content p {
+        line-height: 36px;
         font-size: 16px;
         width: 360px;
     }
@@ -90,5 +120,9 @@
     #projectcard-component div.content h3 {
         font-size: 32px;
     }
-    
+
+    #projectcard-component div.content a {
+        max-width: 24vw;
+        font-size: 18px;
+    }
 }

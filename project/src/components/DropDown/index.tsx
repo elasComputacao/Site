@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {css} from 'emotion';
 import { useMenuState, Menu, MenuItem, MenuButton } from "reakit/Menu";
+import ItemContent from '../ItemContent';
+import { ChevronDown, ChevronUp } from 'react-feather';
 
 import './styles.css'
-import ItemContent from '../ItemContent';
+import icons from '../../enums/icons';
 
 const styles = css`
   display: flex;
@@ -21,18 +23,25 @@ const styles = css`
 
 interface Properties {
   title: string;
+  defaultImg: string;
   items: {
     src: string;
     subtitle: string;
   }[];
 };
 
-const DropDown:React.FC<Properties> = ({title, items}) => {
+const DropDown:React.FC<Properties> = ({title, defaultImg, items}) => {
   const menu = useMenuState({ animated: 250 });
+
+  const [click, setClick] = useState(false)
+  const [select, setSelect] = useState(defaultImg);
+
   return (
       <div id="dropdown-component">
-          <MenuButton {...menu} className="button" >
-            {title}
+          <MenuButton {...menu} className="button" onClick={() => setClick(!click)}>
+            <span>{title}</span>
+            <img src={select} alt="Lang" className="selected"/>
+            {click ? <ChevronUp className="icon"/> : <ChevronDown className="icon"/>}
           </MenuButton>
           <Menu
             {...menu}
@@ -42,7 +51,7 @@ const DropDown:React.FC<Properties> = ({title, items}) => {
             <div className={styles}>
               {items.map((item) => {
                 return(
-                <MenuItem {...menu} className="menu-item">
+                <MenuItem {...menu} className="menu-item" onClick={() => setSelect(item.src)}>
                   <ItemContent
                     title={item.subtitle}
                     src={item.src}

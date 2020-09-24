@@ -31,23 +31,23 @@ html {
     align-items: center;
     font-family: var(--title-font);
     background-color: var(--color-7);
-    padding-left: 9px;
-    padding-right: 9px;
     max-height: 44px;
     transition: 0.5s;
     box-shadow: var(--color-10) 1px 2px 8px;
 }
 
 #home-page header img {
-    max-width: 50px;
+    max-width: 40px;
+    margin-right: 3vw;
+    margin-top: 4px;
 }
 
 #home-page header ul {
     display: flex;
     gap: 7px;
     justify-content: space-between;
-    max-height: 24px;
-    padding-right: 2vw;
+    margin-left: -8vw;
+    width: 40vw;
 }
 
 #home-page header ul li {
@@ -91,7 +91,14 @@ html {
     align-items: center;
     align-self: center;
     justify-content: center;
+    max-width: 100vw;
     column-gap: 8px;
+    padding-left: 90px;
+    padding-right: 100px;
+}
+
+#home-page main .section-projects .children {
+    align-self: center;
 }
 
 #home-page footer {
@@ -137,7 +144,7 @@ html {
 }
 
 #home-page footer div.footer-content div.social-networks a img {
-    max-height: 70px;
+    max-height: 64px;
 }
 
 #home-page footer div.footer-content div.social-networks a img:hover {
@@ -165,29 +172,35 @@ html {
 @media (min-width: 760px) {
     #home-page main .section-painel .children {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
         align-items: center;
         justify-content: center;
+        align-self: center;
     }
 }
 
 @media (min-width: 1024px) {
     #home-page header {
-        max-height: 86px;
+        max-height: 200px;
     }
     
     #home-page header img {
         max-width: 80px;
+        padding-right: 2vw;
+        margin-top: 4px;
+        margin-right: 0.3vw;
     }
 
     #home-page header ul {
-        max-height: 30px;
         gap: 20px;
+        max-height: 24px;
+        width: 40vw;
+        margin-left: -2vw;
     }
 
     #home-page header ul li {
         font-size: 20px;
-        max-height: 30px;
+        padding-bottom: 32px;
     }
 
     #home-page header ul li a {
@@ -205,9 +218,12 @@ html {
 
     #home-page main .section-painel .children {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
         align-items: center;
         justify-content: center;
+        margin-left: 15px;
+        column-gap: 20px;
+        row-gap: 5px;
     }
 
     #home-page main .section-projects .children {
@@ -236,9 +252,10 @@ html {
     }
 
     #home-page footer div.copyright {
-        max-width: 300px;
+        max-width: 400px;
         align-self: center;
         padding-bottom: 12px;
         padding-top: 24px;
+        font-size: 20px;
     }
 }

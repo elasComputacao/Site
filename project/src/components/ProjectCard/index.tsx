@@ -12,13 +12,17 @@ interface Properties {
 const ProjectCard:React.FC<Properties> = ({title, description, imageURL, href, spotlight}) => {
   return (
     <div id="projectcard-component" className={spotlight ? "spotlight" : "normal"}>
-      <img src={imageURL}/>
+      <div className="img-content">
+        <img src={imageURL}/>
+      </div>
       <div className="content">
         <h3>{title}</h3>
         <p>
           {description}
         </p>
-        <a target="_blank" href={href}>Conferir detalhes do projeto</a>
+        <a target="_blank" href={href}>
+          <span>Conferir detalhes do projeto</span>
+        </a>
       </div>
     </div>
   );

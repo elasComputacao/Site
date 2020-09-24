@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import {MapPin, Mail} from 'react-feather';
-import { Octokit } from "@octokit/rest"
+import { Octokit } from "@octokit/rest";
 
 import logoHorizontal from '../assets/logos/elas_horizontal.png';
 import logoVertical from '../assets/logos/elas_vertical.png';
@@ -35,10 +35,10 @@ export default function Home() {
 
     window.addEventListener('mousemove', (event) => {
       var pos = event.clientY;
+      console.log(pos)
       if (scroll > 380 && ((pos >= 0 && pos < 44 && window.innerWidth < 1080) || (pos >= 0 && pos < 64 && window.innerWidth > 1080))) {
-        console.log(header.style.position);
         header.style.position = "fixed";
-        main.style.marginTop = window.innerWidth < 1080 ? "44px" : "62px";
+        main.style.marginTop = window.innerWidth < 1080 ? "44px" : "64px";
       } else {
         header.style.position = "relative";
         main.style.marginTop = "0px";    
@@ -62,9 +62,6 @@ export default function Home() {
   return (
     <div id="home-page" onMouseOver={mouse}>
       <header id="header">
-        <a href="#">
-          <img src={logoHorizontal} alt="Logo Elas@Computação Horizontal"/>
-        </a>
         <ul>
           <li>
             <a href="/#Sobre">Sobre</a>
@@ -80,11 +77,15 @@ export default function Home() {
           </li>
           <li>
             <Dropdown 
-            title="Idiomas"
+            title="Idioma"
+            defaultImg={icons.brasilFlag}
             items={langs}
             />
           </li>
         </ul>
+        <a href="#">
+          <img src={logoHorizontal} alt="Logo Elas@Computação Horizontal"/>
+        </a>
       </header>
       <img className="wellcome-image" src={cabecalho} alt="Elas@Computação UFCG"/>
       <main id="main">
