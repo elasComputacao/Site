@@ -11,6 +11,7 @@ interface Properties {
 const Section:React.FC<Properties> = ({title, children, className, toggle}) => {
   
   const [hidden, setHidden] = useState(true);
+  const [text, setText] = useState("");
 
   useEffect(() => {
     if (toggle) {
@@ -22,14 +23,17 @@ const Section:React.FC<Properties> = ({title, children, className, toggle}) => {
     const section = window.document.getElementById(className);
     if (hidden) {
       if (window.innerWidth > 1080) {
-        section.style.maxHeight = "420px";
+        section.style.maxHeight = "416px";
       } else {
-        section.style.maxHeight = "248px";
+        section.style.maxHeight = "246px";
       }
     } else {
-      section.style.maxHeight = "100vh";
+      section.style.maxHeight = "600vh";
     }
     setHidden(!hidden);
+    if (hidden) {
+      window.location.href = "/#Painel";
+    }
   }
 
   return (
@@ -39,9 +43,16 @@ const Section:React.FC<Properties> = ({title, children, className, toggle}) => {
               {children}
           </div>
           {toggle ? 
-          <button onClick={handleToggle}>
-            {hidden ? <ChevronsUp /> : <ChevronsDown />}
-          </button> : <></>
+            <button className="toggle" 
+            onClick={handleToggle}
+            onMouseOver={() => {hidden ? setText("Mostrar menos") : setText("Mostrar mais")}}
+            onMouseOut={() => setText("")}
+            >
+              {hidden ? <ChevronsUp className="icon"/> : <ChevronsDown className="icon"/>}
+            </button> : <></>
+          }
+          {toggle ? 
+            <span className="status">{text}</span> : <></>
           }
     </div>
   );

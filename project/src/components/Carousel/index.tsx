@@ -17,8 +17,11 @@ interface Properties {
 const Carousel:React.FC<Properties> = ({array}) => {
   
   const [show, setShow] = useState([]);
+  const [display, setDisplay] = useState(0);
   
   useEffect(() => {
+
+    setDisplay(window.innerWidth);
 
     if (window.innerWidth > 1080) {
       setShow([0, 1, 2])
@@ -56,7 +59,7 @@ const Carousel:React.FC<Properties> = ({array}) => {
   return (
     <div id="carousel-component">
       <button className="pass-button" id="left" onClick={() => pass(false)}>
-        <ChevronsLeft size={window.innerWidth > 1080 ? 64 : 24}/>
+        <ChevronsLeft size={display > 1080 ? 64 : 24}/>
       </button>
       <div className="carousel-content">
         {show.map(element => {
@@ -75,7 +78,7 @@ const Carousel:React.FC<Properties> = ({array}) => {
         })}
       </div>
       <button className="pass-button" id="right" onClick={() => pass(true)}>
-        <ChevronsRight size={window.innerWidth > 1080 ? 64 : 24}/>
+        <ChevronsRight size={display > 1080 ? 64 : 24}/>
       </button>
     </div>
   );

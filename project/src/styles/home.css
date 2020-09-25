@@ -24,6 +24,7 @@ html {
 }
 
 #home-page header {
+    z-index: 1;
     display: flex;
     cursor: pointer;
     width: 100vw;

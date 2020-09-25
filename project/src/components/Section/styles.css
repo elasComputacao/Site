@@ -32,8 +32,39 @@
     transition: opacity 0.2s;
 }
 
-#section-component button:hover{
+#section-component button.toggle:hover{
     opacity: 90%;
+    animation: bottom-top 0.8s infinite;
+}
+
+#section-component button.toggle .icon {
+    color: var(--color-6);
+}
+
+#section-component span.status {
+    display: flex;
+    height: 15px;
+    padding: 10px;
+    align-self: center;
+    text-align: center;
+    font-family: var(--text-font);
+    color: var(--color-10);
+    font-size: 12px;
+    transition: 0.5s;
+}
+
+@keyframes bottom-top {
+    0% {
+        padding: 0;
+    } 25% {
+        padding-top: 15px;
+    } 50% {
+        padding-top: 0;
+    } 75% {
+        padding-bottom: 0px;
+    } 100% {
+        padding-bottom: 0;
+    }
 }
 
 @media (min-width: 1024px) {

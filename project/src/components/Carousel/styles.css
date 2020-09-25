@@ -20,6 +20,41 @@
     color: var(--color-3);
 }
 
+#carousel-component button#right:hover {
+    animation: 0.7s right infinite;
+}
+
+#carousel-component button#left:hover {
+    animation: 0.7s left infinite;
+}
+
+@keyframes right {
+    0% {
+        padding-right: 6px;
+
+    } 25% {
+        padding-right: 9px;
+    } 50% {
+        padding-right: 6px;
+    } 100% {
+        padding-right: 0px;
+    } 
+}
+
+@keyframes left {
+    0% {
+        padding-left: 6px;
+
+    } 25% {
+        padding-left: 9px;
+    } 50% {
+        padding-left: 6px;
+    } 100% {
+        padding-left: 0px;
+    } 
+}
+
+
 @media (min-width: 1080px) {
     #carousel-component {
         gap: 12px;

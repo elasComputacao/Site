@@ -115,6 +115,90 @@ export default function Home() {
           />
         </Section>
         <Section toggle title="Painel" className="section-painel">
+        {
+            users.map(user => {
+              return(
+                <PictureLink 
+                  href={`${socialNetwork.github}/${user.login}`}
+                  pic={user.avatar_url}
+                  text={user.login}
+                  key={user.id}
+                />
+              );
+            })
+          }
+          {
+            users.map(user => {
+              return(
+                <PictureLink 
+                  href={`${socialNetwork.github}/${user.login}`}
+                  pic={user.avatar_url}
+                  text={user.login}
+                  key={user.id}
+                />
+              );
+            })
+          }
+          {
+            users.map(user => {
+              return(
+                <PictureLink 
+                  href={`${socialNetwork.github}/${user.login}`}
+                  pic={user.avatar_url}
+                  text={user.login}
+                  key={user.id}
+                />
+              );
+            })
+          }
+          {
+            users.map(user => {
+              return(
+                <PictureLink 
+                  href={`${socialNetwork.github}/${user.login}`}
+                  pic={user.avatar_url}
+                  text={user.login}
+                  key={user.id}
+                />
+              );
+            })
+          }
+          {
+            users.map(user => {
+              return(
+                <PictureLink 
+                  href={`${socialNetwork.github}/${user.login}`}
+                  pic={user.avatar_url}
+                  text={user.login}
+                  key={user.id}
+                />
+              );
+            })
+          }
+          {
+            users.map(user => {
+              return(
+                <PictureLink 
+                  href={`${socialNetwork.github}/${user.login}`}
+                  pic={user.avatar_url}
+                  text={user.login}
+                  key={user.id}
+                />
+              );
+            })
+          }
+          {
+            users.map(user => {
+              return(
+                <PictureLink 
+                  href={`${socialNetwork.github}/${user.login}`}
+                  pic={user.avatar_url}
+                  text={user.login}
+                  key={user.id}
+                />
+              );
+            })
+          }
           {
             users.map(user => {
               return(
@@ -136,11 +220,11 @@ export default function Home() {
         <h1 id="Contato">Contato</h1>
         <div className="footer-content">
           <div className="contact">
-            <ContactCard content="Universidade Federal de Campina Grande - UFCG,
+            <ContactCard href="https://goo.gl/maps/xx1zhPUttKVzUSTQ6" content="Universidade Federal de Campina Grande - UFCG,
             Campus Central, R. Aprígio Veloso, 882 - Universitário, Campina Grande - PB, 58428-830">
-            <MapPin />
-            </ContactCard>            
-            <ContactCard content="elas@computacao.ufcg.edu.br">
+              <MapPin />
+            </ContactCard>        
+            <ContactCard copy content="elas@computacao.ufcg.edu.br">
               <Mail/>
             </ContactCard>
           </div>
