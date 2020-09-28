@@ -35,7 +35,7 @@ module.exports = {
             variants: [`400`, `500`, `600`]
           },
           {
-            family: `Raleway`,
+            family: `Montserrat`,
             subsets: [`latin`],
             variants: [`300`, `400`, `500`]
           },

@@ -10,7 +10,7 @@
     --color-9: #ffffff;
     --color-10: #2b2b2b88;
     --title-font: 'Poppins', sans-serif;
-    --text-font: 'Raleway', sans-serif;
+    --text-font: 'Montserrat', sans-serif;
 }
 
 html {
@@ -61,7 +61,7 @@ html {
     text-decoration: none;
     color: var(--color-2);
     font-weight: 500;
-    font-size: 12px;
+    font-size: 10px;
     cursor: pointer;
     transition: 0.1s;
 }
@@ -100,6 +100,12 @@ html {
 
 #home-page main .section-projects .children {
     align-self: center;
+}
+
+#home-page main .section-events .children {
+    align-self: center;
+    padding: 12px;
+    gap: 10px;
 }
 
 #home-page footer {
@@ -158,6 +164,7 @@ html {
     align-items: center;
     justify-content: space-between;
     gap: 5px;
+    padding: 22px;
 }
 
 #home-page footer div.copyright span {
@@ -186,7 +193,7 @@ html {
     }
     
     #home-page header img {
-        max-width: 80px;
+        max-width: 65px;
         padding-right: 2vw;
         margin-top: 4px;
         margin-right: 0.3vw;
@@ -231,6 +238,11 @@ html {
         gap: 24px;
     }
 
+    #home-page main .section-events .children {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    
     #home-page footer h1 {
         font-size: 56px;
     }

@@ -48,6 +48,8 @@
 }
 
 #projectcard-component div.content {
+    display: flex;
+    flex-direction: column;
     padding: 20px;
     align-items: center;
     justify-content: center;
@@ -59,7 +61,7 @@
     font-size: 24px;
     font-weight: 300;
     color: var(--color-4);
-    margin-top: -2px;
+    margin-top: -5px;
 }
 
 #projectcard-component div.content p {
@@ -67,27 +69,31 @@
     font-family: var(--text-font);
     text-align: justify;
     font-size: 12px;
-    line-height: 30px;
+    line-height: 25px;
     color: var(--color-6);
-    margin-top: -28px;
     max-width: 350px;
     height: 148px;
     overflow: hidden;
+    margin-top: -14px;
 }
 
 #projectcard-component div.content a {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-items: center;
     align-self: center;
+    justify-content: center;
     text-decoration: none;
     font-family: var(--title-font);
     color: var(--color-9);
     background-color: var(--color-3);
-    padding: 10px;
     text-align: center;
-    border-radius: 4px;
+    padding: 10px;
     transition: opacity 0.5s;
+    max-width: 24vw;
+    height: 28px;
+    font-size: 16px;
+    border-radius: 30px;
 }
 
 #projectcard-component div.content a:hover {
@@ -107,21 +113,26 @@
 
     #projectcard-component img {
         max-width: 400px;
-        max-height: 240px;
+        max-height: 250px;
     }
 
     #projectcard-component div.content p {
-        line-height: 36px;
-        font-size: 16px;
+        line-height: 30px;
+        font-size: 18px;
         width: 360px;
+        margin-top: -15px;
     }
 
     #projectcard-component div.content h3 {
         font-size: 32px;
+        margin-top: 10px;
     }
-
+ 
     #projectcard-component div.content a {
-        max-width: 24vw;
+        display: flex;
+        width: 9vw;
+        height: 28px;
         font-size: 18px;
+        text-align: center;
     }
 }

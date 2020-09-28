@@ -21,7 +21,7 @@ const ProjectCard:React.FC<Properties> = ({title, description, imageURL, href, s
           {description}
         </p>
         <a target="_blank" href={href}>
-          <span>Conferir detalhes do projeto</span>
+          <span>Conferir</span>
         </a>
       </div>
     </div>

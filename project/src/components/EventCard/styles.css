@@ -1,0 +1,71 @@
+#eventcard-component {
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+    border-radius: 4px;
+    border: 1px solid var(--color-8);
+    transition: 0.2s;
+    overflow: hidden;
+}
+
+#eventcard-component:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--color-10) 5px 3px 7px;
+}
+
+#eventcard-component h3 {
+    font-family: var(--title-font);
+    font-weight: 300;
+    font-size: 20px;
+    color: var(--color-6);
+    margin-top: -2px;
+}
+
+#eventcard-component span {
+    margin-top: -15px;
+    font-size: 12px;
+    font-family: var(--title-font);
+    margin-bottom: 10px;
+    color: var(--color-6);
+}
+
+#eventcard-component p {
+    font-size: 15px;
+    font-family: var(--title-font);
+    color: var(--color-6);
+}
+
+#eventcard-component .buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+#eventcard-component .buttons a {
+    display: flex;
+    flex-direction: row;
+    font-family: var(--title-font);
+    color: var(--color-9);
+    background-color: var(--color-3);
+    text-align: center;
+    border-radius: 30px;
+    padding: 12px;
+    cursor: pointer;
+    transition: opacity 0.5s;
+}
+
+#eventcard-component .buttons a:hover {
+    opacity: 60%;
+}
+
+@media (min-width: 1080px) {
+    #eventcard-component h3 {
+        font-size: 24px;
+    }
+
+    #eventcard-component .buttons {
+        gap: 0px;
+    }
+}

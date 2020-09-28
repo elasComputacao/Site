@@ -34,7 +34,7 @@ const ContactCard:React.FC<Properties> = ({content, copy, href, children}) => {
               <div className="icon">
                 {children}
               </div>
-              <p id="text-content">
+              <p id="text-content" className="copy">
                 {content}
               <span id="status">
                 {status ? "Copiado!" : "Clique para copiar!"}

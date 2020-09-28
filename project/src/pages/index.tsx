@@ -22,7 +22,13 @@ import PictureLink from '../components/PictureLink';
 import Carousel from '../components/Carousel';
 
 import '../styles/home.css'
+import EventCard from '../components/EventCard';
 
+
+/**
+ * <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FRecife&amp;src=bWFyaWEuc2lsdmFAY2NjLnVmY2cuZWR1LmJy&amp;src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;src=Y29tcHV0YWNhby51ZmNnLmVkdS5icl9jbGFzc3Jvb201OGYyNGY2OUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&amp;src=Y2NjLnVmY2cuZWR1LmJyX2NsYXNzcm9vbTYwZmM2OTUyQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&amp;src=Y29tcHV0YWNhby51ZmNnLmVkdS5icl9jbGFzc3Jvb204MmYwYTY2ZEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&amp;src=Y29tcHV0YWNhby51ZmNnLmVkdS5icl9jbGFzc3Jvb205M2I3OThiMkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&amp;color=%23039BE5&amp;color=%2333B679&amp;color=%237627bb&amp;color=%23137333&amp;color=%23c26401&amp;color=%23202124&amp;showTitle=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0" scrolling="no" id="schedule">
+ * </iframe>
+ */
 export default function Home() {
 
   const [users, setUsers] = useState([]);
@@ -38,7 +44,7 @@ export default function Home() {
       console.log(pos)
       if (scroll > 380 && ((pos >= 0 && pos < 44 && window.innerWidth < 1080) || (pos >= 0 && pos < 64 && window.innerWidth > 1080))) {
         header.style.position = "fixed";
-        main.style.marginTop = window.innerWidth < 1080 ? "44px" : "64px";
+        main.style.marginTop = window.innerWidth < 1080 ? "44px" : "56px";
       } else {
         header.style.position = "relative";
         main.style.marginTop = "0px";    
@@ -47,6 +53,7 @@ export default function Home() {
   }
 
   useEffect(() => {
+    console.log(window.document.getElementById('schedule'))
     var result:any = [];
 
     const octokit = new Octokit();
@@ -74,6 +81,9 @@ export default function Home() {
           </li>
           <li>
             <a href="/#Contato">Contato</a>
+          </li>
+          <li>
+            <a href="/#Eventos">Eventos</a>
           </li>
           <li>
             <Dropdown 
@@ -214,6 +224,20 @@ export default function Home() {
         </Section>
         <Section title="Projetos" className="section-projects">  
           <Carousel array={projects} />
+        </Section>
+        <Section title="Eventos" className="section-events">
+          <EventCard title="Nome do evento" 
+          day="29" month="09" year="2020"
+          description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, nobis nesciunt. Suscipit earum quam, numquam voluptate sunt illum et dolores eum."
+          />
+          <EventCard title="Nome do evento" 
+          day="29" month="09" year="2020"
+          description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, nobis nesciunt. Suscipit earum quam, numquam voluptate sunt illum et dolores eum."
+          />
+          <EventCard title="Nome do evento" 
+          day="29" month="09" year="2020"
+          description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, nobis nesciunt. Suscipit earum quam, numquam voluptate sunt illum et dolores eum."
+          />
         </Section>
       </main>
       <footer>

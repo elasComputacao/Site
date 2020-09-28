@@ -1,0 +1,26 @@
+#page-404 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    font-family: var(--title-font);
+}
+
+#page-404 img {
+    max-width: 30vw;
+}
+
+#page-404 h1 {
+    font-size: 72px;
+    text-align: center;
+}
+
+#page-404 a {
+    margin-left: -196px;
+    max-width: 18vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+}
