@@ -23,15 +23,11 @@ import Carousel from '../components/Carousel';
 
 import '../styles/home.css'
 import EventCard from '../components/EventCard';
+import { arrayShuffle, test } from '../functions/functions';
 
-
-/**
- * <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FRecife&amp;src=bWFyaWEuc2lsdmFAY2NjLnVmY2cuZWR1LmJy&amp;src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;src=Y29tcHV0YWNhby51ZmNnLmVkdS5icl9jbGFzc3Jvb201OGYyNGY2OUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&amp;src=Y2NjLnVmY2cuZWR1LmJyX2NsYXNzcm9vbTYwZmM2OTUyQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&amp;src=Y29tcHV0YWNhby51ZmNnLmVkdS5icl9jbGFzc3Jvb204MmYwYTY2ZEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&amp;src=Y29tcHV0YWNhby51ZmNnLmVkdS5icl9jbGFzc3Jvb205M2I3OThiMkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&amp;color=%23039BE5&amp;color=%2333B679&amp;color=%237627bb&amp;color=%23137333&amp;color=%23c26401&amp;color=%23202124&amp;showTitle=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0" scrolling="no" id="schedule">
- * </iframe>
- */
 export default function Home() {
-
   const [users, setUsers] = useState([]);
+  const [randomIndex, setRandomIndex] = useState([])
 
   function mouse() {
     const header = window.document.getElementById("header")
@@ -41,7 +37,6 @@ export default function Home() {
 
     window.addEventListener('mousemove', (event) => {
       var pos = event.clientY;
-      console.log(pos)
       if (scroll > 380 && ((pos >= 0 && pos < 44 && window.innerWidth < 1080) || (pos >= 0 && pos < 64 && window.innerWidth > 1080))) {
         header.style.position = "fixed";
         main.style.marginTop = window.innerWidth < 1080 ? "44px" : "56px";
@@ -53,16 +48,25 @@ export default function Home() {
   }
 
   useEffect(() => {
-    console.log(window.document.getElementById('schedule'))
     var result:any = [];
 
-    const octokit = new Octokit();
-    
+    const octokit = new Octokit(
+      {
+        //auth: "tokendeacesso",
+        baseUrl: 'https://api.github.com',
+      }
+    );
+
     octokit.orgs.listMembers({
       org: "elasComputacao",
-      type: "public",
+      per_page: 100,
+      type: "",
     }).then(({data}) => {
         setUsers(data);
+        var array = [...Array(data.length).keys()];
+        arrayShuffle(array);
+        setRandomIndex(array);
+        console.log(array.length)
     })
   }, [])
 
@@ -125,98 +129,13 @@ export default function Home() {
           />
         </Section>
         <Section toggle title="Painel" className="section-painel">
-        {
-            users.map(user => {
+        { randomIndex.map(index => {
               return(
                 <PictureLink 
-                  href={`${socialNetwork.github}/${user.login}`}
-                  pic={user.avatar_url}
-                  text={user.login}
-                  key={user.id}
-                />
-              );
-            })
-          }
-          {
-            users.map(user => {
-              return(
-                <PictureLink 
-                  href={`${socialNetwork.github}/${user.login}`}
-                  pic={user.avatar_url}
-                  text={user.login}
-                  key={user.id}
-                />
-              );
-            })
-          }
-          {
-            users.map(user => {
-              return(
-                <PictureLink 
-                  href={`${socialNetwork.github}/${user.login}`}
-                  pic={user.avatar_url}
-                  text={user.login}
-                  key={user.id}
-                />
-              );
-            })
-          }
-          {
-            users.map(user => {
-              return(
-                <PictureLink 
-                  href={`${socialNetwork.github}/${user.login}`}
-                  pic={user.avatar_url}
-                  text={user.login}
-                  key={user.id}
-                />
-              );
-            })
-          }
-          {
-            users.map(user => {
-              return(
-                <PictureLink 
-                  href={`${socialNetwork.github}/${user.login}`}
-                  pic={user.avatar_url}
-                  text={user.login}
-                  key={user.id}
-                />
-              );
-            })
-          }
-          {
-            users.map(user => {
-              return(
-                <PictureLink 
-                  href={`${socialNetwork.github}/${user.login}`}
-                  pic={user.avatar_url}
-                  text={user.login}
-                  key={user.id}
-                />
-              );
-            })
-          }
-          {
-            users.map(user => {
-              return(
-                <PictureLink 
-                  href={`${socialNetwork.github}/${user.login}`}
-                  pic={user.avatar_url}
-                  text={user.login}
-                  key={user.id}
-                />
-              );
-            })
-          }
-          {
-            users.map(user => {
-              return(
-                <PictureLink 
-                  href={`${socialNetwork.github}/${user.login}`}
-                  pic={user.avatar_url}
-                  text={user.login}
-                  key={user.id}
+                  href={`${socialNetwork.github}/${users[index].login}`}
+                  pic={users[index].avatar_url}
+                  text={users[index].login}
+                  key={users[index].id}
                 />
               );
             })
