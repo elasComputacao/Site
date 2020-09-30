@@ -13,6 +13,7 @@ import icons from '../enums/icons'
 import socialNetwork from '../enums/social-network'
 import langs from '../enums/langs'
 import projects from '../enums/projects';
+import events from '../enums/events'
 
 import Section from '../components/Section';
 import ContactCard from '../components/ContactCard';
@@ -20,14 +21,16 @@ import IconStatus from '../components/IconStatus';
 import Dropdown from '../components/DropDown';
 import PictureLink from '../components/PictureLink';
 import Carousel from '../components/Carousel';
+import EventCard from '../components/EventCard';
+
+import { arrayShuffle } from '../functions/functions';
 
 import '../styles/home.css'
-import EventCard from '../components/EventCard';
-import { arrayShuffle, test } from '../functions/functions';
 
 export default function Home() {
   const [users, setUsers] = useState([]);
   const [randomIndex, setRandomIndex] = useState([])
+  const [bio, setBio] = useState("")
 
   function mouse() {
     const header = window.document.getElementById("header")
@@ -52,7 +55,7 @@ export default function Home() {
 
     const octokit = new Octokit(
       {
-        //auth: "tokendeacesso",
+        auth: "",
         baseUrl: 'https://api.github.com',
       }
     );
@@ -145,18 +148,16 @@ export default function Home() {
           <Carousel array={projects} />
         </Section>
         <Section title="Eventos" className="section-events">
-          <EventCard title="Nome do evento" 
-          day="29" month="09" year="2020"
-          description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, nobis nesciunt. Suscipit earum quam, numquam voluptate sunt illum et dolores eum."
-          />
-          <EventCard title="Nome do evento" 
-          day="29" month="09" year="2020"
-          description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, nobis nesciunt. Suscipit earum quam, numquam voluptate sunt illum et dolores eum."
-          />
-          <EventCard title="Nome do evento" 
-          day="29" month="09" year="2020"
-          description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, nobis nesciunt. Suscipit earum quam, numquam voluptate sunt illum et dolores eum."
-          />
+          {
+            events.map(event => {
+              return(
+                <EventCard time={event.time} title={event.title}
+                day={event.day} month={event.month} year={event.year}
+                description={event.description}
+                />
+              );
+            })
+          }
         </Section>
       </main>
       <footer>

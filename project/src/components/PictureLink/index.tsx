@@ -1,3 +1,5 @@
+import { Octokit } from '@octokit/rest';
+import { binaryauthorization } from 'googleapis/build/src/apis/binaryauthorization';
 import React, { useEffect, useState } from 'react';
 import Tooltip from '../Tooltip';
 
@@ -11,15 +13,38 @@ interface Properties {
 
 const PictureLink:React.FC<Properties> = ({pic, href, text}) =>  {
 
-  const [display, setDisplay] = useState(window.innerWidth);
+  const [status, setStatus] = useState("");
+
+  useEffect(() => {
+    const octokit = new Octokit({
+      auth: "",
+    });
+
+    octokit.users.getByUsername({
+      username: text,
+    }).then((user) => {
+      const bio = user.data.bio;
+      if (bio !== null) {
+        setStatus(user.data.bio.split(" ")[0]);
+      }
+    })
+
+  }, []) 
 
   return (
     <div id="picturelink-component">
-        <Tooltip position="bottom" slim={true} text={text}>
+        <Tooltip position="bottom" slim={true} text={`${text}`}>
             <a href={href} target="_blank">
-                <img src={pic} alt={text}/>
+              <img src={pic} alt={text}/>
             </a>
         </Tooltip>
+        {
+          status.length !== [...status].length ?
+          <div className="emoji">
+            {status}
+          </div> :
+          <></>
+        }
     </div>
   );
 }
