@@ -7,6 +7,7 @@ const preferDefault = m => (m && m.default) || m
 exports.components = {
   "component---cache-dev-404-page-js": hot(preferDefault(require("/home/mariaeas/Área de Trabalho/Elas@Computação/Site/project/.cache/dev-404-page.js"))),
   "component---src-pages-404-tsx": hot(preferDefault(require("/home/mariaeas/Área de Trabalho/Elas@Computação/Site/project/src/pages/404.tsx"))),
+  "component---src-pages-en-index-tsx": hot(preferDefault(require("/home/mariaeas/Área de Trabalho/Elas@Computação/Site/project/src/pages/en/index.tsx"))),
   "component---src-pages-index-tsx": hot(preferDefault(require("/home/mariaeas/Área de Trabalho/Elas@Computação/Site/project/src/pages/index.tsx")))
 }
 

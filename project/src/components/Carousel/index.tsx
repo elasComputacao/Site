@@ -71,7 +71,7 @@ const Carousel:React.FC<Properties> = ({array}) => {
               title={array[element].title} 
               description={array[element].description}
               href={array[element].href}
-              spotlight={show.indexOf(element) == 1 ? true : false}
+              type={show.indexOf(element) == 1 ? "spotlight" : "normal"}
             />
             );
           }
@@ -80,6 +80,7 @@ const Carousel:React.FC<Properties> = ({array}) => {
       <button className="pass-button" id="right" onClick={() => pass(true)}>
         <ChevronsRight size={display > 1080 ? 64 : 24}/>
       </button>
+      
     </div>
   );
 }

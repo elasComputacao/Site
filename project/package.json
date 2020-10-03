@@ -29,6 +29,8 @@
     "gatsby-plugin-prefetch-google-fonts": "^1.4.3",
     "gatsby-plugin-react-helmet": "^3.3.10",
     "gatsby-plugin-sitemap": "^2.4.13",
+    "gatsby-remark-external-links": "0.0.4",
+    "gatsby-transformer-remark": "^2.8.37",
     "googleapis": "^39.2.0",
     "leaflet": "^1.7.1",
     "octokit": "^1.0.0-hello-world",

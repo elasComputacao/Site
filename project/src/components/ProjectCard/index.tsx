@@ -7,11 +7,12 @@ interface Properties {
     description: string;
     imageURL: string;
     href: string;
-    spotlight?: boolean;
+    type: string;
 }
-const ProjectCard:React.FC<Properties> = ({title, description, imageURL, href, spotlight}) => {
+const ProjectCard:React.FC<Properties> = ({title, description, imageURL, href, type}) => {
+  
   return (
-    <div id="projectcard-component" className={spotlight ? "spotlight" : "normal"}>
+    <div id="projectcard-component" className={type}>
       <div className="img-content">
         <img src={imageURL}/>
       </div>

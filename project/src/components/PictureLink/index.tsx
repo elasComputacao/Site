@@ -1,8 +1,18 @@
 import { Octokit } from '@octokit/rest';
-import { binaryauthorization } from 'googleapis/build/src/apis/binaryauthorization';
 import React, { useEffect, useState } from 'react';
+import GITHUBTOKEN from '../../GITHUB-TOKEN';
 import Tooltip from '../Tooltip';
 
+
+/**
+ * {
+    status.length !== [...status].length ?
+    <div className="emoji">
+      {status}
+    </div> :
+    <></>
+  }
+ */
 import './styles.css'
 
 interface Properties {
@@ -17,7 +27,7 @@ const PictureLink:React.FC<Properties> = ({pic, href, text}) =>  {
 
   useEffect(() => {
     const octokit = new Octokit({
-      auth: "",
+      auth: GITHUBTOKEN,
     });
 
     octokit.users.getByUsername({
@@ -38,13 +48,6 @@ const PictureLink:React.FC<Properties> = ({pic, href, text}) =>  {
               <img src={pic} alt={text}/>
             </a>
         </Tooltip>
-        {
-          status.length !== [...status].length ?
-          <div className="emoji">
-            {status}
-          </div> :
-          <></>
-        }
     </div>
   );
 }

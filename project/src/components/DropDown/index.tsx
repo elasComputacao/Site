@@ -5,7 +5,6 @@ import ItemContent from '../ItemContent';
 import { ChevronDown, ChevronUp } from 'react-feather';
 
 import './styles.css'
-import icons from '../../enums/icons';
 
 const styles = css`
   display: flex;
@@ -27,6 +26,7 @@ interface Properties {
   items: {
     src: string;
     subtitle: string;
+    ref: string;
   }[];
 };
 
@@ -34,13 +34,12 @@ const DropDown:React.FC<Properties> = ({title, defaultImg, items}) => {
   const menu = useMenuState({ animated: 250 });
 
   const [click, setClick] = useState(false)
-  const [select, setSelect] = useState(defaultImg);
 
   return (
       <div id="dropdown-component">
-          <MenuButton {...menu} className="button" onClick={() => setClick(!click)}>
+          <MenuButton {...menu} className="button">
             <span>{title}</span>
-            <img src={select} alt="Lang" className="selected"/>
+            <img src={defaultImg} alt="Lang" className="selected"/>
             {click ? <ChevronUp className="icon"/> : <ChevronDown className="icon"/>}
           </MenuButton>
           <Menu
@@ -51,11 +50,13 @@ const DropDown:React.FC<Properties> = ({title, defaultImg, items}) => {
             <div className={styles}>
               {items.map((item) => {
                 return(
-                <MenuItem {...menu} className="menu-item" onClick={() => setSelect(item.src)}>
-                  <ItemContent
-                    title={item.subtitle}
-                    src={item.src}
-                  />
+                <MenuItem {...menu} className="menu-item">
+                  <a href={item.ref}>
+                    <ItemContent
+                      title={item.subtitle}
+                      src={item.src}
+                    />
+                  </a>
                 </MenuItem>);
               })}
             </div>

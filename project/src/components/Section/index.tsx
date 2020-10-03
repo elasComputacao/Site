@@ -31,9 +31,6 @@ const Section:React.FC<Properties> = ({title, children, className, toggle}) => {
       section.style.maxHeight = "600vh";
     }
     setHidden(!hidden);
-    if (hidden) {
-      window.location.href = "/#Painel";
-    }
   }
 
   return (

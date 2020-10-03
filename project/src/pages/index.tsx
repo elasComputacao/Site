@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import {MapPin, Mail} from 'react-feather';
-import { Octokit } from "@octokit/rest";
 
 import logoHorizontal from '../assets/logos/elas_horizontal.png';
 import logoVertical from '../assets/logos/elas_vertical.png';
@@ -23,48 +22,21 @@ import PictureLink from '../components/PictureLink';
 import Carousel from '../components/Carousel';
 import EventCard from '../components/EventCard';
 
-import { arrayShuffle } from '../functions/functions';
+import { arrayShuffle, mouseMonitoring } from '../functions/functions';
+import { getUsersFromGitHub } from '../functions/connections';
 
 import '../styles/home.css'
+import infos from '../enums/infos';
+import supports from '../enums/supports';
+import sections from '../enums/sections';
 
 export default function Home() {
   const [users, setUsers] = useState([]);
   const [randomIndex, setRandomIndex] = useState([])
-  const [bio, setBio] = useState("")
-
-  function mouse() {
-    const header = window.document.getElementById("header")
-    const main = window.document.getElementById("main")
-
-    const scroll = window.scrollY;
-
-    window.addEventListener('mousemove', (event) => {
-      var pos = event.clientY;
-      if (scroll > 380 && ((pos >= 0 && pos < 44 && window.innerWidth < 1080) || (pos >= 0 && pos < 64 && window.innerWidth > 1080))) {
-        header.style.position = "fixed";
-        main.style.marginTop = window.innerWidth < 1080 ? "44px" : "56px";
-      } else {
-        header.style.position = "relative";
-        main.style.marginTop = "0px";    
-      }
-    })
-  }
 
   useEffect(() => {
     var result:any = [];
-
-    const octokit = new Octokit(
-      {
-        auth: "",
-        baseUrl: 'https://api.github.com',
-      }
-    );
-
-    octokit.orgs.listMembers({
-      org: "elasComputacao",
-      per_page: 100,
-      type: "",
-    }).then(({data}) => {
+    getUsersFromGitHub().then(({data}) => {
         setUsers(data);
         var array = [...Array(data.length).keys()];
         arrayShuffle(array);
@@ -74,27 +46,27 @@ export default function Home() {
   }, [])
 
   return (
-    <div id="home-page" onMouseOver={mouse}>
+    <div id="home-page" onMouseOver={() => mouseMonitoring()}>
       <header id="header">
         <ul>
           <li>
-            <a href="/#Sobre">Sobre</a>
+            <a href={`/#${sections.about.pt}`}>{sections.about.pt}</a>
           </li>
           <li>
-            <a href="/#Painel">Painel</a>
+            <a href={`/#${sections.painel.pt}`}>{sections.painel.pt}</a>
           </li>
           <li>
-            <a href="/#Projetos">Projetos</a>
+            <a href={`/#${sections.projects.pt}`}>{sections.projects.pt}</a>
           </li>
           <li>
-            <a href="/#Contato">Contato</a>
+            <a href={`/#${sections.events.pt}`}>{sections.events.pt}</a>
           </li>
           <li>
-            <a href="/#Eventos">Eventos</a>
+            <a href={`/#${sections.contact.pt}`}>{sections.contact.pt}</a>
           </li>
           <li>
-            <Dropdown 
-            title="Idioma"
+            <Dropdown
+            title={sections.language.pt}
             defaultImg={icons.brasilFlag}
             items={langs}
             />
@@ -108,30 +80,15 @@ export default function Home() {
       <main id="main">
         <Section title="Sobre" className="section-about">
           <p className="screen-paragraph">
-          O Elas@computação surge com o objetivo de reunir mulheres 
-          do curso de Ciência da Computação da Universidade Federal 
-          de Campina Grande e também outras mais. Nosso foco é levantar, 
-          discutir e impulsionar os assuntos que dizem respeito ao feminino, 
-          feminismo, nossos espaços, falas, movimentos e necessidades. A nossa
-          missão é inspirar mulheres mostrando que todas são capazes de trabalhar
-          e serem as melhores profissionais na área que Elas quiserem. Somos uma
-          comunidade que se apoia e que está disposta sempre a acolher novas 
-          membras e continuamente ajudá-las a se desenvolverem como mulheres 
-          e profissionais.
+            {infos.bio.pt}
           </p>
           <IconStatus 
             icon={logoVertical} 
-            status={icons.yellowRibbon} 
-            statusText="
-            O Elas@Computação apoia a campanha do Setembro Amarelo em prevenção
-            ao suicídio.
-            Se você estiver passando por problemas relacionados a sua saúde mental 
-            ou conhece alguém que está passando por alguma dificuldade, procure ajuda
-            profissional.
-            "
+            status={icons.pinkRibbon} 
+            statusText={supports.outubroRosa.description.pt}
           />
         </Section>
-        <Section toggle title="Painel" className="section-painel">
+        <Section toggle title="Painel" className="section-panel">
         { randomIndex.map(index => {
               return(
                 <PictureLink 
@@ -148,7 +105,11 @@ export default function Home() {
           <Carousel array={projects} />
         </Section>
         <Section title="Eventos" className="section-events">
+          
           {
+            events.length == 0 ? 
+              <span className="nothing">Nenhum evento confirmado</span>
+            :
             events.map(event => {
               return(
                 <EventCard time={event.time} title={event.title}
@@ -164,11 +125,10 @@ export default function Home() {
         <h1 id="Contato">Contato</h1>
         <div className="footer-content">
           <div className="contact">
-            <ContactCard href="https://goo.gl/maps/xx1zhPUttKVzUSTQ6" content="Universidade Federal de Campina Grande - UFCG,
-            Campus Central, R. Aprígio Veloso, 882 - Universitário, Campina Grande - PB, 58428-830">
+            <ContactCard href="https://goo.gl/maps/xx1zhPUttKVzUSTQ6" content={infos.location}>
               <MapPin />
             </ContactCard>        
-            <ContactCard copy content="elas@computacao.ufcg.edu.br">
+            <ContactCard copy content={infos.email}>
               <Mail/>
             </ContactCard>
           </div>

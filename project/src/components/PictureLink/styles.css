@@ -1,6 +1,8 @@
 #picturelink-component {   
     cursor: pointer;
     height: 72px;
+    margin-bottom: 10px;
+    z-index: 9;
 }
 
 #picturelink-component a {
@@ -37,6 +39,7 @@
 
     #picturelink-component {
         height: 135px;
+        margin-bottom: 0px;
     }
 
     #picturelink-component img {

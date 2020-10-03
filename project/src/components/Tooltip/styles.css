@@ -4,6 +4,7 @@
     padding: 8px;
     max-width: 325px;
     max-height: 218px;
+    z-index: 11;
 }
 
 #text-slim {
@@ -13,10 +14,12 @@
     border-radius: 8px;
     padding: 2px;
     height: 24px;
+    z-index: 11;
 }
 
 #text p,
 #text-slim p {
     font-family: var(--text-font);
     color: var(--color-9);
+    z-index: 11;
 }

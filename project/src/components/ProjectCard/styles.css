@@ -7,17 +7,24 @@
     width: 270px;
     height: 424px;
     overflow: hidden;
-    border: var(--color-3) 0.2px;
-    border-style: dashed;
     margin-bottom: 16px;
     transition: 0.2s;
 }
 
 .normal {
-    
+    border: var(--color-3) 0.2px;
+    border-style: dashed;
 }
 
 .spotlight {
+    transform: translateY(-5px);
+    border: var(--color-3) 0.2px;
+    border-style: solid;
+    box-shadow: var(--color-10) 5px 3px 7px;
+}
+
+.hidden {
+    visibility: hidden;
 }
 
 .normal:hover {
@@ -27,7 +34,7 @@
 }
 
 .spotlight:hover {
-    transform: translateY(-5px);
+    transform: scale(1.01);
     box-shadow: var(--color-10) 5px 3px 7px;
     border-style: solid;
 }
@@ -43,7 +50,7 @@
 }
 
 #projectcard-component img {
-    max-width: 240px;
+    width: 240px;
     max-height: 240px;
 }
 
@@ -112,8 +119,8 @@
     }
 
     #projectcard-component img {
-        max-width: 400px;
-        max-height: 250px;
+        width: 360px;
+        height: 250px;
     }
 
     #projectcard-component div.content p {

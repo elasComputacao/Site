@@ -1,12 +1,18 @@
 #carousel-component {
     display: flex;
     align-items: center;
+    align-self: center;
     justify-content: space-between;
+    max-width: 100vw;
+    overflow: hidden;
 }
 
 #carousel-component .carousel-content {
     display: flex;
     transition: 0.5s;
+    width: 85vw;
+    padding: 10px;
+    overflow: hidden;
 }
 
 #carousel-component .pass-button {
@@ -44,7 +50,6 @@
 @keyframes left {
     0% {
         padding-left: 6px;
-
     } 25% {
         padding-left: 9px;
     } 50% {
@@ -70,10 +75,10 @@
     }
 
     #carousel-component .pass-button #left {
-        margin-right: 90vw;
+        margin-left: 0px;
     }
 
     #carousel-component .pass-button #right {
-        margin-right: 90vw;
+        margin-right: 0px;
     }
 }
