@@ -100,7 +100,11 @@ html {
 }
 
 #home-page main .section-projects .children {
-    align-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    height: 70vh;
 }
 
 #home-page main .section-events .children {

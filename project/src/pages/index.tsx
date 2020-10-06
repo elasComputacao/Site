@@ -112,7 +112,10 @@ export default function Home() {
             :
             events.map(event => {
               return(
-                <EventCard time={event.time} title={event.title}
+                <EventCard 
+                eventURL={event.eventURL}
+                href={event.pageURL}
+                time={event.time} title={event.title}
                 day={event.day} month={event.month} year={event.year}
                 description={event.description}
                 />

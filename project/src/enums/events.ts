@@ -4,7 +4,7 @@ const events = [{
     day: "01",
     month: "10",
     year: "2020",
-    time: "18",
+    time: "18h",
     pageURL: "www.ex.com",
     eventURL: "www.ex.com",
 },
@@ -14,7 +14,7 @@ const events = [{
     day: "01",
     month: "10",
     year: "2020",
-    time: "18",
+    time: "18h",
     pageURL: "www.ex.com",
     eventURL: "www.ex.com",
 },]

@@ -13,7 +13,7 @@ const sections = {
     },
     events: {
         pt: "Eventos",
-        en: "Events"
+        en: "Events",
     },
     contact: {
         pt: "Contato",

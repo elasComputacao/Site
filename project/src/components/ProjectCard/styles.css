@@ -1,42 +1,38 @@
 #projectcard-component {
     display: flex;
     flex-direction: column;
+    background-color: var(--color-9);
     align-items: center;
     justify-content: center;
     border-radius: 4px;
     width: 270px;
-    height: 424px;
+    height: 390px;
     overflow: hidden;
     margin-bottom: 16px;
+    background-position-x: absolute;
     transition: 0.2s;
+    position: relative;
 }
 
 .normal {
     border: var(--color-3) 0.2px;
     border-style: dashed;
-}
-
-.spotlight {
-    transform: translateY(-5px);
-    border: var(--color-3) 0.2px;
-    border-style: solid;
-    box-shadow: var(--color-10) 5px 3px 7px;
-}
-
-.hidden {
-    visibility: hidden;
+    box-shadow: var(--color-10) 4px 2px 6px;
 }
 
 .normal:hover {
     transform: translateY(-5px);
     box-shadow: var(--color-10) 5px 3px 7px;
     border-style: solid;
+    opacity: 100%;
 }
 
 .spotlight:hover {
-    transform: scale(1.01);
-    box-shadow: var(--color-10) 5px 3px 7px;
-    border-style: solid;
+    transform: scale(1);
+}
+
+.hidden {
+    visibility: hidden;
 }
 
 #projectcard-component .img-content {
@@ -44,14 +40,14 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    height: 360px;
+    max-height: 720px;
     width: 360px;
     background-color: var(--color-7);
 }
 
 #projectcard-component img {
-    width: 240px;
-    max-height: 240px;
+    width: 200px;
+    max-height: 720px;
 }
 
 #projectcard-component div.content {
@@ -68,13 +64,13 @@
     font-size: 24px;
     font-weight: 300;
     color: var(--color-4);
-    margin-top: -5px;
+    margin-top: -2px;
 }
 
 #projectcard-component div.content p {
     display: flex;
     font-family: var(--text-font);
-    text-align: justify;
+    text-align: start;
     font-size: 12px;
     line-height: 25px;
     color: var(--color-6);
@@ -109,18 +105,18 @@
 
 @media (min-width: 1080px) {
     #projectcard-component {
-        width: 380px;
+        width: 500px;
         height: 510px;
         margin-bottom: 12px;
     }
 
     #projectcard-component .img-content {
-        width: 500px;
+        width: 510px;
     }
 
     #projectcard-component img {
         width: 360px;
-        height: 250px;
+        max-height: 250px;
     }
 
     #projectcard-component div.content p {

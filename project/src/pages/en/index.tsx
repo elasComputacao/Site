@@ -50,19 +50,19 @@ export default function HomeEN() {
       <header id="header">
         <ul>
           <li>
-            <a href={`/#${sections.about.en}`}>{sections.about.en}</a>
+            <a href={`/${langs[1].ref}/#${sections.about.en}`}>{sections.about.en}</a>
           </li>
           <li>
-            <a href={`/#${sections.painel.en}`}>{sections.painel.en}</a>
+            <a href={`/${langs[1].ref}/#${sections.painel.en}`}>{sections.painel.en}</a>
           </li>
           <li>
-            <a href={`/#${sections.projects.en}`}>{sections.projects.en}</a>
+            <a href={`/${langs[1].ref}/#${sections.projects.en}`}>{sections.projects.en}</a>
           </li>
           <li>
-            <a href={`/#${sections.events.en}`}>{sections.events.en}</a>
+            <a href={`/${langs[1].ref}/#${sections.events.en}`}>{sections.events.en}</a>
           </li>
           <li>
-            <a href={`/#${sections.contact.en}`}>{sections.contact.en}</a>
+            <a href={`/${langs[1].ref}/#${sections.contact.en}`}>{sections.contact.en}</a>
           </li>
           <li>
             <Dropdown

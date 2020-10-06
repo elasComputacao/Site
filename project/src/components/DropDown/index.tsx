@@ -33,14 +33,21 @@ interface Properties {
 const DropDown:React.FC<Properties> = ({title, defaultImg, items}) => {
   const menu = useMenuState({ animated: 250 });
 
-  const [click, setClick] = useState(false)
+  function verifyLocation(href) {
+    const url = window.location.href;
+    if (!url.split("/").includes(href)) {
+      return href;
+    } else {
+      return "#";
+    }
+  }
 
   return (
       <div id="dropdown-component">
           <MenuButton {...menu} className="button">
             <span>{title}</span>
             <img src={defaultImg} alt="Lang" className="selected"/>
-            {click ? <ChevronUp className="icon"/> : <ChevronDown className="icon"/>}
+            <ChevronDown className="icon"/>
           </MenuButton>
           <Menu
             {...menu}
@@ -51,7 +58,7 @@ const DropDown:React.FC<Properties> = ({title, defaultImg, items}) => {
               {items.map((item) => {
                 return(
                 <MenuItem {...menu} className="menu-item">
-                  <a href={item.ref}>
+                  <a href={verifyLocation(item.ref)}>
                     <ItemContent
                       title={item.subtitle}
                       src={item.src}

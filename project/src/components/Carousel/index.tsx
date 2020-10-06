@@ -1,88 +1,34 @@
-import React, { useEffect, useState } from 'react';
-import { ChevronsLeft, ChevronsRight } from 'react-feather';
-
-import ProjectCard from '../ProjectCard'
+import React from 'react'
+import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel';
+import ReactCardCarousel from 'react-card-carousel'
+import ItemsCarousel from 'react-items-carousel'
 
 import './styles.css'
 
-interface Properties {
-    array: {
-      imageURL: string;
-      title: string;
-      description: string;
-      href: string;
-    }[];
-}
+import ProjectCard from '../ProjectCard';
 
-const Carousel:React.FC<Properties> = ({array}) => {
-  
-  const [show, setShow] = useState([]);
-  const [display, setDisplay] = useState(0);
-  
-  useEffect(() => {
-
-    setDisplay(window.innerWidth);
-
-    if (window.innerWidth > 1080) {
-      setShow([0, 1, 2])
-    } else {
-      setShow([0])
-    }
-    console.log(show)
-  }, [])
-
-  function pass(direction:boolean) {
-    if (direction) {
-      var copy = [...show];
-      for (let index = 0; index < show.length; index++) {
-        if (copy[index] == array.length - 1) {
-          copy[index] = 0;
-        } else {
-          copy[index]++;
+const Carousel = ({array}) => {
+    
+    return (
+      <ReactCardCarousel disable_keydown={ true } autoplay={ true } autoplay_speed={ 5500 } className={"carousel-component"}>
+        {
+          array.slice(0, 4).map(
+            element => {
+              return(
+                <ProjectCard 
+                key={element}
+                imageURL={element.imageURL} 
+                title={element.title} 
+                description={element.description}
+                href={element.href}
+                type={"normal"}
+                color={element.color}
+              />);
+            }
+          )
         }
-      }
-      setShow(copy);
-    } else if (!direction) {
-      var copy = [...show];
-      for (let index = 0; index < show.length; index++) {
-        if (copy[index] == 0) {
-          copy[index] = array.length - 1;  
-        } else {
-          copy[index]--;
-        }
-      }
-      setShow(copy);
-    }
-    console.log(show)
-  }
-  
-  return (
-    <div id="carousel-component">
-      <button className="pass-button" id="left" onClick={() => pass(false)}>
-        <ChevronsLeft size={display > 1080 ? 64 : 24}/>
-      </button>
-      <div className="carousel-content">
-        {show.map(element => {
-          if (element < array.length && element >= 0) {
-            return(
-              <ProjectCard 
-              key={element}
-              imageURL={array[element].imageURL} 
-              title={array[element].title} 
-              description={array[element].description}
-              href={array[element].href}
-              type={show.indexOf(element) == 1 ? "spotlight" : "normal"}
-            />
-            );
-          }
-        })}
-      </div>
-      <button className="pass-button" id="right" onClick={() => pass(true)}>
-        <ChevronsRight size={display > 1080 ? 64 : 24}/>
-      </button>
-      
-    </div>
-  );
+      </ReactCardCarousel>
+    );
 }
 
 export default Carousel;

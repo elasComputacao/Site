@@ -57,6 +57,7 @@
     text-align: center;
     cursor: pointer;
     transition: opacity 0.5s;
+    text-decoration: none;
 }
 
 #eventcard-component .buttons a:hover {

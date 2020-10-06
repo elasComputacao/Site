@@ -1,6 +1,6 @@
 import React from 'react';
 import {ArrowLeft} from 'react-feather';
-import cafe from '../assets/images/cafe-delas.png'
+import cafe from '../assets/images/cafe-delas-reverse.png'
 
 import '../styles/404.css'
 
