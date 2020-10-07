@@ -1,7 +1,5 @@
 import React from 'react'
-import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel';
 import ReactCardCarousel from 'react-card-carousel'
-import ItemsCarousel from 'react-items-carousel'
 
 import './styles.css'
 
@@ -10,6 +8,7 @@ import ProjectCard from '../ProjectCard';
 const Carousel = ({array}) => {
     
     return (
+      <div id="carousel-component">
       <ReactCardCarousel disable_keydown={ true } autoplay={ true } autoplay_speed={ 5500 } className={"carousel-component"}>
         {
           array.slice(0, 4).map(
@@ -28,6 +27,7 @@ const Carousel = ({array}) => {
           )
         }
       </ReactCardCarousel>
+      </div>
     );
 }
 

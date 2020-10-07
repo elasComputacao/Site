@@ -1,22 +1,48 @@
-const events = [{
-    title: "Título do evento",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Non beatae autem doloribus perferendis quasi ipsa at atque nisi quibusdam. Animi recusandae officiis.",
-    day: "01",
-    month: "10",
-    year: "2020",
-    time: "18h",
-    pageURL: "www.ex.com",
-    eventURL: "www.ex.com",
-},
-{
-    title: "Título do evento",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Non beatae autem doloribus perferendis quasi ipsa at atque nisi quibusdam. Animi recusandae officiis.",
-    day: "01",
-    month: "10",
-    year: "2020",
-    time: "18h",
-    pageURL: "www.ex.com",
-    eventURL: "www.ex.com",
-},]
+const events = [
+    {
+        title: "Café com Elas",
+        description: 'Edição do "Café com Elas" sobre trabalho no exterior e OpenSource na programação da Jornada Acadêmica Computação@UFCG.',
+        day: "08",
+        month: "10",
+        year: "2020",
+        time: "20h",
+        local: "Discord CCC",
+        pageURL: "",
+        eventURL: "",
+    },
+    {
+        title: "Café com Elas",
+        description: 'Edição do "Café com Elas" sobre trabalho no exterior e OpenSource na programação da Jornada Acadêmica Computação@UFCG.',
+        day: "08",
+        month: "10",
+        year: "2020",
+        time: "20h",
+        local: "Discord CCC",
+        pageURL: "",
+        eventURL: "",
+    },
+    {
+        title: "Café com Elas",
+        description: 'Edição do "Café com Elas" sobre trabalho no exterior e OpenSource na programação da Jornada Acadêmica Computação@UFCG.',
+        day: "08",
+        month: "10",
+        year: "2020",
+        time: "20h",
+        local: "Discord CCC",
+        pageURL: "",
+        eventURL: "",
+    },
+    {
+        title: "Café com Elas",
+        description: 'Edição do "Café com Elas" sobre trabalho no exterior e OpenSource na programação da Jornada Acadêmica Computação@UFCG.',
+        day: "08",
+        month: "10",
+        year: "2020",
+        time: "20h",
+        local: "Discord CCC",
+        pageURL: "",
+        eventURL: "",
+    }
+]
 
 export default events;

@@ -110,7 +110,7 @@ export default function HomeEN() {
               return(
                 <EventCard time={event.time} title={event.title}
                 day={event.day} month={event.month} year={event.year}
-                description={event.description}
+                description={event.description} local={event.local}
                 />
               );
             })

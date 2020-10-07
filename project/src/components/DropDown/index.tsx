@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {css} from 'emotion';
 import { useMenuState, Menu, MenuItem, MenuButton } from "reakit/Menu";
 import ItemContent from '../ItemContent';
@@ -33,8 +33,13 @@ interface Properties {
 const DropDown:React.FC<Properties> = ({title, defaultImg, items}) => {
   const menu = useMenuState({ animated: 250 });
 
+  const [url, setURL] = useState("");
+
+  useEffect(() => {
+    setURL(window.location.href)
+  }, []);
+
   function verifyLocation(href) {
-    const url = window.location.href;
     if (!url.split("/").includes(href)) {
       return href;
     } else {

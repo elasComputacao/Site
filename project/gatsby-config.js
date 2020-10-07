@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Elas@Computação UFCG`,
-    siteUrl: `https://www.elascomputacao.org`, 
+    siteUrl: `https://www.elascomputacao.github.io`, 
     description: `Site do Elas@Computação UFCG`,
     social: [
       {

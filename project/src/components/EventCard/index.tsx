@@ -11,21 +11,40 @@ interface Properties {
     time: string;
     eventURL: string;
     href?: string;
+    local: string;
 }
-const EventCard:React.FC<Properties> = ({title, day, month, year, description, time, eventURL, href}) => {
+const EventCard:React.FC<Properties> = ({title, day, month, year, description, time, local, eventURL, href}) => {
   const [isOver, setIsOver] = useState(false);
   return (
     <div id="eventcard-component" onMouseOver={() => setIsOver(true)} onMouseOut={() => setIsOver(false)}>
-      <h3>{title}</h3>
-      <span>
-        {day}/{month}/{year} às {time}
-      </span>
-      <p>
-        {description}
-      </p>
-      <div className={isOver ? "buttons" : "buttons-hidden"}>
-        <a target="_blank" href={eventURL}>Adicionar à agenda</a>
-        <a target="_blank" href={href}>Saber mais</a>
+     <div className="header-note">
+       <div className="pin">
+          <div className="pin-part">
+          </div>
+        </div>
+        <div className="title">
+          <h3>{title}</h3>
+          <div className="infos">
+            <span>{day}/{month}/{year} - {time}</span>
+            <span>{local}</span>
+          </div>
+        </div>
+       </div>
+       <p>
+         {description}
+       </p>
+      <div className={isOver ?  "more" : "more-hidden"}>
+        {eventURL.trim() == "" ?
+        <a className="block">Adicionar à agenda</a>
+        :
+        <a href={eventURL}>Adicionar à agenda</a>
+        }
+
+        {href.trim() == "" ?
+        <a className="block">Saber mais</a>
+        :
+        <a href={href}>Saber mais</a>
+        }
       </div> 
     </div>
   );
