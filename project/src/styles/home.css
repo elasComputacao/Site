@@ -10,7 +10,6 @@
     --color-9: #ffffff;
     --color-10: #2b2b2b88;
     --color-11: #f1928131;
-    --color-12: #e9848852;
     --title-font: 'Poppins', sans-serif;
     --text-font: 'Montserrat', sans-serif;
 }
@@ -100,23 +99,18 @@ html {
     padding-right: 100px;
 }
 
-#home-page main .section-projects {
-    display: flex;
-    overflow: hidden;
-}
-
 #home-page main .section-projects .children {
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    height: 60vh;
+    height: 70vh;
 }
 
 #home-page main .section-events .children {
-    padding: 24px;
     align-self: center;
-    gap: 16px;
+    padding: 12px;
+    gap: 10px;
 }
 
 #home-page main .section-events .children span.nothing {
@@ -260,7 +254,7 @@ html {
 
     #home-page main .section-events .children {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
     }
     
     #home-page footer h1 {

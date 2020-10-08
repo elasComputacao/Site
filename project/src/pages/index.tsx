@@ -115,7 +115,6 @@ export default function Home() {
                 <EventCard 
                 eventURL={event.eventURL}
                 href={event.pageURL}
-                local={event.local}
                 time={event.time} title={event.title}
                 day={event.day} month={event.month} year={event.year}
                 description={event.description}

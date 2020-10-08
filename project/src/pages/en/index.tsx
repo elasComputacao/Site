@@ -108,9 +108,12 @@ export default function HomeEN() {
           {
             events.map(event => {
               return(
-                <EventCard time={event.time} title={event.title}
+                <EventCard 
+                href={event.pageURL}
+                eventURL={event.eventURL}
+                time={event.time} title={event.title}
                 day={event.day} month={event.month} year={event.year}
-                description={event.description} local={event.local}
+                description={event.description}
                 />
               );
             })

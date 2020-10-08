@@ -6,122 +6,65 @@
     border:1px solid #E8E8E8;      
     padding: 24px;
     transition: 0.2s;
+    overflow: hidden;
     cursor: pointer;
-    height: 250px;
-    width: 250px;
-    background: var(--color-12); 
 }
 
 #eventcard-component:hover {
     transform: translateY(-5px);
     box-shadow: var(--color-10) 5px 3px 7px;
-    border-bottom-right-radius: 100px 20px; 
+    border-bottom-right-radius: 70px 10px; 
+    background: var(--color-11); 
 }
 
-#eventcard-component .header-note {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-}
-
-#eventcard-component .header-note .pin {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--color-3);
-    height: 32px;
-    width: 32px;
-    border-radius: 50%;
-    margin-top: -32px;
-    transition: all 0.2s;
-}
-
-#eventcard-component .header-note .pin-part {
-    background-color: var(--color-11);
-    height: 22px;
-    width: 22px;
-    box-shadow: var(--color-10) 5px 3px 7px;
-    border-radius: 50%;
-}
-
-#eventcard-component:hover .pin {
-    transform: scale(1.1);
-    box-shadow: var(--color-10) 5px 3px 7px;
-}
-
-#eventcard-component .title {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px;
-    justify-content: space-between;
-}
-
-#eventcard-component .title h3 {
+#eventcard-component h3 {
     font-family: var(--title-font);
     font-weight: 300;
     font-size: 24px;
     color: var(--color-6);
-    margin-top: 0px;
-    line-height: 24px;
+    margin-top: -2px;
 }
 
-#eventcard-component .infos {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    gap: 24px;
-    text-align: start;
-}
-
-#eventcard-component .infos span {
+#eventcard-component span {
+    margin-top: -24px;
     font-size: 12px;
     font-family: var(--title-font);
     margin-bottom: 10px;
     color: var(--color-6);
-    margin-top: -12px;
 }
 
 #eventcard-component p {
     font-size: 15px;
     font-family: var(--title-font);
     color: var(--color-6);
-    margin-top: -12px;
-    overflow: hidden;
-    height: 120px;
-    margin-top: 2px;
 }
 
-#eventcard-component .more,
-#eventcard-component .more-hidden {
-    margin-top: 15px;
+#eventcard-component .buttons, 
+#eventcard-component .buttons-hidden {
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    transition: opacity 0.2s;
+    gap: 8px;
 }
 
-#eventcard-component .more a,
-#eventcard-component .more-hidden a {
+#eventcard-component .buttons a,
+#eventcard-component .buttons-hidden a {
+    display: flex;
+    flex-direction: row;
     font-family: var(--title-font);
-    font-size: 15px;
-    color: var(--color-4);
+    color: var(--color-3);
+    text-align: center;
+    cursor: pointer;
+    transition: opacity 0.5s;
     text-decoration: none;
 }
 
-#eventcard-component .more a.block {
-    cursor: not-allowed;
-}
-
-#eventcard-component .more a:hover,
-#eventcard-component .more-hidden a:hover {
+#eventcard-component .buttons a:hover {
     opacity: 50%;
 }
 
-#eventcard-component .more-hidden {
+#eventcard-component .buttons-hidden {
     visibility: hidden;
 }
 
@@ -131,7 +74,7 @@
         max-width: 30vw;
     }
 
-    #eventcard-component .more {
+    #eventcard-component .buttons {
         gap: 0px;
     }
 }
