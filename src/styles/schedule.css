@@ -1,0 +1,13 @@
+#schedule-page {
+    overflow: hidden;
+    font-family: var(--title-font);
+}
+
+#schedule-page a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 24px;
+    text-decoration: none;
+    color: var(--color-5);
+}

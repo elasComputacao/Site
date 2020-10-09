@@ -3,7 +3,7 @@
 <img src="./assets/logo_elas.png" heigth="80" width="180"/>
 <p/>
 
-O repositório com o projeto do site pode ser visto em [elasComputacao.github.io](https://github.com/elasComputacao/elasComputacao.github.io)
+Uma versão do site já pode ser acessada em [elasComputacao.github.io](https://elascomputacao.github.io)
 
 ## Índice
 - [Descrição do projeto](#pencil-Descrição-do-projeto)
@@ -66,23 +66,25 @@ O perfil da aprendiz se baseia em ser proativa, ser aberta a novas aprendizados 
     
 - [x] Formação do layout do site.
     
-- [ ] Implementação do esqueleto das páginas. (em andamento)
+- [x] Implementação do esqueleto das páginas.
 
-- [ ] Estrutural / Princípio da estilização (em andamento)
+- [x] Estrutural / Princípio da estilização (em andamento)
     
 #### 2ª fase de desenvolvimento
 
-- [ ] Implementar design e parte lógica das páginas
+- [x] Implementar design e parte lógica das páginas
     
-- [ ] Continuação da estilização
+- [x] Continuação da estilização
     
-- [ ] Parte lógica das páginas
+- [x] Parte lógica das páginas
     
-- [ ] Implementação
+- [x] Implementação
 
 - [ ] Continuação da parte lógica das páginas
     
 - [ ] Implementação
+
+[Alguns detalhes estão sendo vistos]
     
 #### 3ª fase de desenvolvimento
 
@@ -94,7 +96,7 @@ O perfil da aprendiz se baseia em ser proativa, ser aberta a novas aprendizados 
     
 - [ ] Textos (estrutura)
     
-- [ ] Deploy
+- [x] Deploy [um primeiro deploy já foi feito]
     
 - [ ] Hospedagem do site
     
