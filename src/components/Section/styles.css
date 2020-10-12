@@ -41,6 +41,20 @@
     color: var(--color-6);
 }
 
+#section-component a.sub {
+    font-family: var(--text-font);
+    text-decoration: none;
+    color: var(--color-4);
+    margin-top: -12px;
+    margin-bottom: 16px;
+    transition: all 0.2s;
+    font-size: 16px;
+}
+
+#section-component a.sub:hover {
+    opacity: 0.7;
+}
+
 #section-component span.status {
     display: flex;
     height: 15px;
@@ -74,5 +88,15 @@
 
     #section-component h1 {
         font-size: 64px;
+    }
+
+    #section-component a.sub {
+        font-family: var(--text-font);
+        text-decoration: none;
+        color: var(--color-4);
+        margin-top: -40px;
+        margin-bottom: 16px;
+        transition: all 0.2s;
+        font-size: 18px;
     }
 }

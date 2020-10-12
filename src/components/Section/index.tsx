@@ -7,8 +7,10 @@ interface Properties {
     title: string;
     className?: string;
     toggle?: boolean;
+    subtitle?: string;
+    link?:string;
 }
-const Section:React.FC<Properties> = ({title, children, className, toggle}) => {
+const Section:React.FC<Properties> = ({title, children, className, toggle, subtitle, link}) => {
   
   const [hidden, setHidden] = useState(true);
   const [text, setText] = useState("");
@@ -36,6 +38,7 @@ const Section:React.FC<Properties> = ({title, children, className, toggle}) => {
   return (
     <div id="section-component" className={className}>
         <h1 id={title}>{title}</h1>
+        <a className="sub" href={link}>{subtitle}</a>
           <div className="children" id={className}>
               {children}
           </div>

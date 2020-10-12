@@ -1,13 +1,110 @@
 #schedule-page {
+    display: flex;
+    flex-direction: column;
     overflow: hidden;
     font-family: var(--title-font);
 }
 
-#schedule-page a {
+#schedule-page .schedule-header {
+    position: fixed;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    align-self: center;
+    justify-content: space-between;
+    padding: 24px;
+    text-decoration: none;
+    color: var(--color-5);
+    margin-top: -10px;
+    width: 100vw;
+    height: 12vh;
+    background-color: #fff;
+    box-shadow: var(--color-10) 1px 2px 8px;
+    margin-left: -16px;
+}
+
+#schedule-page .schedule-header a {
     display: flex;
     flex-direction: row;
     align-items: center;
     padding: 24px;
     text-decoration: none;
     color: var(--color-5);
+    margin-left: 32px;
+}
+
+#schedule-page .schedule-header .event-info {
+    display: flex;
+    flex-direction: column;
+    color: var(--color-4);
+    max-height: 100px;
+    width: 400px;
+    margin-top: -16px;
+    align-items: center;
+    justify-content: center;
+}
+
+#schedule-page .schedule-header .event-info p {
+    margin-top: -12px;
+    line-height: 25px;
+}
+
+#schedule-page .schedule-header .event-info h4 {
+    display: flex;
+    align-items: center;
+    width: 400px;
+    text-align: start;
+}
+
+#schedule-page .nice-dates-day {
+    border-radius: 10%;
+}
+
+#schedule-page .nice-dates-day:hover {
+    opacity: 0.8;
+}
+
+#schedule-page .nice-dates-day.-selected.-highlight {
+    background-color: #fff;
+}
+
+#schedule-page .nice-dates-day.-highlight { 
+    font-weight: bold;
+    color: var(--color-2);
+    background-color: var(--color-11);
+}
+
+#schedule-page main {
+    margin-top: 64px;
+}
+
+
+@media (max-width: 1080px) {
+
+    #schedule-page .schedule-header {
+        font-size: 12px;
+        height: 20vh;
+        padding-top: 32px;
+    }
+
+    #schedule-page .schedule-header .event-info {
+        width: 90vw;
+        max-height: 20vh;
+        overflow: hidden;
+        text-align: end;
+    }
+
+    #schedule-page .schedule-header .event-info h4 {
+        width: 195px;
+        text-align: end;
+    }
+
+    #schedule-page .schedule-header a {
+        gap: 5px;
+    }
+
+    #schedule-page main {
+        padding-top: 120px;
+    }
 }

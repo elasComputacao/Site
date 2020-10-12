@@ -38,6 +38,7 @@
     "octokit": "^1.0.0-hello-world",
     "pure-react-carousel": "^1.27.4",
     "react": "^16.13.1",
+    "react-big-calendar": "^0.28.1",
     "react-bootstrap": "^1.3.0",
     "react-card-carousel": "^1.1.3",
     "react-copy-button-wrapper": "0.0.6",

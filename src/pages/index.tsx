@@ -104,14 +104,13 @@ export default function Home() {
         <Section title="Projetos" className="section-projects">  
           <Carousel array={projects} />
         </Section>
-        <Section title="Eventos" className="section-events">
-          
+        <Section title="Eventos" className="section-events" subtitle="Confira nossa Agenda" link="/schedule">
           {
             events.length == 0 ? 
-              <span className="nothing">Nenhum evento confirmado</span>
+              <span className="nothing">Nenhum evento confirmado para este mês</span>
             :
             events.map(event => {
-              return(
+              return(Number(event.month) == new Date().getMonth() ? 
                 <EventCard 
                 eventURL={event.eventURL}
                 href={event.pageURL}
@@ -120,7 +119,7 @@ export default function Home() {
                 day={event.day} month={event.month} year={event.year}
                 description={event.description}
                 />
-              );
+               : <span className="nothing">Nenhum evento confirmado para este mês</span>);
             })
           }
         </Section>

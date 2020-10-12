@@ -91,6 +91,7 @@
     #page-404 img {
         margin-top: 100px;
         transform: rotateY(180deg) scale(350%);
+        margin-left: -72px;
     }
     
     #page-404 .texts {
@@ -103,7 +104,7 @@
     #page-404 .texts h1 {
         margin-top: 10px;
         font-size: 80px;
-        max-width: 50vw;
+        max-width: 56vw;
     }
     
     #page-404 .texts a {
