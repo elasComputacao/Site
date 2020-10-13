@@ -15,6 +15,9 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
+    "@devexpress/dx-react-core": "^2.7.2",
+    "@devexpress/dx-react-scheduler": "^2.7.2",
+    "@devexpress/dx-react-scheduler-material-ui": "^2.7.2",
     "@octokit/auth-token": "^2.4.2",
     "@octokit/core": "^3.1.2",
     "@octokit/rest": "^18.0.6",

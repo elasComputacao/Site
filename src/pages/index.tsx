@@ -45,6 +45,16 @@ export default function Home() {
     })
   }, [])
 
+  function hasEventsMonth() {
+    for (let index = 0; index < events.length; index++) {
+      const element = events[index];
+      if (Number(element.month) == new Date().getMonth() + 1) {
+        return true;
+      }
+    }    
+    return false;
+  }
+
   return (
     <div id="home-page" onMouseOver={() => mouseMonitoring()}>
       <header id="header">
@@ -106,11 +116,11 @@ export default function Home() {
         </Section>
         <Section title="Eventos" className="section-events" subtitle="Confira nossa Agenda" link="/schedule">
           {
-            events.length == 0 ? 
+            !hasEventsMonth() ? 
               <span className="nothing">Nenhum evento confirmado para este mês</span>
             :
             events.map(event => {
-              return(Number(event.month) == new Date().getMonth() ? 
+              return(Number(event.month) == new Date().getMonth() + 1 ? 
                 <EventCard 
                 eventURL={event.eventURL}
                 href={event.pageURL}
@@ -119,7 +129,7 @@ export default function Home() {
                 day={event.day} month={event.month} year={event.year}
                 description={event.description}
                 />
-               : <span className="nothing">Nenhum evento confirmado para este mês</span>);
+               : "");
             })
           }
         </Section>

@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { enGB } from 'date-fns/locale'
-import { getDay, getDate, getMonth, getYear } from 'date-fns'
-import { DatePickerCalendar } from 'react-nice-dates'
+import { getDay, getDate, getMonth, getYear, isSameDay } from 'date-fns'
+import { DatePickerCalendar,Calendar } from 'react-nice-dates'
 import {ArrowLeft, X} from 'react-feather';
 
 import '../styles/schedule.css'
@@ -14,8 +14,27 @@ export default function Schedule() {
   const [title, setTitle] = useState("Clique em uma data para saber mais sobre")
   const [description, setDescription] = useState("")
 
+  useEffect(() => {
+    getEventInfo(date);
+  },[date])
+
+  function checkDate(date) {
+    
+    for (let index = 0; index < events.length; index++) {
+      const element = events[index];
+      const newDate = new Date(Number(element.year), Number(element.month) - 1, Number(element.day))
+      console.log(getDate(date) == getDate(newDate))
+      console.log(getDate(date))
+      console.log(getDate(newDate))
+      if (getDate(newDate) == getDate(date) && getMonth(newDate) == getMonth(date) && getYear(newDate) == getYear(date)) {
+        return true
+      }
+    }
+    return false
+  }
+
   const modifiers = {
-    highlight: date => getDate(date) === 3 && getMonth(date) + 1 === 11,
+    highlight: date => checkDate(date),
   }
   
   const modifiersClassNames = {
@@ -23,18 +42,19 @@ export default function Schedule() {
   }
   
   function getEventInfo(date) {
-    setDate(date)
-    events.map((element) => {
-      console.log(getDate(date) == Number(element.day))
-      console.log(getDate(date))
+
+    for (let index = 0; index < events.length; index++) {
+      const element = events[index];
       if (getDate(date) == Number(element.day) && getMonth(date) + 1 == Number(element.month) && getYear(date) == Number(element.year)) {
         setTitle(`${element.title} - ${element.day}/${element.month}/${element.year} (${element.time})`)
         setDescription(element.description)
+        return
       } else {
         setTitle(date ? `Nenhum evento marcado para ${getDate(date)}/${getMonth(date) + 1}/${getYear(date)}` : "")
         setDescription("")
       }
-    })
+      setDate(date)
+    }
   }
 
   return (
@@ -51,8 +71,8 @@ export default function Schedule() {
       </div>
       <main>
         <DatePickerCalendar
-          date={date} 
-          onDateChange={(e:Date) => getEventInfo(e)} 
+          date={date}
+          onDateChange={(e:Date) => setDate(e)} 
           locale={enGB}
           modifiers={modifiers}
           modifiersClassNames={modifiersClassNames}

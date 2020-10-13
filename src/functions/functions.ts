@@ -17,9 +17,9 @@ export function mouseMonitoring() {
 
     window.addEventListener('mousemove', (event) => {
         var pos = event.clientY;
-        if (scroll > 380 && ((pos >= 0 && pos < 44 && window.innerWidth < 1080) || (pos >= 0 && pos < 120 && window.innerWidth > 1080))) {
+        if (scroll > 380 && ((pos >= 0 && pos < 100 && window.innerWidth < 1080) || (pos >= 0 && pos < 140 && window.innerWidth > 1080))) {
           header.style.position = "fixed";
-          main.style.marginTop = window.innerWidth < 1080 ? "44px" : "101px";
+          main.style.marginTop = window.innerWidth < 1080 ? "76px" : "101px";
         } else {
           header.style.position = "relative";
           main.style.marginTop = "0px";    

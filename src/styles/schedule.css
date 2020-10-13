@@ -10,7 +10,7 @@
     z-index: 1;
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
     align-self: center;
     justify-content: space-between;
     padding: 24px;
@@ -31,7 +31,7 @@
     padding: 24px;
     text-decoration: none;
     color: var(--color-5);
-    margin-left: 32px;
+    margin-left: 0px;
 }
 
 #schedule-page .schedule-header .event-info {
@@ -58,7 +58,7 @@
 }
 
 #schedule-page .nice-dates-day {
-    border-radius: 10%;
+    border-radius: 4%;
 }
 
 #schedule-page .nice-dates-day:hover {
@@ -71,12 +71,12 @@
 
 #schedule-page .nice-dates-day.-highlight { 
     font-weight: bold;
-    color: var(--color-2);
-    background-color: var(--color-11);
+    color: var(--color-10);
+    background-color: var(--color-13);
 }
 
 #schedule-page main {
-    margin-top: 64px;
+    margin-top: 80px;
 }
 
 
