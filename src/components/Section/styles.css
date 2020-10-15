@@ -3,16 +3,19 @@
     flex-direction: column;
     padding-left: 32px;
     padding-right: 32px;
-    margin-bottom: 40px;
+    margin-bottom: 24px;
     overflow: hidden;
+    align-items: center;
+    border-bottom: 1px var(--color-14) groove;
 }
 
 #section-component .children {
     display: flex;
     flex-direction: column;
-    transition: 0.5s;
+    transition: all 0.5s;
     overflow: hidden;
-    padding-top: 12px;
+    padding-top: 24px;
+    margin-bottom: 72px;
 }
 
 #section-component h1 {
@@ -41,20 +44,6 @@
     color: var(--color-6);
 }
 
-#section-component a.sub {
-    font-family: var(--text-font);
-    text-decoration: none;
-    color: var(--color-4);
-    margin-top: -12px;
-    margin-bottom: 16px;
-    transition: all 0.2s;
-    font-size: 16px;
-}
-
-#section-component a.sub:hover {
-    opacity: 0.7;
-}
-
 #section-component span.status {
     display: flex;
     height: 15px;
@@ -64,7 +53,7 @@
     font-family: var(--text-font);
     color: var(--color-10);
     font-size: 12px;
-    transition: 0.5s;
+    transition: all 0.5s;
 }
 
 @keyframes bottom-top {
@@ -82,21 +71,17 @@
 }
 
 @media (min-width: 1024px) {
+
+    #section-component {
+        margin-bottom: 96px;
+        justify-content: space-between;
+    }
+
     #section-component .children {
         flex-direction: row;
     }
 
     #section-component h1 {
-        font-size: 64px;
-    }
-
-    #section-component a.sub {
-        font-family: var(--text-font);
-        text-decoration: none;
-        color: var(--color-4);
-        margin-top: -40px;
-        margin-bottom: 16px;
-        transition: all 0.2s;
-        font-size: 18px;
+        font-size: 48px;
     }
 }

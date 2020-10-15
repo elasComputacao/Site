@@ -12,6 +12,7 @@
     --color-11: #f1928131;
     --color-12: #e9848852;
     --color-13: #d27c9086;
+    --color-14: #2b2b2b26;
     --title-font: 'Poppins', sans-serif;
     --text-font: 'Montserrat', sans-serif;
 }
@@ -61,6 +62,8 @@ html {
     list-style: none;
     cursor: pointer;
     max-height: 24px;
+    transition: all 0.1s;
+    border-bottom: solid transparent 2px;
 }
 
 #home-page header ul li a {
@@ -69,22 +72,22 @@ html {
     font-weight: 500;
     font-size: 10px;
     cursor: pointer;
-    transition: 0.1s;
 }
 
 #home-page header ul li:hover {
-    border-bottom: solid var(--color-2) 2px;
+    border-color: var(--color-2);
 }
 
 #home-page img.wellcome-image {
     width: 100vw;
 }
 
-#home-page main p.screen-paragraph {
+#home-page main .screen-paragraph {
     font-family: var(--text-font);
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 300;
     line-height: 40px;
+    text-align: justify;
     color: var(--color-6);
 }
 
@@ -123,12 +126,9 @@ html {
     gap: 16px;
 }
 
-#home-page main .section-events .children span.nothing {
-    width: 100vw;
-    align-self: center;
-    text-align: center;
-    font-family: var(--text-font);
-    color: var(--color-6);
+#home-page main .section-events {
+    padding-bottom: 104px;
+    margin-bottom: -1px;
 }
 
 #home-page footer {
@@ -237,12 +237,19 @@ html {
         font-size: 20px;
     }
 
-    #home-page main p.screen-paragraph {
+    #home-page main .screen-paragraph {
         font-size: 22px;
         line-height: 50px;
+        font-family: var(--text-font);
     }
 
-    #home-page main .section-about .icon{
+    #home-page main .section-about .children {
+        display: flex;
+        justify-content: space-between;
+        gap: 10vw;
+     }
+
+    #home-page main .section-about .icon {
        margin-top: -124px; 
     }
 
@@ -258,15 +265,20 @@ html {
 
     #home-page main .section-projects .children {
         gap: 24px;
+        height: 80vh;
     }
 
     #home-page main .section-events .children {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        align-items: center;
+        justify-content: center;
+        align-self: center;
+        flex-wrap: wrap;
+        width: 100vw;
     }
     
+
     #home-page footer h1 {
-        font-size: 56px;
+        font-size: 48px;
     }
 
     #home-page footer div.footer-content {
@@ -281,7 +293,7 @@ html {
     }
 
     #home-page footer div.footer-content div.social-networks a img {
-        max-height: 130px;
+        max-height: 100px;
         transition: 0.2s;
         border-radius: 50%;
     }
@@ -292,5 +304,12 @@ html {
         padding-bottom: 12px;
         padding-top: 24px;
         font-size: 20px;
+    }
+
+    #home-page main .screen-paragraph {
+        font-size: 18px;
+        line-height: 45px;
+        margin-top: -20px;
+        max-width: 50vw;
     }
 }

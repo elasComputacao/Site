@@ -1,0 +1,35 @@
+#linkbutton-component {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    align-self: center;
+    justify-content: center;
+    text-decoration: none;
+    font-family: var(--title-font);
+    color: var(--color-9);
+    background-color: var(--color-3);
+    text-align: center;
+    padding: 10px;
+    transition: opacity 0.5s;
+    max-width: 50vw;
+    height: 28px;
+    font-size: 16px;
+    border-radius: 30px;
+    transition: all 0.2s;
+}
+
+#linkbutton-component:hover {
+    transform: scale(0.95);
+}
+
+@media (min-width: 1080px) {
+    #linkbutton-component {
+        max-width: 24vw;
+        display: flex;
+        height: 28px;
+        font-size: 18px;
+        text-align: center;
+        padding-right: 24px;
+        padding-left: 24px;
+    }    
+}

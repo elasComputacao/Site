@@ -3,19 +3,34 @@ import React, { useState } from 'react';
 import './styles.css'
 
 interface Properties {
-    title: string;
-    day: string;
-    month: string;
-    year: string;
+    title?: string;
+    day?: string;
+    month?: string;
+    year?: string;
     description: string;
-    time: string;
-    eventURL: string;
+    time?: string;
+    eventURL?: string;
     href?: string;
-    local: string;
+    local?: string;
+    note?: boolean;
 }
-const EventCard:React.FC<Properties> = ({title, day, month, year, description, time, local, eventURL, href}) => {
+const EventCard:React.FC<Properties> = ({note, title, day, month, year, description, time, local, eventURL, href}) => {
   const [isOver, setIsOver] = useState(false);
+  const dateTime = day != "" && month != "" && year != "" && time != "" ? `${day}/${month}/${year} - ${time}` : ""
+
   return (
+    note ? 
+    <div id="eventcard-component" onMouseOver={() => setIsOver(true)} onMouseOut={() => setIsOver(false)}>
+    <div className="header-note">
+      <div className="pin">
+         <div className="pin-part">
+         </div>
+       </div>
+      </div>
+      <p className="note">
+        {description}
+      </p>
+   </div>:
     <div id="eventcard-component" onMouseOver={() => setIsOver(true)} onMouseOut={() => setIsOver(false)}>
      <div className="header-note">
        <div className="pin">
@@ -25,7 +40,7 @@ const EventCard:React.FC<Properties> = ({title, day, month, year, description, t
         <div className="title">
           <h3>{title}</h3>
           <div className="infos">
-            <span>{day}/{month}/{year} - {time}</span>
+            <span>{dateTime}</span>
             <span>{local}</span>
           </div>
         </div>

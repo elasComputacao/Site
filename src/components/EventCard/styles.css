@@ -95,6 +95,14 @@
     margin-top: 2px;
 }
 
+#eventcard-component .note {
+    display: flex;
+    align-self: center;
+    align-items: center;
+    margin: auto;
+    text-align: center;
+}
+
 #eventcard-component .more,
 #eventcard-component .more-hidden {
     margin-top: 15px;

@@ -6,7 +6,7 @@ module.exports = {
   pathPrefix: `/`,
   siteMetadata: {
     title: `Elas@Computação UFCG`,
-    siteUrl: `https://www.elascomputacao.github.io`, 
+    siteUrl: `https://elascomputacao.github.io`, 
     description: `Site do Elas@Computação UFCG`,
     social: [
       {

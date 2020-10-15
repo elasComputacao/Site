@@ -1,4 +1,5 @@
 import React from 'react';
+import LinkButton from '../LinkButton';
 
 import './styles.css'
 
@@ -29,9 +30,10 @@ const ProjectCard:React.FC<Properties> = ({title, description, imageURL, href, t
         <p>
           {description}
         </p>
-        <a target="_blank" href={href}>
-          <span>Conferir</span>
-        </a>
+        <LinkButton
+        href={href}
+        title="Conferir"
+        />
       </div>
     </div>
   );

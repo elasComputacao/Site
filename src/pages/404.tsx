@@ -9,13 +9,13 @@ export default function NotFound() {
   return (
     <div id="page-404">
         <div className="texts">
-          <h1>
-            404: Página não encontrada
-          </h1>
           <a href="/">
             <ArrowLeft />
             <span>Voltar para a Página Inicial</span>
           </a>
+          <h1>
+            404: Página não encontrada
+          </h1>
         </div>
         <img src={cafe} alt="Image"/>
         

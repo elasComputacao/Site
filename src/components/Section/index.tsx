@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { ChevronsDown, ChevronsUp } from 'react-feather';
+import LinkButton from '../LinkButton';
 
 import './styles.css'
 
@@ -37,8 +38,8 @@ const Section:React.FC<Properties> = ({title, children, className, toggle, subti
 
   return (
     <div id="section-component" className={className}>
-        <h1 id={title}>{title}</h1>
-        <a className="sub" href={link}>{subtitle}</a>
+        <div id={title}></div>
+          <h1>{title}</h1>
           <div className="children" id={className}>
               {children}
           </div>
@@ -54,6 +55,7 @@ const Section:React.FC<Properties> = ({title, children, className, toggle, subti
           {toggle ? 
             <span className="status">{text}</span> : <></>
           }
+          {link ? <LinkButton title={subtitle} href={link}/> : <></>}
     </div>
   );
 }

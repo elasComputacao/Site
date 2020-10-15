@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import {MapPin, Mail} from 'react-feather';
+import { Text } from 'theme-ui'
 
 import logoHorizontal from '../assets/logos/elas_horizontal.png';
 import logoVertical from '../assets/logos/elas_vertical.png';
@@ -35,6 +36,7 @@ export default function Home() {
   const [randomIndex, setRandomIndex] = useState([])
 
   useEffect(() => {
+    document.title = "Elas@Computação UFCG"
     var result:any = [];
     getUsersFromGitHub().then(({data}) => {
         setUsers(data);
@@ -89,9 +91,12 @@ export default function Home() {
       <img className="wellcome-image" src={cabecalho} alt="Elas@Computação UFCG"/>
       <main id="main">
         <Section title="Sobre" className="section-about">
-          <p className="screen-paragraph">
-            {infos.bio.pt}
-          </p>
+          
+          <Text 
+            className="screen-paragraph"
+          >
+          {infos.bio.pt}
+          </Text>
           <IconStatus 
             icon={logoVertical} 
             status={icons.pinkRibbon} 
@@ -114,10 +119,21 @@ export default function Home() {
         <Section title="Projetos" className="section-projects">  
           <Carousel array={projects} />
         </Section>
-        <Section title="Eventos" className="section-events" subtitle="Confira nossa Agenda" link="/schedule">
+        <Section title="Eventos" className="section-events" subtitle="Confira a agenda" link="/schedule">
           {
             !hasEventsMonth() ? 
-              <span className="nothing">Nenhum evento confirmado para este mês</span>
+              <EventCard
+              note
+              title=""
+              day=""
+              month=""
+              year=""
+              time=""
+              local=""
+              eventURL=""
+              href=""
+              description="Nenhum evento confirmado para este mês"
+              />
             :
             events.map(event => {
               return(Number(event.month) == new Date().getMonth() + 1 ? 
