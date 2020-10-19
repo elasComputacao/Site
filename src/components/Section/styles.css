@@ -6,7 +6,7 @@
     margin-bottom: 24px;
     overflow: hidden;
     align-items: center;
-    border-bottom: 1px var(--color-14) groove;
+    border-bottom: var(--color-14) thin solid;
 }
 
 #section-component .children {

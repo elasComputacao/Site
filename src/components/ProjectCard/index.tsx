@@ -10,8 +10,9 @@ interface Properties {
     href: string;
     type: string;
     color?: string;
+    buttonText: string;
 }
-const ProjectCard:React.FC<Properties> = ({title, description, imageURL, href, type, color}) => {
+const ProjectCard:React.FC<Properties> = ({title, description, imageURL, href, type, color, buttonText}) => {
   
   const DEFAULT_COLOR = "#fff6f3";
 
@@ -32,7 +33,7 @@ const ProjectCard:React.FC<Properties> = ({title, description, imageURL, href, t
         </p>
         <LinkButton
         href={href}
-        title="Conferir"
+        title={buttonText}
         />
       </div>
     </div>

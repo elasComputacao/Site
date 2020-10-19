@@ -26,19 +26,3 @@ export function mouseMonitoring() {
         }
     })
 }
-
-export function moveRight(array, len, index) {
-    if (array[index] == len - 1) {
-        array[index] = 0;
-      } else {
-        array[index]++;
-      }
-}
-
-export function moveLeft(array, len, index) {
-    if (array[index] == 0) {
-        array[index] = len - 1;
-      } else {
-        array[index]--;
-      }
-}

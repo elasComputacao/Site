@@ -16,7 +16,7 @@
 
 .normal {
     border: var(--color-3) 0.2px;
-    border-style: dashed;
+    border-style: solid;
     box-shadow: var(--color-10) 4px 2px 6px;
 }
 
@@ -24,10 +24,6 @@
     transform: translateY(-5px);
     box-shadow: var(--color-10) 5px 3px 7px;
     border-style: solid;
-}
-
-.spotlight:hover {
-    transform: scale(1);
 }
 
 .hidden {
@@ -99,11 +95,17 @@
         max-height: 250px;
     }
 
+    #projectcard-component div.content {
+        gap: 5px;
+    }
+
     #projectcard-component div.content p {
         line-height: 30px;
-        font-size: 18px;
+        font-size: 16px;
+        align-self: center;
         width: 360px;
         margin-top: -15px;
+        height: 205px;
     }
 
     #projectcard-component div.content h3 {

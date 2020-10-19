@@ -12,7 +12,7 @@
     --color-11: #f1928131;
     --color-12: #e9848852;
     --color-13: #d27c9086;
-    --color-14: #2b2b2b26;
+    --color-14: #2b2b2b11;
     --title-font: 'Poppins', sans-serif;
     --text-font: 'Montserrat', sans-serif;
 }
@@ -82,17 +82,20 @@ html {
     width: 100vw;
 }
 
-#home-page main .screen-paragraph {
+#home-page main .paragraph {
     font-family: var(--text-font);
-    font-size: 15px;
-    font-weight: 300;
-    line-height: 40px;
     text-align: justify;
     color: var(--color-6);
+    font-weight: 300;
+    line-height: 40px;
 }
 
-#home-page main .section-about p.screen-paragraph {
-    margin-top: -10px;
+#home-page main .section-about .text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
 }
 
 #home-page main .section-panel .children {
@@ -200,6 +203,14 @@ html {
     margin-top: -6px;
 }
 
+#carousel-component {
+    display: flex;
+    right: 1000%;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
 @media (min-width: 760px) {
     #home-page main .section-panel .children {
         display: grid;
@@ -237,20 +248,19 @@ html {
         font-size: 20px;
     }
 
-    #home-page main .screen-paragraph {
-        font-size: 22px;
-        line-height: 50px;
-        font-family: var(--text-font);
-    }
-
     #home-page main .section-about .children {
         display: flex;
         justify-content: space-between;
         gap: 10vw;
-     }
+    }
 
-    #home-page main .section-about .icon {
-       margin-top: -124px; 
+    #home-page main .section-about .children .text {
+        width: 70vw;
+    }
+
+    #home-page main .section-about #iconstatus-component {
+       margin-top: 15vh; 
+       margin-left: -120px;
     }
 
     #home-page main .section-panel .children {
@@ -306,10 +316,12 @@ html {
         font-size: 20px;
     }
 
-    #home-page main .screen-paragraph {
+    #home-page main .paragraph {
         font-size: 18px;
         line-height: 45px;
         margin-top: -20px;
-        max-width: 50vw;
+        width: 65vw;
+        text-align: justify;
+        padding-left: 88px;
     }
 }

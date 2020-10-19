@@ -2,31 +2,30 @@ import React, { useEffect, useState } from 'react';
 import {MapPin, Mail} from 'react-feather';
 import ReactCardCarousel from 'react-card-carousel'
 
-import logoHorizontal from '../assets/logos/elas_horizontal.png';
-import logoVertical from '../assets/logos/elas_vertical.png';
-import instagram from '../assets/redes-sociais/instagram.svg';
-import github from '../assets/redes-sociais/github.svg';
-import twitter from '../assets/redes-sociais/twitter.svg';
-import cabecalho from '../assets/images/cabecalho.png';
+import logoHorizontal from '../../assets/logos/elas_horizontal.png';
+import logoVertical from '../../assets/logos/elas_vertical.png';
+import instagram from '../../assets/redes-sociais/instagram.svg';
+import github from '../../assets/redes-sociais/github.svg';
+import twitter from '../../assets/redes-sociais/twitter.svg';
+import cabecalho from '../../assets/images/cabecalho.png';
 
-import socialNetwork from '../enums/social-network'
-import langs from '../enums/langs'
-import infos from '../enums/infos';
-import {bio, events, projects, sections, supports, buttonTexts} from '../enums/pt/texts'
-import {langInfo} from '../enums/pt/lang-infos'
+import socialNetwork from '../../enums/social-network'
+import langs from '../../enums/langs'
+import infos from '../../enums/infos';
+import {bio, events, projects, sections, supports,buttonTexts} from '../../enums/en/texts'
+import {langInfo} from '../../enums/en/lang-infos'
+import Section from '../../components/Section';
+import ContactCard from '../../components/ContactCard';
+import IconStatus from '../../components/IconStatus';
+import Dropdown from '../../components/DropDown';
+import PictureLink from '../../components/PictureLink';
+import EventCard from '../../components/EventCard';
 
-import Section from '../components/Section';
-import ContactCard from '../components/ContactCard';
-import IconStatus from '../components/IconStatus';
-import Dropdown from '../components/DropDown';
-import PictureLink from '../components/PictureLink';
-import EventCard from '../components/EventCard';
+import { arrayShuffle, mouseMonitoring } from '../../functions/functions';
+import { getUsersFromGitHub } from '../../functions/connections';
 
-import { arrayShuffle, mouseMonitoring } from '../functions/functions';
-import { getUsersFromGitHub } from '../functions/connections';
-
-import '../styles/home.css'
-import ProjectCard from '../components/ProjectCard';
+import '../../styles/home.css'
+import ProjectCard from '../../components/ProjectCard';
 
 export default function Home() {
   const [users, setUsers] = useState([]);
@@ -59,27 +58,25 @@ export default function Home() {
         <a href="#">
           <img src={logoHorizontal} alt="Logo Elas@Computação Horizontal"/>
         </a>
-        <nav>
-          <ul>
-            <li>
-              <a href={`/#${sections.about}`}>{sections.about}</a>
-            </li>
-            <li>
-              <a href={`/#${sections.panel}`}>{sections.panel}</a>
-            </li>
-            <li>
-              <a href={`/#${sections.projects}`}>{sections.projects}</a>
-            </li>
-            <li>
-              <a href={`/#${sections.events}`}>{sections.events}</a>
-            </li>
-            <li>
-              <a href={`/#${sections.contact}`}>{sections.contact}</a>
-            </li>
-            <li>
-            </li>
-          </ul>
-        </nav>
+        <ul>
+          <li>
+            <a href={`/${langInfo.ref}/#${sections.about}`}>{sections.about}</a>
+          </li>
+          <li>
+            <a href={`/${langInfo.ref}/#${sections.panel}`}>{sections.panel}</a>
+          </li>
+          <li>
+            <a href={`/${langInfo.ref}/#${sections.projects}`}>{sections.projects}</a>
+          </li>
+          <li>
+            <a href={`/${langInfo.ref}/#${sections.events}`}>{sections.events}</a>
+          </li>
+          <li>
+            <a href={`/${langInfo.ref}/#${sections.contact}`}>{sections.contact}</a>
+          </li>
+          <li>
+          </li>
+        </ul>
         <Dropdown
           title={langInfo.subtitle}
           defaultImg={langInfo.src}
@@ -142,7 +139,7 @@ export default function Home() {
           </ReactCardCarousel>
       </div>
         </Section>
-        <Section title={sections.events} className="section-events" subtitle={buttonTexts.sectionEvents} link="/schedule">
+        <Section title={sections.events} className="section-events" subtitle={buttonTexts.sectionEvents} link={`/${langInfo.ref}/schedule`}>
           {
             !hasEventsMonth() ? 
               <EventCard
@@ -155,7 +152,7 @@ export default function Home() {
               local=""
               eventURL=""
               href=""
-              description="Nenhum evento confirmado para este mês"
+              description="No events for this month"
               />
             :
             events.map(event => {

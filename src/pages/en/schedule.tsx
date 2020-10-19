@@ -4,10 +4,10 @@ import { getDay, getDate, getMonth, getYear, isSameDay } from 'date-fns'
 import { DatePickerCalendar,Calendar } from 'react-nice-dates'
 import {ArrowLeft, X} from 'react-feather';
 
-import '../styles/schedule.css'
+import '../../styles/schedule.css'
 import 'react-nice-dates/build/style.css'
 
-import {events} from '../enums/pt/texts'
+import {events} from '../../enums/en/texts'
 
 export default function Schedule() {
   const [date, setDate] = useState<Date>()
@@ -19,9 +19,9 @@ export default function Schedule() {
   },[date])
 
   useEffect(() => {
-    document.title = "Agenda - Elas@Computação UFCG"
-    setTitle("Clique em uma data para saber mais")
-    setDescription("Datas em evidência indicam um evento marcado para o dia")
+    document.title = "Schedule - Elas@Computação UFCG"
+    setTitle("Click on a date for more information")
+    setDescription("Highlighted dates indicate an event scheduled for the day")
   }, [])
 
   function checkDate(date) {
@@ -49,11 +49,11 @@ export default function Schedule() {
     for (let index = 0; index < events.length; index++) {
       const element = events[index];
       if (getDate(date) == Number(element.day) && getMonth(date) + 1 == Number(element.month) && getYear(date) == Number(element.year)) {
-        setTitle(`${element.title} - ${element.day}/${element.month}/${element.year} (${element.time})`)
+        setTitle(`${element.title} - ${element.month}/${element.day}/${element.year} (${element.time})`)
         setDescription(element.description)
         return
       } else {
-        setTitle(date ? `Nenhum evento marcado para ${getDate(date)}/${getMonth(date) + 1}/${getYear(date)}` : "")
+        setTitle(date ? `No events scheduled for ${getMonth(date) + 1}/${getDate(date)}/${getYear(date)}` : "")
         setDescription("")
       }
       setDate(date)
@@ -63,9 +63,9 @@ export default function Schedule() {
   return (
     <div id="schedule-page">
       <div className="schedule-header">
-        <a href="/">
+        <a href="/en">
           <ArrowLeft size={16}/>
-          Voltar para a homepage
+          Go back to the homepage
         </a>
         <div className="event-info">
           <h4>{title}</h4>
