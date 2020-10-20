@@ -3,10 +3,11 @@
     flex-direction: column;
     padding-left: 32px;
     padding-right: 32px;
-    margin-bottom: 24px;
     overflow: hidden;
     align-items: center;
-    border-bottom: var(--color-14) thin solid;
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+    margin-bottom: 12px;
+    background-color: #fff;
 }
 
 #section-component .children {
@@ -73,12 +74,15 @@
 @media (min-width: 1024px) {
 
     #section-component {
-        margin-bottom: 96px;
         justify-content: space-between;
+        align-items: center;
+        align-self: center;
     }
 
     #section-component .children {
         flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
     }
 
     #section-component h1 {

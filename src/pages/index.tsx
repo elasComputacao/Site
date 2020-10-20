@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import {MapPin, Mail} from 'react-feather';
 import ReactCardCarousel from 'react-card-carousel'
+import {Link} from 'react-scroll'
 
 import logoHorizontal from '../assets/logos/elas_horizontal.png';
 import logoVertical from '../assets/logos/elas_vertical.png';
@@ -62,19 +63,19 @@ export default function Home() {
         <nav>
           <ul>
             <li>
-              <a href={`/#${sections.about}`}>{sections.about}</a>
+              <Link to={`${sections.about}`}>{sections.about}</Link>
             </li>
             <li>
-              <a href={`/#${sections.panel}`}>{sections.panel}</a>
+              <Link to={`${sections.panel}`}>{sections.panel}</Link>
             </li>
             <li>
-              <a href={`/#${sections.projects}`}>{sections.projects}</a>
+              <Link to={`${sections.projects}`}>{sections.projects}</Link>
             </li>
             <li>
-              <a href={`/#${sections.events}`}>{sections.events}</a>
+              <Link to={`${sections.events}`}>{sections.events}</Link>
             </li>
             <li>
-              <a href={`/#${sections.contact}`}>{sections.contact}</a>
+              <Link to={`${sections.contact}`}>{sections.contact}</Link>
             </li>
             <li>
             </li>

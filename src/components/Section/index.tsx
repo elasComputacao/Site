@@ -10,8 +10,9 @@ interface Properties {
     toggle?: boolean;
     subtitle?: string;
     link?:string;
+    highlight?: boolean;
 }
-const Section:React.FC<Properties> = ({title, children, className, toggle, subtitle, link}) => {
+const Section:React.FC<Properties> = ({title, children, className, toggle, subtitle, link, highlight}) => {
   
   const [hidden, setHidden] = useState(true);
   const [text, setText] = useState("");
@@ -19,6 +20,10 @@ const Section:React.FC<Properties> = ({title, children, className, toggle, subti
   useEffect(() => {
     if (toggle) {
       handleToggle();
+      if (highlight == undefined) {
+        highlight = false;
+      }
+      console.log(highlight)
     }
   }, [])
 
@@ -37,7 +42,7 @@ const Section:React.FC<Properties> = ({title, children, className, toggle, subti
   }
 
   return (
-    <div id="section-component" className={className}>
+    <div id="section-component" className={className} style={highlight ? {backgroundColor: "var(--color-7)", color: "#fff"} : {}}>
         <div id={title}></div>
           <h1>{title}</h1>
           <div className="children" id={className}>

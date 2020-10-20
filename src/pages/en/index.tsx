@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import {MapPin, Mail} from 'react-feather';
-import ReactCardCarousel from 'react-card-carousel'
+import ReactCardCarousel from 'react-card-carousel';
+import { Link } from 'react-scroll';
 
 import logoHorizontal from '../../assets/logos/elas_horizontal.png';
 import logoVertical from '../../assets/logos/elas_vertical.png';
@@ -60,19 +61,19 @@ export default function Home() {
         </a>
         <ul>
           <li>
-            <a href={`/${langInfo.ref}/#${sections.about}`}>{sections.about}</a>
+            <Link to={`${sections.about}`}>{sections.about}</Link>
           </li>
           <li>
-            <a href={`/${langInfo.ref}/#${sections.panel}`}>{sections.panel}</a>
+            <Link to={`${sections.panel}`}>{sections.panel}</Link>
           </li>
           <li>
-            <a href={`/${langInfo.ref}/#${sections.projects}`}>{sections.projects}</a>
+            <Link to={`${sections.projects}`}>{sections.projects}</Link>
           </li>
           <li>
-            <a href={`/${langInfo.ref}/#${sections.events}`}>{sections.events}</a>
+            <Link to={`${sections.events}`}>{sections.events}</Link>
           </li>
           <li>
-            <a href={`/${langInfo.ref}/#${sections.contact}`}>{sections.contact}</a>
+            <Link to={`${sections.contact}`}>{sections.contact}</Link>
           </li>
           <li>
           </li>

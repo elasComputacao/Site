@@ -1,7 +1,6 @@
 import { Octokit } from "@octokit/rest";
 
 export async function getUsersFromGitHub() {
-    console.log(process.env.REACT_APP_GITHUB_TOKEN)
     const octokit = new Octokit(
         {
           auth: process.env.REACT_APP_GITHUB_TOKEN,

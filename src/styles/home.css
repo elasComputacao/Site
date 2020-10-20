@@ -12,7 +12,7 @@
     --color-11: #f1928131;
     --color-12: #e9848852;
     --color-13: #d27c9086;
-    --color-14: #2b2b2b11;
+    --color-14: #d27c903d;
     --title-font: 'Poppins', sans-serif;
     --text-font: 'Montserrat', sans-serif;
 }
@@ -22,6 +22,8 @@ html {
 }
 
 #home-page {
+    display: flex;
+    flex-direction: column;
     justify-self: center;
     overflow: hidden;
     margin: -8px;
@@ -80,6 +82,15 @@ html {
 
 #home-page img.wellcome-image {
     width: 100vw;
+    background-color: #fff;
+}
+
+#home-page main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
 }
 
 #home-page main .paragraph {
@@ -113,6 +124,7 @@ html {
 #home-page main .section-projects {
     display: flex;
     overflow: hidden;
+    width: 100vw;
 }
 
 #home-page main .section-projects .children {
@@ -214,7 +226,7 @@ html {
 @media (min-width: 760px) {
     #home-page main .section-panel .children {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: repeat(12, 1fr);
         align-items: center;
         justify-content: center;
         align-self: center;
@@ -250,22 +262,25 @@ html {
 
     #home-page main .section-about .children {
         display: flex;
+        flex-direction: row;
         justify-content: space-between;
-        gap: 10vw;
+        align-items: center;
+        gap: 9vw;
     }
 
     #home-page main .section-about .children .text {
-        width: 70vw;
+        width: 72vw;
+        max-height: 100vh;
     }
 
     #home-page main .section-about #iconstatus-component {
-       margin-top: 15vh; 
+       margin-top: -80px;
        margin-left: -120px;
     }
 
     #home-page main .section-panel .children {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: repeat(12, 1fr);
         align-items: center;
         justify-content: center;
         margin-left: 15px;
