@@ -2,6 +2,7 @@ import icons from '../icons'
 import cafeComElas from '../../assets/images/cafe-com-elas.png';
 import hacktoberelas from '../../assets/images/hacktoberelas.png'
 import raioxdelas from '../../assets/images/raiox-delas.png'
+import dev from '../../assets/images/dev-elas.png'
 
 export const sections = {
     about: "About",
@@ -10,6 +11,7 @@ export const sections = {
     events: "Events",
     contact: "Contact",
     language: "Language",
+    partnerships: "Partnerships",
 }
 
 export const supports = {
@@ -48,6 +50,13 @@ export const projects = [
         title: "HacktoberElas", 
         description: "Want to celebrate the open source with the Elas@Computação? The HacktoberElas was created to motivate, initiate and prepare all the community to contribute with open source softwares!",
         href: "https://github.com/elasComputacao/"
+    },
+    {
+        imageURL: dev,
+        color: "#e8e8e8",
+        title: "DEV blog", 
+        description: "We're at DEV! A space for our community to produce and publish content about technology in general and also involve the participation of Brazilian women from TI on the platform. Follow us on DEV!",
+        href: "https://dev.to/elascomputacao"
     }
 ]
 
@@ -77,3 +86,5 @@ export const buttonTexts = {
     projectCard: "Check",
     sectionEvents: "Check the schedule"
 }
+
+export const noEvents = "No events for this month"

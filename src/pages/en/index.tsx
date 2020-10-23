@@ -9,11 +9,12 @@ import instagram from '../../assets/redes-sociais/instagram.svg';
 import github from '../../assets/redes-sociais/github.svg';
 import twitter from '../../assets/redes-sociais/twitter.svg';
 import cabecalho from '../../assets/images/cabecalho.png';
+import partnerships from '../../enums/partnerships'
 
 import socialNetwork from '../../enums/social-network'
 import langs from '../../enums/langs'
 import infos from '../../enums/infos';
-import {bio, events, projects, sections, supports,buttonTexts} from '../../enums/en/texts'
+import {bio, events, projects, sections, supports,buttonTexts, noEvents} from '../../enums/en/texts'
 import {langInfo} from '../../enums/en/lang-infos'
 import Section from '../../components/Section';
 import ContactCard from '../../components/ContactCard';
@@ -73,9 +74,10 @@ export default function Home() {
             <Link to={`${sections.events}`}>{sections.events}</Link>
           </li>
           <li>
-            <Link to={`${sections.contact}`}>{sections.contact}</Link>
+            <Link to={`${sections.partnerships}`}>{sections.partnerships}</Link>
           </li>
           <li>
+            <Link to={`${sections.contact}`}>{sections.contact}</Link>
           </li>
         </ul>
         <Dropdown
@@ -104,6 +106,7 @@ export default function Home() {
             statusText={supports.outubroRosa.description}
           />
         </Section>
+        <div className="division"></div>
         <Section title={sections.panel} className="section-panel">
         { randomIndex.map(index => {
               return(
@@ -117,6 +120,7 @@ export default function Home() {
             })
           }
         </Section>
+        <div className="division"></div>
         <Section title={sections.projects} className="section-projects">  
         <div id="carousel-component">
           <ReactCardCarousel disable_keydown={ true } autoplay={ true } autoplay_speed={ 15000 } className={"carousel-component"}>
@@ -140,6 +144,7 @@ export default function Home() {
           </ReactCardCarousel>
       </div>
         </Section>
+        <div className="division"></div>
         <Section title={sections.events} className="section-events" subtitle={buttonTexts.sectionEvents} link={`/${langInfo.ref}/schedule`}>
           {
             !hasEventsMonth() ? 
@@ -153,7 +158,7 @@ export default function Home() {
               local=""
               eventURL=""
               href=""
-              description="No events for this month"
+              description={noEvents}
               />
             :
             events.map(event => {
@@ -169,6 +174,13 @@ export default function Home() {
                : "");
             })
           }
+        </Section>
+        <Section title={sections.partnerships} className="section-partnerships">
+        {partnerships.map(element => {
+            return(
+              <PictureLink text={element.title} href={element.href} pic={element.pic}/>
+            );
+          })}
         </Section>
       </main>
       <footer>
