@@ -161,18 +161,27 @@ html {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 100vw;
 }
 
 #home-page main .section-partnerships .children {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     align-items: center;
     align-self: center;
     justify-content: center;
     max-width: 100vw;
-    column-gap: 8px;
+    column-gap: 12px;
+    row-gap: 8px;
     padding-left: 90px;
     padding-right: 100px;
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+
+#home-page main .section-partnerships .children #picturelink-component img {
+    max-height: 80px;
+    border: none;
 }
 
 #home-page footer {
@@ -340,8 +349,12 @@ html {
         flex-wrap: wrap;
         width: 100vw;
     }
-    
 
+    #home-page main .section-partnerships .children #picturelink-component img {
+        max-height: 120px;
+        border: none;
+    }
+    
     #home-page footer h1 {
         font-size: 48px;
     }
@@ -381,7 +394,12 @@ html {
     }
 
     #home-page main .section-partnerships .children {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
         grid-template-columns: repeat(5, 1fr);
         gap: 24px;
+        padding-top: 100px;
+        padding-bottom: 120px;
     }
 }

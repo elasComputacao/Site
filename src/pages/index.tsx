@@ -178,6 +178,7 @@ export default function Home() {
             })
           }
         </Section>
+        <div className="division"></div>
         <Section title={sections.partnerships} className="section-partnerships">
           {partnerships.map(element => {
             return(

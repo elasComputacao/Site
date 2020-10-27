@@ -1,9 +1,10 @@
 import { Octokit } from "@octokit/rest";
+import GITHUBTOKEN from "../GITHUB-TOKEN";
 
 export async function getUsersFromGitHub() {
     const octokit = new Octokit(
         {
-          auth: process.env.REACT_APP_GITHUB_TOKEN,
+          auth: "",
           baseUrl: 'https://api.github.com',
         }
       );

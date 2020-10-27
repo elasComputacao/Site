@@ -16,23 +16,9 @@
     transition: 0.2s; 
 }
 
-#picturelink-component img:hover,  
-#picturelink-component div.emoji:hover {
+#picturelink-component img:hover {
     transform: scale(1.1);
     box-shadow: var(--color-10) 5px 3px 7px;
-}
-
-#picturelink-component div.emoji {
-    z-index: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 30px;
-    width: 30px;
-    background-color: var(--color-1);
-    border-radius: 50%;
-    margin-top: -26px;
-    font-size: 24px;
 }
 
 @media (min-width: 1080px) {
