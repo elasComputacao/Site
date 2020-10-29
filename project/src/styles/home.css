@@ -46,9 +46,16 @@ html {
     transition: all 0.2s;
 }
 
-#home-page header img {
+#home-page header a.image {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-left: 4px;
+}
+
+#home-page header a img {
     max-width: 48px;
-    margin-left: 10px;
     margin-top: 4px;
 }
 
@@ -59,8 +66,7 @@ html {
     gap: 12px;
     justify-content: space-between;
     align-items: center;
-    margin-left: -40px;
-    max-width: 60vw;
+    padding-right: 24px;
 }
 
 #home-page header ul li {
@@ -70,6 +76,7 @@ html {
     cursor: pointer;
     max-height: 8px;
     transition: all 0.1s;
+    justify-content: center;
     border-bottom: solid transparent 2px;
 }
 
@@ -280,19 +287,16 @@ html {
         max-height: 300px;
     }
     
-    #home-page header img {
+    #home-page header a img {
         max-width: 88px;
-        margin-right: 3vw;
         margin-left: 12px;
     }
 
     #home-page header ul {
         display: flex;
         align-items: baseline;
-        gap: 0px;
+        gap: 32px;
         max-height: 24px;
-        width: 50vw;
-        margin-left: -390px;
     }
 
     #home-page header ul li {
@@ -307,6 +311,10 @@ html {
     #home-page header ul li a {
         font-size: 20px;
         text-align: center;
+    }
+
+    #home-page img.wellcome-image {
+        
     }
 
     #home-page main .section-about .children {

@@ -19,10 +19,23 @@ export function mouseMonitoring() {
         var pos = event.clientY;
         if (scroll > 380 && ((pos >= 0 && pos < 100 && window.innerWidth < 1080) || (pos >= 0 && pos < 140 && window.innerWidth > 1080))) {
           header.style.position = "fixed";
-          main.style.marginTop = window.innerWidth < 1080 ? "76px" : "101px";
+          main.style.marginTop = window.innerWidth < 1080 ? "76px" : "95px";
         } else {
           header.style.position = "relative";
           main.style.marginTop = "0px";    
         }
     })
+}
+
+export function hasEventsMonth(events: any[]) {
+    
+  for (let index = 0; index < events.length; index++) {
+    const element = events[index]; 
+
+    if (Number(element.month) == new Date().getMonth() + 1) {
+      return true;
+    }
+  }    
+
+  return false;
 }

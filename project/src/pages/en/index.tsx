@@ -1,88 +1,85 @@
 import React, { useEffect, useState } from 'react';
+
+//Importing external modules
 import {MapPin, Mail} from 'react-feather';
-import ReactCardCarousel from 'react-card-carousel'
-import {Link} from 'react-scroll'
+import ReactCardCarousel from 'react-card-carousel';
+import { Link } from 'react-scroll';
 
-import logoHorizontal from '../assets/logos/elas_horizontal.png';
-import logoVertical from '../assets/logos/elas_vertical.png';
-import instagram from '../assets/redes-sociais/instagram.svg';
-import github from '../assets/redes-sociais/github.svg';
-import twitter from '../assets/redes-sociais/twitter.svg';
-import cabecalho from '../assets/images/cabecalho.png';
-import partnerships from '../enums/partnerships'
+//Importing images
+import logoHorizontal from '../../assets/logos/elas_horizontal.png';
+import logoVertical from '../../assets/logos/elas_vertical.png';
+import instagram from '../../assets/redes-sociais/instagram.svg';
+import github from '../../assets/redes-sociais/github.svg';
+import twitter from '../../assets/redes-sociais/twitter.svg';
+import cabecalho from '../../assets/images/header.png';
 
-import socialNetwork from '../enums/social-network'
-import langs from '../enums/langs'
-import infos from '../enums/infos';
-import {bio, events, projects, sections, supports, buttonTexts, noEvents} from '../enums/pt/texts'
-import {langInfo} from '../enums/pt/lang-infos'
+//Importing site information and content
+import socialNetwork from '../../enums/social-network'
+import langs from '../../enums/langs'
+import infos from '../../enums/infos';
+import {bio, events, projects, sections, supports,buttonTexts, noEvents} from '../../enums/en/texts'
+import {langInfo} from '../../enums/en/lang-infos'
+import partnerships from '../../enums/partnerships'
 
-import Section from '../components/Section';
-import ContactCard from '../components/ContactCard';
-import IconStatus from '../components/IconStatus';
-import Dropdown from '../components/DropDown';
-import PictureLink from '../components/PictureLink';
-import EventCard from '../components/EventCard';
+//Importing components
+import Section from '../../components/Section';
+import ContactCard from '../../components/ContactCard';
+import IconStatus from '../../components/IconStatus';
+import Dropdown from '../../components/DropDown';
+import PictureLink from '../../components/PictureLink';
+import EventCard from '../../components/EventCard';
+import ProjectCard from '../../components/ProjectCard';
 
-import { arrayShuffle, mouseMonitoring } from '../functions/functions';
-import { getUsersFromGitHub } from '../functions/connections';
+// Importing functions
+import { arrayShuffle, mouseMonitoring, hasEventsMonth } from '../../functions/functions';
+import { getUsersFromGitHub } from '../../functions/connections';
 
-import '../styles/home.css'
-import ProjectCard from '../components/ProjectCard';
+// Importing styles
+import '../../styles/home.css'
 
 export default function Home() {
-  const [users, setUsers] = useState([]);
-  const [randomIndex, setRandomIndex] = useState([])
+  const [users, setUsers] = useState([]); //Users array
+  const [randomIndex, setRandomIndex] = useState([]) //Shuffled indexes
+
 
   useEffect(() => {
-    document.title = "Elas@Computação UFCG"
-    var result:any = [];
+    document.title = "Elas@Computação UFCG" //Page title
+    
+    //Calling getUsersFromGitHub function 
     getUsersFromGitHub().then(({data}) => {
-        setUsers(data);
-        var array = [...Array(data.length).keys()];
-        arrayShuffle(array);
-        setRandomIndex(array);
+        setUsers(data); //Set users data
+        var array = [...Array(data.length).keys()]; //Getting users indexes
+        arrayShuffle(array); //Shuffling indexes
+        setRandomIndex(array); //Set shuffled indexes
     })
   }, [])
-
-  function hasEventsMonth() {
-    for (let index = 0; index < events.length; index++) {
-      const element = events[index];
-      if (Number(element.month) == new Date().getMonth() + 1) {
-        return true;
-      }
-    }    
-    return false;
-  }
 
   return (
     <div id="home-page" onMouseOver={() => mouseMonitoring()}>
       <header id="header">
-        <a href="#">
+        <a href="#" className="image">
           <img src={logoHorizontal} alt="Logo Elas@Computação Horizontal"/>
         </a>
-        <nav>
-          <ul>
-            <li>
-              <Link to={`${sections.about}`}>{sections.about}</Link>
-            </li>
-            <li>
-              <Link to={`${sections.panel}`}>{sections.panel}</Link>
-            </li>
-            <li>
-              <Link to={`${sections.projects}`}>{sections.projects}</Link>
-            </li>
-            <li>
-              <Link to={`${sections.events}`}>{sections.events}</Link>
-            </li>
-            <li>
-              <Link to={`${sections.partnerships}`}>{sections.partnerships}</Link>
-            </li>
-            <li>
-              <Link to={`${sections.contact}`}>{sections.contact}</Link>
-            </li>
-          </ul>
-        </nav>
+        <ul>
+          <li>
+            <Link to={`${sections.about}`}>{sections.about}</Link>
+          </li>
+          <li>
+            <Link to={`${sections.panel}`}>{sections.panel}</Link>
+          </li>
+          <li>
+            <Link to={`${sections.projects}`}>{sections.projects}</Link>
+          </li>
+          <li>
+            <Link to={`${sections.events}`}>{sections.events}</Link>
+          </li>
+          <li>
+            <Link to={`${sections.partnerships}`}>{sections.partnerships}</Link>
+          </li>
+          <li>
+            <Link to={`${sections.contact}`}>{sections.contact}</Link>
+          </li>
+        </ul>
         <Dropdown
           title={langInfo.subtitle}
           defaultImg={langInfo.src}
@@ -148,9 +145,9 @@ export default function Home() {
       </div>
         </Section>
         <div className="division"></div>
-        <Section title={sections.events} className="section-events" subtitle={buttonTexts.sectionEvents} link="/schedule">
+        <Section title={sections.events} className="section-events" subtitle={buttonTexts.sectionEvents} link={`/${langInfo.ref}/schedule`}>
           {
-            !hasEventsMonth() ? 
+            !hasEventsMonth(events) ? 
               <EventCard
               note
               title=""
@@ -180,7 +177,7 @@ export default function Home() {
         </Section>
         <div className="division"></div>
         <Section title={sections.partnerships} className="section-partnerships">
-          {partnerships.map(element => {
+        {partnerships.map(element => {
             return(
               <PictureLink text={element.title} href={element.href} pic={element.pic}/>
             );
@@ -216,7 +213,7 @@ export default function Home() {
           <a href="#">
             <img src={logoHorizontal} alt="Logo Elas@Computação Horizontal"/>
           </a>
-          <span>© 2020 Elas@Computação</span>
+          <span>© {new Date().getFullYear()} Elas@Computação</span>
         </div>
       </footer>
     </div>

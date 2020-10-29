@@ -1,13 +1,13 @@
-import React, { useDebugValue, useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { enGB } from 'date-fns/locale'
-import { getDay, getDate, getMonth, getYear, isSameDay } from 'date-fns'
-import { DatePickerCalendar,Calendar } from 'react-nice-dates'
-import {ArrowLeft, X} from 'react-feather';
+import { getDate, getMonth, getYear } from 'date-fns'
+import { DatePickerCalendar} from 'react-nice-dates'
+import {ArrowLeft} from 'react-feather';
+
+import {events} from '../enums/pt/texts'
 
 import '../styles/schedule.css'
 import 'react-nice-dates/build/style.css'
-
-import {events} from '../enums/pt/texts'
 
 export default function Schedule() {
   const [date, setDate] = useState<Date>()

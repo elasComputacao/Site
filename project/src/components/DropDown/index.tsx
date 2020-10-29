@@ -50,8 +50,8 @@ const DropDown:React.FC<Properties> = ({title, defaultImg, items}) => {
   return (
       <div id="dropdown-component">
           <MenuButton {...menu} className="button">
-            <span>{title}</span>
             <img src={defaultImg} alt="Lang" className="selected"/>
+            <span>{title}</span>
             <ChevronDown className="icon"/>
           </MenuButton>
           <Menu
