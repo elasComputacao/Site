@@ -17,9 +17,10 @@ import cabecalho from '../../assets/images/header.png';
 import socialNetwork from '../../enums/social-network'
 import langs from '../../enums/langs'
 import infos from '../../enums/infos';
-import {bio, events, projects, sections, supports,buttonTexts, noEvents} from '../../enums/LANG/texts'
+import {bio, projects, sections, supports,buttonTexts, noEvents} from '../../enums/LANG/texts'
 import {langInfo} from '../../enums/LANG/lang-infos'
 import partnerships from '../../enums/partnerships'
+import events from '../../enums/events';
 
 //Importing components
 import Section from '../../components/Section';
@@ -81,7 +82,7 @@ export default function Home() {
           </li>
         </ul>
         <Dropdown
-          title={langInfo.subtitle}
+          title=""
           defaultImg={langInfo.src}
           items={langs}
         />
@@ -219,3 +220,4 @@ export default function Home() {
     </div>
   );
 }
+

@@ -60,20 +60,6 @@ export const projects = [
     }
 ]
 
-export const events = [
-    {
-        title: "Café com Elas",
-        description: '"Café com Elas" na programação da Jornada Acadêmica Computação@UFCG.',
-        day: "5",
-        month: "11",
-        year: "2020",
-        time: "20h",
-        local: "Discord CCC",
-        pageURL: "",
-        eventURL: "",
-    },
-]
-
 export const bio = [
     'Somos uma comunidade nascida na Universidade Federal de Campina Grande em maio de 2017, com o intuito de trazer mais mulheres para o curso de Ciência da Computação e de gerar uma rede de apoio e visibilidade pautada na sororidade e no empoderamento de todas as meninas que fazem parte desse meio.',
 
@@ -89,3 +75,10 @@ export const buttonTexts = {
 }
 
 export const noEvents = "Nenhum evento confirmado para este mês"
+
+export const schedule = {
+    pageTitle: "Agenda",
+    initialTitle: "Clique em uma data para saber mais",
+    initialDescription: "Datas em evidência indicam um evento marcado para o dia",
+    noEvents: "Nenhum evento marcado para",
+}

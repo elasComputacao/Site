@@ -1,13 +1,14 @@
-import React, { useDebugValue, useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { enGB } from 'date-fns/locale'
-import { getDay, getDate, getMonth, getYear, isSameDay } from 'date-fns'
-import { DatePickerCalendar,Calendar } from 'react-nice-dates'
-import {ArrowLeft, X} from 'react-feather';
+import { getDate, getMonth, getYear } from 'date-fns'
+import { DatePickerCalendar } from 'react-nice-dates'
+import {ArrowLeft } from 'react-feather';
 
 import '../../styles/schedule.css'
 import 'react-nice-dates/build/style.css'
 
-import {events} from '../../enums/en/texts'
+import {schedule} from '../../enums/LANG/texts'
+import events from '../../enums/events'
 
 export default function Schedule() {
   const [date, setDate] = useState<Date>()
@@ -19,9 +20,9 @@ export default function Schedule() {
   },[date])
 
   useEffect(() => {
-    document.title = "translation - Elas@Computação UFCG" //translation
-    setTitle("translation") //translation
-    setDescription("translation") //translation
+    document.title = `${schedule.pageTitle} - Elas@Computação UFCG`
+    setTitle(schedule.initialTitle)
+    setDescription(schedule.initialDescription)
   }, [])
 
   function checkDate(date) {
@@ -53,7 +54,7 @@ export default function Schedule() {
         setDescription(element.description)
         return
       } else {
-        setTitle(date ? `translation ${getMonth(date) + 1}/${getDate(date)}/${getYear(date)}` : "") //translation
+        setTitle(date ? `${schedule.noEvents} ${getMonth(date) + 1}/${getDate(date)}/${getYear(date)}` : "")
         setDescription("")
       }
       setDate(date)

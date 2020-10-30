@@ -60,20 +60,6 @@ export const projects = [
     }
 ]
 
-export const events = [
-    {
-        title: "Café com Elas",
-        description: '"Café com Elas" on the schedule of the Jornada Acadêmica Computação@UFCG',
-        day: "5",
-        month: "11",
-        year: "2020",
-        time: "20h",
-        local: "Discord CCC",
-        pageURL: "",
-        eventURL: "",
-    },
-]
-
 export const bio = [
 'We are a brazilian community, created at May 2017, in Federal University of Campina Grande, in order to bring more women to the Computer Science graduation and generate a support network and more visibility, guided by sorority and the IT girl empowerment.',
 
@@ -88,3 +74,10 @@ export const buttonTexts = {
 }
 
 export const noEvents = "No events for this month"
+
+export const schedule = {
+    pageTitle: "Schedule",
+    initialTitle: "Click on a date for more information",
+    initialDescription: "Highlighted dates indicate an event scheduled for the day",
+    noEvents: "No events scheduled for",
+}

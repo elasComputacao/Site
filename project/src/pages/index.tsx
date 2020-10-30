@@ -18,8 +18,9 @@ import socialNetwork from '../enums/social-network'
 import langs from '../enums/langs'
 import infos from '../enums/infos';
 import partnerships from '../enums/partnerships'
-import {bio, events, projects, sections, supports, buttonTexts, noEvents} from '../enums/pt/texts'
+import {bio, projects, sections, supports, buttonTexts, noEvents} from '../enums/pt/texts'
 import {langInfo} from '../enums/pt/lang-infos'
+import events from '../enums/events'
 
 //Importando componentes
 import Section from '../components/Section';
@@ -85,7 +86,7 @@ export default function Home() {
           </ul>
         </nav>
         <Dropdown
-          title={langInfo.subtitle}
+          title=""
           defaultImg={langInfo.src}
           items={langs}
         />
@@ -93,7 +94,6 @@ export default function Home() {
       <img className="wellcome-image" src={cabecalho} alt="Elas@Computação UFCG"/>
       <main id="main">
         <Section title={sections.about} className="section-about">
-          
           <div className="text">
           {
             bio.map(paragraph => {

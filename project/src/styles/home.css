@@ -406,8 +406,8 @@ html {
         align-items: center;
         justify-content: center;
         grid-template-columns: repeat(5, 1fr);
-        gap: 24px;
-        padding-top: 100px;
-        padding-bottom: 120px;
+        gap: 40px;
+        padding-top: 160px;
+        padding-bottom: 160px;
     }
 }

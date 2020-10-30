@@ -4,7 +4,8 @@ import { getDate, getMonth, getYear } from 'date-fns'
 import { DatePickerCalendar} from 'react-nice-dates'
 import {ArrowLeft} from 'react-feather';
 
-import {events} from '../enums/pt/texts'
+import {schedule} from '../enums/pt/texts'
+import events from '../enums/events'
 
 import '../styles/schedule.css'
 import 'react-nice-dates/build/style.css'
@@ -19,9 +20,9 @@ export default function Schedule() {
   },[date])
 
   useEffect(() => {
-    document.title = "Agenda - Elas@Computação UFCG"
-    setTitle("Clique em uma data para saber mais")
-    setDescription("Datas em evidência indicam um evento marcado para o dia")
+    document.title = `${schedule.pageTitle} - Elas@Computação UFCG`
+    setTitle(schedule.initialTitle)
+    setDescription(schedule.initialDescription)
   }, [])
 
   function checkDate(date) {
@@ -53,7 +54,7 @@ export default function Schedule() {
         setDescription(element.description)
         return
       } else {
-        setTitle(date ? `Nenhum evento marcado para ${getDate(date)}/${getMonth(date) + 1}/${getYear(date)}` : "")
+        setTitle(date ? `${schedule.noEvents} ${getDate(date)}/${getMonth(date) + 1}/${getYear(date)}` : "")
         setDescription("")
       }
       setDate(date)
