@@ -57,30 +57,32 @@ export default function Home() {
 
   return (
     <div id="home-page" onMouseOver={() => mouseMonitoring()}>
-      <header id="header">
-        <a href="#" className="image">
-          <img src={logoHorizontal} alt="Logo Elas@Computação Horizontal"/>
-        </a>
-        <ul>
-          <li>
-            <Link to={`${sections.about}`}>{sections.about}</Link>
-          </li>
-          <li>
-            <Link to={`${sections.panel}`}>{sections.panel}</Link>
-          </li>
-          <li>
-            <Link to={`${sections.projects}`}>{sections.projects}</Link>
-          </li>
-          <li>
-            <Link to={`${sections.events}`}>{sections.events}</Link>
-          </li>
-          <li>
-            <Link to={`${sections.partnerships}`}>{sections.partnerships}</Link>
-          </li>
-          <li>
-            <Link to={`${sections.contact}`}>{sections.contact}</Link>
-          </li>
-        </ul>
+	<header id="header">
+        <nav>
+            <a href="#" className="image">
+              <img src={logoHorizontal} alt="Logo Elas@Computação Horizontal"/>
+            </a>
+          <ul>
+            <li>
+              <Link to={`${sections.about}`}>{sections.about}</Link>
+            </li>
+            <li>
+              <Link to={`${sections.panel}`}>{sections.panel}</Link>
+            </li>
+            <li>
+              <Link to={`${sections.projects}`}>{sections.projects}</Link>
+            </li>
+            <li>
+              <Link to={`${sections.events}`}>{sections.events}</Link>
+            </li>
+            <li>
+              <Link to={`${sections.partnerships}`}>{sections.partnerships}</Link>
+            </li>
+            <li>
+              <Link to={`${sections.contact}`}>{sections.contact}</Link>
+            </li>
+          </ul>
+        </nav>
         <Dropdown
           title=""
           defaultImg={langInfo.src}
@@ -89,7 +91,7 @@ export default function Home() {
       </header>
       <img className="wellcome-image" src={cabecalho} alt="Elas@Computação UFCG"/>
       <main id="main">
-        <Section title={sections.about} className="section-about">
+        <Section title={sections.about} className="section-about" color="#fff6f3">
           
           <div className="text">
           {
@@ -122,7 +124,7 @@ export default function Home() {
           }
         </Section>
         <div className="division"></div>
-        <Section title={sections.projects} className="section-projects">  
+        <Section title={sections.projects} className="section-projects" color="#fff6f3">  
         <div id="carousel-component">
           <ReactCardCarousel disable_keydown={ true } autoplay={ true } autoplay_speed={ 15000 } className={"carousel-component"}>
             {
@@ -177,7 +179,7 @@ export default function Home() {
           }
         </Section>
         <div className="division"></div>
-        <Section title={sections.partnerships} className="section-partnerships">
+        <Section title={sections.partnerships} className="section-partnerships" color="#fff6f3">
         {partnerships.map(element => {
             return(
               <PictureLink text={element.title} href={element.href} pic={element.pic}/>
