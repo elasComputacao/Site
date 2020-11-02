@@ -78,23 +78,23 @@
     text-align: justify;
 }
 
-@media (min-width: 1080px) {
+@media (min-width: 760px) {
     #projectcard-component {
         flex-direction: row;
-        width: 56vw;
+        width: 72vw;
         height: 450px;
         margin-bottom: 12px;
         margin-top: -32px;
     }
 
     #projectcard-component .img-content {
-        width: 600px;
+        width: 700px;
         height: 490px;
     }
 
     #projectcard-component img {
-        width: 360px;
-        max-height: 300px;
+        width: 1000px;
+        max-height: 1000px;
     }
 
     #projectcard-component div.content {
@@ -113,5 +113,15 @@
     #projectcard-component div.content h3 {
         font-size: 32px;
         margin-top: 10px;
+    }
+}
+
+@media (min-width: 1080px) {
+    #projectcard-component {
+        flex-direction: row;
+        width: 56vw;
+        height: 450px;
+        margin-bottom: 12px;
+        margin-top: -32px;
     }
 }

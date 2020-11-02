@@ -10,8 +10,9 @@ interface Properties {
     toggle?: boolean;
     subtitle?: string;
     link?:string;
+    color?:string;
 }
-const Section:React.FC<Properties> = ({title, children, className, toggle, subtitle, link}) => {
+const Section:React.FC<Properties> = ({title, children, className, toggle, subtitle, link, color}) => {
   
   const [hidden, setHidden] = useState(true);
   const [text, setText] = useState("");
@@ -37,7 +38,7 @@ const Section:React.FC<Properties> = ({title, children, className, toggle, subti
   }
 
   return (
-    <div id="section-component" className={className}>
+    <div id="section-component" className={className} style={{backgroundColor: color}}>
         <div id={title}></div>
           <h1>{title}</h1>
           <div className="children" id={className}>

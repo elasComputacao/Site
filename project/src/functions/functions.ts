@@ -19,7 +19,7 @@ export function mouseMonitoring() {
         var pos = event.clientY;
         if (scroll > 380 && ((pos >= 0 && pos < 100 && window.innerWidth < 1080) || (pos >= 0 && pos < 140 && window.innerWidth > 1080))) {
           header.style.position = "fixed";
-          main.style.marginTop = window.innerWidth < 1080 ? "76px" : "95px";
+          main.style.marginTop = window.innerWidth < 1080 ? "76px" : "101px";
         } else {
           header.style.position = "relative";
           main.style.marginTop = "0px";    

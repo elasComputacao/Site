@@ -64,7 +64,7 @@
     opacity: 0.6;
 }
 
-@media (min-width: 1080px) {
+@media (min-width: 760px) {
 
     #dropdown-component {
         margin-top: 0.9vh;
@@ -78,8 +78,8 @@
 
     #dropdown-component .button .selected {
         margin-top: 5px;
-        height: 20px;
-        width: 20px;
+        height: 24px;
+        width: 24px;
     }
 
     #dropdown-component .button span {
@@ -89,6 +89,8 @@
     
     #dropdown-component .button img {
         margin-right: 4px;
+        height: 20px;
+        width: 20px;
     }
 
     #dropdown-component .button .icon {

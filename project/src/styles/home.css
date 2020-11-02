@@ -30,8 +30,8 @@ html {
 }
 
 #home-page header {
-    z-index: 10;
     display: flex;
+    z-index: 10;
     cursor: pointer;
     width: 100vw;
     justify-content: space-between;
@@ -46,17 +46,26 @@ html {
     transition: all 0.2s;
 }
 
-#home-page header a.image {
+#home-page header ul a.image {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    padding-left: 4px;
+    padding-left: 0px;
+    max-width: 8vw;
 }
 
-#home-page header a img {
+#home-page header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80vw;
+}
+
+#home-page header nav a img {
     max-width: 48px;
     margin-top: 4px;
+    padding-left: 8px;
 }
 
 #home-page header ul {
@@ -67,12 +76,12 @@ html {
     justify-content: space-between;
     align-items: center;
     padding-right: 24px;
+    list-style-type: circle;
 }
 
 #home-page header ul li {
     display: flex;
     align-items: center;
-    list-style: none;
     cursor: pointer;
     max-height: 8px;
     transition: all 0.1s;
@@ -208,6 +217,7 @@ html {
     font-family: var(--title-font);
     color: var(--color-2);
     font-weight: 300;
+    padding-left: 16px;
 }
 
 #home-page footer div.footer-content {
@@ -269,43 +279,37 @@ html {
 }
 
 @media (min-width: 760px) {
-    #home-page main .section-panel .children {
-        display: grid;
-        grid-template-columns: repeat(12, 1fr);
-        align-items: center;
-        justify-content: center;
-        align-self: center;
-    }
-
-    #home-page main .section-partnerships .children {
-        grid-template-columns: repeat(5, 1fr);
-    }
-}
-
-@media (min-width: 1024px) {
     #home-page header {
         max-height: 300px;
     }
     
-    #home-page header a img {
+    #home-page header nav a {
+        max-width: 8vw;
+    }
+
+    #home-page header nav a img {
         max-width: 88px;
-        margin-left: 12px;
+        margin-right: -120px;
     }
 
     #home-page header ul {
-        display: flex;
-        align-items: baseline;
-        gap: 32px;
-        max-height: 24px;
+        text-align: center;
+        gap: 72px;
+        row-gap: 12px;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 50vw;
+        padding-right: 72px;
     }
 
     #home-page header ul li {
         display: flex;
         align-items: center;
         justify-content: center;
+        text-align: center;
         font-size: 20px;
-        padding-bottom: 12px;
         padding-top: 12px;
+        max-height: 48px;
     }
 
     #home-page header ul li a {
@@ -313,8 +317,9 @@ html {
         text-align: center;
     }
 
-    #home-page img.wellcome-image {
-        
+    #home-page main .section-about p {
+        font-size: 16px;
+        max-width: 60vw;
     }
 
     #home-page main .section-about .children {
@@ -323,6 +328,7 @@ html {
         justify-content: space-between;
         align-items: center;
         gap: 9vw;
+        width: 100vw;
     }
 
     #home-page main .section-about .children .text {
@@ -337,7 +343,7 @@ html {
 
     #home-page main .section-panel .children {
         display: grid;
-        grid-template-columns: repeat(12, 1fr);
+        grid-template-columns: repeat(8, 1fr);
         align-items: center;
         justify-content: center;
         margin-left: 15px;
@@ -345,9 +351,20 @@ html {
         row-gap: 0px;
     }
 
+    #home-page main .section-panel h1,
+    #home-page main .section-about h1 {
+        margin-top: -144px;
+        margin-bottom: -80px;
+    }
+
     #home-page main .section-projects .children {
         gap: 24px;
-        height: 80vh;
+        height: 100vh;
+    }
+
+    #home-page main .section-projects h1 {
+        padding-top: 56px;
+        margin-bottom: -24px;
     }
 
     #home-page main .section-events .children {
@@ -364,7 +381,7 @@ html {
     }
     
     #home-page footer h1 {
-        font-size: 48px;
+        font-size: 40px;
     }
 
     #home-page footer div.footer-content {
@@ -394,7 +411,7 @@ html {
 
     #home-page main .paragraph {
         font-size: 18px;
-        line-height: 45px;
+        line-height: 28px;
         margin-top: -20px;
         width: 65vw;
         text-align: justify;
@@ -406,8 +423,22 @@ html {
         align-items: center;
         justify-content: center;
         grid-template-columns: repeat(5, 1fr);
-        gap: 40px;
+        gap: 40px;  
         padding-top: 160px;
         padding-bottom: 160px;
+    }
+}
+
+@media (min-width: 1080px) {
+    #home-page main .section-panel .children {
+        grid-template-columns: repeat(12, 1fr);
+    }
+
+    #home-page header ul {
+        display: flex;
+        align-items: center;
+        gap: 48px;
+        max-height: 24px;
+        padding-right: 100px;
     }
 }
