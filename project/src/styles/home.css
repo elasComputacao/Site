@@ -357,9 +357,15 @@ html {
         margin-bottom: -80px;
     }
 
+    #home-page main .section-projects {
+        overflow: hidden;
+    }
+
     #home-page main .section-projects .children {
         gap: 24px;
         height: 100vh;
+        overflow: hidden;
+        max-width: 10px;
     }
 
     #home-page main .section-projects h1 {

@@ -80,6 +80,25 @@
 
 @media (min-width: 760px) {
     #projectcard-component {
+        width: 430px;
+        height: 580px;
+    }
+
+    #projectcard-component .img-content {
+        overflow: hidden;
+        height: 200px;
+        width: 430px;
+        padding-top: 32px;
+    }
+
+    #projectcard-component div.content {
+        margin-top: 32px;
+        padding-bottom: 40px;
+    }
+}
+
+@media (min-width: 1080px) {
+    #projectcard-component {
         flex-direction: row;
         width: 72vw;
         height: 450px;
