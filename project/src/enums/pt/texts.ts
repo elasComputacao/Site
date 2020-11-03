@@ -26,6 +26,18 @@ export const supports = {
     prideMonth: {
         description: "O Elas@Computação é favorável a toda e qualquer forma de amor ❤️.",
         icon: icons.lgbtFlag,
+    },
+    blm: {
+        description: "Vidas Negras Importam.",
+        icon: icons.blackLivesMatter,
+    }, 
+    novembroAzul: {
+        description: "O Elas@Computação apoia a campanha do Novembro Azul em prevenção ao câncer de próstata e em atenção à saúde masculina.",
+        icon: icons.blueRibbon,
+    },
+    christmas: {
+        description: "Boas Festas!",
+        icon: icons.santaClaus,
     }
 }
 

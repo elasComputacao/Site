@@ -100,20 +100,24 @@
 @media (min-width: 1080px) {
     #projectcard-component {
         flex-direction: row;
-        width: 72vw;
+        justify-content: space-between;
+        width: 820px;
         height: 450px;
         margin-bottom: 12px;
         margin-top: -32px;
     }
 
     #projectcard-component .img-content {
-        width: 700px;
-        height: 490px;
+        display: flex;
+        width: 500px;
+        height: 450px;
+        align-items: center;
+        justify-content: center;
     }
 
     #projectcard-component img {
-        width: 1000px;
-        max-height: 1000px;
+        width: 300px;
+        max-height: 300px;
     }
 
     #projectcard-component div.content {
@@ -132,15 +136,5 @@
     #projectcard-component div.content h3 {
         font-size: 32px;
         margin-top: 10px;
-    }
-}
-
-@media (min-width: 1080px) {
-    #projectcard-component {
-        flex-direction: row;
-        width: 56vw;
-        height: 450px;
-        margin-bottom: 12px;
-        margin-top: -32px;
     }
 }

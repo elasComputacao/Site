@@ -10,6 +10,7 @@ const icons = {
     lgbtFlag: "https://www.flaticon.com/svg/static/icons/svg/2620/2620727.svg",
     girlPower: "https://www.flaticon.com/svg/static/icons/svg/2597/2597227.svg",
     blackLivesMatter: "https://www.flaticon.com/svg/static/icons/svg/3100/3100124.svg",
+    santaClaus: "https://www.flaticon.com/svg/static/icons/svg/601/601393.svg"
 }
 
 export default icons;

@@ -3,6 +3,7 @@ import cafeComElas from '../../assets/images/cafe-com-elas.png';
 import hacktoberelas from '../../assets/images/hacktoberelas.png'
 import raioxdelas from '../../assets/images/raiox-delas.png'
 import dev from '../../assets/images/dev-elas.png'
+import { icon } from 'leaflet';
 
 export const sections = {
     about: "About",
@@ -26,6 +27,18 @@ export const supports = {
     prideMonth: {
         description: "Elas@Computação supports the LGBTQIA+ community and all the forms of love.",
         icon: icons.lgbtFlag,
+    },
+    blm: {
+        description: "Black Lives Matters.",
+        icon: icons.blackLivesMatter,
+    },
+    novembroAzul: {
+        description: "Elas@Computação supports the prostate cancer campaign.",
+        icon: icons.blueRibbon,
+    },
+    christmas: {
+        description: "Happy Holidays!",
+        icon: icons.santaClaus,
     }
 }
 

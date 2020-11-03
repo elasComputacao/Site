@@ -32,7 +32,7 @@ import EventCard from '../../components/EventCard';
 import ProjectCard from '../../components/ProjectCard';
 
 // Importing functions
-import { arrayShuffle, mouseMonitoring, hasEventsMonth } from '../../functions/functions';
+import { arrayShuffle, mouseMonitoring, hasEventsMonth, setAutoSupport } from '../../functions/functions';
 import { getUsersFromGitHub } from '../../functions/connections';
 
 // Importing styles
@@ -105,8 +105,8 @@ export default function Home() {
           
           <IconStatus 
             icon={logoVertical} 
-            status={supports.outubroRosa.icon} 
-            statusText={supports.outubroRosa.description}
+            status={setAutoSupport(supports).icon} 
+            statusText={setAutoSupport(supports).description}
           />
         </Section>
         <div className="division"></div>

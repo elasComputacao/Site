@@ -26,6 +26,18 @@ export const supports = {
     prideMonth: {
         description: //Elas@Computação supports the LGBTQIA+ community and all the forms of love.,
         icon: icons.lgbtFlag,
+    },
+    blm: {
+        description: //Black Lives Matters.,
+        icon: icons.blackLivesMatter,
+    }, 
+    novembroAzul: {
+        description: //Elas@Computação supports the prostate cancer campaign.,
+        icon: icons.blueRibbon,
+    },
+    christmas: {
+        description://Happy Holidays!,
+        icon: icons.santaClaus,
     }
 }
 

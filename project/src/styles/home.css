@@ -168,8 +168,12 @@ html {
 }
 
 #home-page main .section-events {
-    padding-bottom: 104px;
+    padding-bottom: 112px;
     margin-bottom: -1px;
+}
+
+#home-page main .section-events #linkbutton-component {
+    margin-top: -80px;
 }
 
 #home-page main .section-partnerships {
@@ -319,7 +323,7 @@ html {
 
     #home-page main .section-about p {
         font-size: 16px;
-        max-width: 60vw;
+        max-width: 65vw;
     }
 
     #home-page main .section-about .children {
@@ -338,7 +342,7 @@ html {
 
     #home-page main .section-about #iconstatus-component {
        margin-top: -80px;
-       margin-left: -120px;
+       margin-left: -160px;
     }
 
     #home-page main .section-panel .children {
@@ -353,8 +357,8 @@ html {
 
     #home-page main .section-panel h1,
     #home-page main .section-about h1 {
-        margin-top: -144px;
-        margin-bottom: -80px;
+        margin-top: -192px;
+        margin-bottom: -216px;
     }
 
     #home-page main .section-projects {
@@ -418,7 +422,7 @@ html {
     #home-page main .paragraph {
         font-size: 18px;
         line-height: 28px;
-        margin-top: -20px;
+        margin-top: -4px;
         width: 65vw;
         text-align: justify;
         padding-left: 88px;
@@ -437,7 +441,8 @@ html {
 
 @media (min-width: 1080px) {
     #home-page main .section-panel .children {
-        grid-template-columns: repeat(12, 1fr);
+        grid-template-columns: repeat(11, 1fr);
+        padding: 64px;
     }
 
     #home-page header ul {

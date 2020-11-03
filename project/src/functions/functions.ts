@@ -1,3 +1,5 @@
+import {supportsMonth, supportsAllTime} from '../enums/supports'
+
 export function arrayShuffle(array:any[]) {
     const size = array.length;
     
@@ -36,6 +38,23 @@ export function hasEventsMonth(events: any[]) {
       return true;
     }
   }    
-
   return false;
+}
+
+export function setAutoSupport(supportsObject) {
+  
+  const month = new Date().getMonth() + 1;
+  
+  const keysMonth = Object.keys(supportsMonth);
+
+  if (keysMonth.includes(String(month))) {
+    const key = supportsMonth[month];
+    return supportsObject[key];
+  }
+
+  const random = Math.floor(supportsAllTime.length * Math.random());
+  const key = supportsAllTime[random];
+  
+  return supportsObject[key];
+
 }
