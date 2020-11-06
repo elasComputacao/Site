@@ -20,6 +20,20 @@
     cursor: pointer;
 }
 
+@media (min-width: 760px) {
+
+    #iconstatus-component img.icon {
+        max-height: 40vh;
+    }
+    
+    #iconstatus-component img.status {
+        max-width: 24px;
+        margin-top: -80px;
+        margin-left: 152px;
+        cursor: pointer;
+    }
+}
+
 @media (min-width: 1080px) {
     #iconstatus-component img.icon {
         max-height: 60vh;

@@ -101,9 +101,9 @@
     #projectcard-component {
         flex-direction: row;
         justify-content: space-between;
-        width: 820px;
-        height: 450px;
-        margin-bottom: 12px;
+        width: 720px;
+        height: 410px;
+        margin-bottom: 0px;
         margin-top: -32px;
     }
 

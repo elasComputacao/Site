@@ -104,6 +104,7 @@ html {
 #home-page img.wellcome-image {
     width: 100vw;
     background-color: #fff;
+    z-index: 1;
 }
 
 #home-page main {
@@ -133,17 +134,20 @@ html {
     align-items: center;
     justify-content: space-between;
     gap: 10px;
+    max-width: 90vw;
 }
 
 #home-page main .section-panel .children {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
     align-self: center;
     justify-content: center;
-    max-width: 100vw;
-    column-gap: 8px;
-    padding-left: 90px;
+    max-width: 98vw;
+    column-gap: 12px;
+    row-gap: 8px;
+    padding-left: 95px;
     padding-right: 100px;
 }
 
@@ -168,8 +172,8 @@ html {
 }
 
 #home-page main .section-events {
-    padding-bottom: 112px;
-    margin-bottom: -1px;
+    width: 100vw;
+    padding-bottom: 24px;
 }
 
 #home-page main .section-events #linkbutton-component {
@@ -185,12 +189,13 @@ html {
 }
 
 #home-page main .section-partnerships .children {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
     align-self: center;
     justify-content: center;
-    max-width: 100vw;
+    max-width: 90vw;
     column-gap: 12px;
     row-gap: 8px;
     padding-left: 90px;
@@ -248,7 +253,7 @@ html {
 }
 
 #home-page footer div.footer-content div.social-networks a img {
-    max-height: 64px;
+    max-height: 72px;
 }
 
 #home-page footer div.footer-content div.social-networks a img:hover {
@@ -321,62 +326,43 @@ html {
         text-align: center;
     }
 
-    #home-page main .section-about p {
-        font-size: 16px;
-        max-width: 65vw;
-    }
-
-    #home-page main .section-about .children {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+    #home-page main .section-panel {
         align-items: center;
-        gap: 9vw;
-        width: 100vw;
     }
 
-    #home-page main .section-about .children .text {
-        width: 72vw;
-        max-height: 100vh;
-    }
-
-    #home-page main .section-about #iconstatus-component {
-       margin-top: -80px;
-       margin-left: -160px;
+    #home-page main .section-about .children #iconstatus-component {
+        margin-top: -80px;
+        margin-left: -32px;
     }
 
     #home-page main .section-panel .children {
-        display: grid;
-        grid-template-columns: repeat(8, 1fr);
+        display: flex;
+        flex-wrap: wrap;
         align-items: center;
         justify-content: center;
-        margin-left: 15px;
+        margin-left: 0px;
         column-gap: 15px;
-        row-gap: 0px;
-    }
-
-    #home-page main .section-panel h1,
-    #home-page main .section-about h1 {
-        margin-top: -192px;
-        margin-bottom: -216px;
+        row-gap: 10px;
+        width: 100vw;
+        display: flex;
+        flex-wrap: wrap;
     }
 
     #home-page main .section-projects {
-        overflow: hidden;
+        overflow: hidden;  
     }
 
     #home-page main .section-projects .children {
         gap: 24px;
-        height: 100vh;
+        height: 98vh;
         overflow: hidden;
-        max-width: 10px;
+        margin-bottom: -100px;
     }
 
-    #home-page main .section-projects h1 {
-        padding-top: 56px;
-        margin-bottom: -24px;
+    #home-page main .section-events {
+        padding-bottom: 112px;
     }
-
+    
     #home-page main .section-events .children {
         align-items: center;
         justify-content: center;
@@ -429,20 +415,29 @@ html {
     }
 
     #home-page main .section-partnerships .children {
-        display: inline-flex;
+        display: flex;
+        flex-wrap: wrap;
         align-items: center;
         justify-content: center;
         grid-template-columns: repeat(5, 1fr);
         gap: 40px;  
-        padding-top: 160px;
-        padding-bottom: 160px;
+        row-gap: 72px;
+        width: 98vw;
+        height: 50vh;
     }
 }
 
 @media (min-width: 1080px) {
     #home-page main .section-panel .children {
-        grid-template-columns: repeat(11, 1fr);
-        padding: 64px;
+        padding-left: 64px;
+        padding-right: 64px;
+        padding-bottom: 64px;
+        max-width: 88vw;
+    }
+
+    #home-page main .section-projects .children {
+        margin-top: -128px;
+        margin-bottom: 0px;
     }
 
     #home-page header ul {

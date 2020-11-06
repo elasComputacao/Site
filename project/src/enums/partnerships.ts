@@ -1,4 +1,5 @@
 import pet from '../assets/images/pet.png';
+import mulherTech from '../assets/images/mulher-tech.png'
 
 const partnerships = [
     {
@@ -24,7 +25,7 @@ const partnerships = [
     {
         title: "Mulher Tech Sim Senhor",
         href: "http://mulhertechsim.sr/",
-        pic: "https://mulhertechsim.sr/2017/images/logo.png",
+        pic: mulherTech,
     }
 ]
 
