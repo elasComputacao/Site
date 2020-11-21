@@ -2,7 +2,7 @@ module.exports = {
   pathPrefix: `/`,
   siteMetadata: {
     title: `Elas@Computação UFCG`,
-    siteUrl: `https://www.elascomputacao.github.io`, 
+    siteUrl: `https://elas.computacao.ufcg.edu.br`, 
     description: `Site do Elas@Computação UFCG`,
     social: [
       {
@@ -27,9 +27,10 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: `gatsby-plugin-webfonts`,
       options: {
-        fonts: [
+        fonts: {
+          google: [
           {
             family: `Poppins`,
             subsets: [`latin`],
@@ -40,7 +41,7 @@ module.exports = {
             subsets: [`latin`],
             variants: [`300`, `400`, `500`]
           },
-        ],
+        ]},
       },
     },
     {

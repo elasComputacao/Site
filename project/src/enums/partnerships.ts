@@ -18,6 +18,11 @@ const partnerships = [
         pic: "https://avatars0.githubusercontent.com/u/44339004?s=200&v=4",
     },
     {
+        title: "Computação UFCG",
+        href: "http://www.computacao.ufcg.edu.br/",
+        pic: "https://pbs.twimg.com/profile_images/1251148719715569670/d2tXx-76_400x400.jpg",
+    },
+    {
         title: "PET Computação",
         href: "https://www.dsc.ufcg.edu.br/~pet/",
         pic: pet,
@@ -26,7 +31,7 @@ const partnerships = [
         title: "Mulher Tech Sim Senhor",
         href: "http://mulhertechsim.sr/",
         pic: mulherTech,
-    }
+    },
 ]
 
 export default partnerships;
