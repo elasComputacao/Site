@@ -3,7 +3,9 @@
 <img src="./assets/logo_elas.png" heigth="80" width="180"/>
 <p/>
 
-Uma versão do site já pode ser acessada em [elasComputacao.github.io](https://elascomputacao.github.io)
+O site já pode ser acessada em [elas.computacao.ufcg.edu.br](https://elas.computacao.ufcg.edu.br/)
+
+Se você deseja contribuir com o site, consulte a [aqui a documentação de contribuição!](https://elas.computacao.ufcg.edu.br/DocsSiteElas/).
 
 ## Índice
 - [Descrição do projeto](#pencil-Descrição-do-projeto)
